@@ -1,0 +1,354 @@
+/** @format */
+@import "Home.module.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+@font-face {
+	font-family: "Fira Sans Condensed", sans-serif;
+	src: url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700;1,800&display=swap");
+}
+
+@import url("https://use.typekit.net/jmo3enq.css");
+
+@import url("https://use.typekit.net/jmo3enq.css");
+
+@import url("https://use.typekit.net/jmo3enq.css");
+
+$red: #e52d27;
+$green: #12d900;
+$wind-i-green: #36510e;
+$yellow: #f2ca3e;
+$orange: #8d2f0d;
+$ai-i-blue: #8fdaef;
+$ai-ii-blue: #d0f7fc;
+$ai-iii-blue: #9bf2ea;
+$i-dark: #001d3b;
+$ii-dark: #000002;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "adelle-condensed", serif, "Fira Sans Condensed", sans-serif,
+		"proxima", "Quicksand";
+	font-size: 20px;
+	font-weight: 300;
+	font-style: normal;
+	letter-spacing: normal;
+	line-height: 31.671875px;
+	background: radial-gradient(at 99% 1%, #1fb8ff 4%, #00035a 44%);
+}
+
+.rec-dot_active {
+	background-color: #00035a !important;
+}
+
+.box-shadow-1 {
+	box-shadow: 0 0 4px 0 #00035a;
+}
+
+.FiraFont {
+	font-family: "Fira Sans Condensed";
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	min-height: 90vh;
+	padding: 0 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-bottom: 16vh;
+}
+
+.container_2 {
+	width: 100%;
+	margin-left: 0px;
+	min-height: 100vh;
+	padding: 0 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-bottom: 10vh;
+	background: radial-gradient(at 99% 1%, #1fb8ff 2%, $ai-ii-blue 44%);
+	transform: skewY(9deg);
+}
+
+.homeSkew {
+	transform: skewY(-9deg);
+}
+
+.card-wrapper {
+	background-color: #f2ca3e;
+	display: flex;
+	flex-direction: row;
+}
+
+.main {
+	padding: 5rem 0;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+nav {
+	padding: 15px;
+	background: #00035a;
+}
+
+.nav_img {
+	max-height: 72px !important;
+	width: auto !important;
+}
+.navbar {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 0.5 rem;
+	padding-bottom: 0.5 rem;
+	width: 99%;
+	z-index: 12;
+	background: transparent;
+}
+
+.navbar-expand-lg {
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+.navbar-collapse {
+	flex-basis: 100%;
+	flex-grow: 1;
+	align-items: center;
+}
+
+.navbar-nav {
+	display: flex;
+	flex-direction: row;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+	gap: 80px;
+}
+
+.navbar-expand-lg .navbar-collapse {
+	display: flex !important;
+	flex-basis: auto !important;
+}
+
+.justify-content-end {
+	justify-content: flex-end !important;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	margin-right: 10px;
+	font-family: "proxima-nova", sans-serif !important;
+	font-weight: 500;
+	font-size: 30px;
+}
+
+nav.dashboard {
+	background: #f3f1f1;
+	padding: 8px;
+}
+
+.navbar-brand {
+	font-family: "Quicksand";
+	display: inline-block;
+	margin-left: 15px !important;
+	margin-right: 15px !important;
+	font-size: 24px !important;
+	color: $ai-ii-blue !important;
+}
+
+a.navbar-brand {
+	color: $ai-ii-blue !important;
+}
+
+.typewriter {
+	display: block;
+	overflow: hidden;
+	justify-content: center;
+}
+
+.footer {
+	width: 100%;
+	height: 100px;
+	border-top: 1px solid $ii-dark;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.title a {
+	color: $wind-i-green;
+	text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+	text-decoration: underline;
+}
+
+.title {
+	margin: 0;
+	line-height: 1.15;
+	font-size: 4rem;
+}
+
+.title,
+.description {
+	text-align: center;
+}
+
+.description {
+	line-height: 1.5;
+	font-size: 1.5rem;
+}
+
+.code {
+	background: #fafafa;
+	border-radius: 5px;
+	padding: 0.75rem;
+	font-size: 1.1rem;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	max-width: 800px;
+	margin-top: 3rem;
+}
+
+.card {
+	margin: 1rem;
+	padding: 1.5rem;
+	text-align: left;
+	color: inherit;
+	text-decoration: none;
+	border: 1px solid $i-dark;
+	border-radius: 10px;
+	transition: color 0.15s ease, border-color 0.15s ease;
+	width: 45%;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+	color: $yellow;
+	border-color: $i-dark;
+}
+
+.card h2 {
+	margin: 0 0 1rem 0;
+	font-size: 1.5rem;
+}
+
+.card p {
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+.logo {
+	height: 1em;
+	margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+	.grid {
+		width: 100%;
+		flex-direction: column;
+	}
+}
+
+/*rotate image-03 css*/
+.rotate_03 {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 150px;
+	height: 150px;
+	margin: -60px 0 0 150px;
+	-webkit-animation: spin 2s linear infinite;
+	-moz-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+
+/*use keyframes*/
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-moz-keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/** @format */
+
+.CardButton {
+	background-color: $green !important;
+	color: white !important;
+	font-size: 1.5rem !important;
+}
+.rec.rec-arrow {
+	border-radius: 0;
+	background: white;
+}
+
+.product-container {
+	display: flex;
+	flex-wrap: wrap;
+	min-width: 98% !important;
+	margin: 0 auto;
+	flex-direction: row;
+}
+
+.ratio-4-3 {
+	width: 100%;
+	position: relative;
+	background: url() 50% 50% no-repeat;
+	background-size: cover;
+	background-clip: content-box;
+}
+.ratio-4-3:before {
+	display: block;
+	content: "";
+	padding-top: 75%;
+}
