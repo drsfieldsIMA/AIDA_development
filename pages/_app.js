@@ -1,7 +1,7 @@
 /** @format */
 
 import "../styles/globals.scss";
-import Head from "next/Head";
+import Head from "next/head";
 import { Component, pageProps } from "react";
 import PropTypes from "prop-types";
 
