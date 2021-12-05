@@ -73,12 +73,15 @@ html h1,html h2{
 	font-family: "adelle", serif!important;
 } 
 
+h1{
+	font-size: calc(1.375rem + 0.5vw)!important;
+}
 html p{
 	font-family: "Fira Sans Condensed", sans-serif,!important;
 } 
 
 .height-75{
-	height: 60vh!important;
+	height: 75vh!important;
 	margin-bottom: 5vh;
 }
 
