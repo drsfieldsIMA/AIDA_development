@@ -214,6 +214,7 @@ html p{
 .card-wrapper {
 	display: flex;
 	flex-direction: row;
+	height:460px;
 }
 
 .main {
@@ -711,7 +712,7 @@ font-family: "adelle";
 
 /** @format */
 .mediaCard{
-	height: 240px !important;
+	height: 150px !important;
     background-size: contain !important;
     background-position: center center;
     object-fit: scale-down!important;
@@ -719,7 +720,7 @@ font-family: "adelle";
 .CardButton {
 	background-color: $primary ;
 	color: white !important;
-	font-size: 1.5rem !important;
+	font-size: 1rem !important;
 }
 .rec.rec-arrow {
 	border-radius: 0;
