@@ -19,7 +19,7 @@ return (
 					<div className="row">
 				<div className="col-md-6 col-lg-4 card-wrapper">
 				<DetailCard style={{maxWidth:"92%",flexDirection:"column"}} className="homeSkew"  title="Our Mission" 
-				content="AIDA provides a  buisness solutions for managing  the maintence of machines, finding replacements of machines and tracking the health of engineering assets/machines."
+				content="AIDA provides a  business solutions for managing  the maintence of machines, finding replacements of machines and tracking the health of engineering assets/machines."
 				date="1 may 2012"
 			Image="/sound_waves.svg"/>
 				</div>
