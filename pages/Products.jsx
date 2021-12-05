@@ -1,51 +1,45 @@
+/* eslint-disable no-mixed-spaces-and-tabs */
 
 /** @format */
 
 import Link from "next/link";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "../components/Nav";
-import Image from "next/image"
-import HomePage from "./HomePage";
-import Heading from "../components/Heading";
-import SplashSection from "./Splash";
-import CardDefault from "../components/CardDefault";
-import Carousel from "react-elastic-carousel";
+import CardDefault from "../comps/CardDefault";
 import PropTypes from "prop-types";
+import assetArr from "./api/assetArr";
+import  Head from "next/head";
 
-const Products = ({ assets }) => {
+const ProductStore=()=> {
+	const assets=assetArr;
 	return (
+		<>
+		<Head>
+        <title>Product Store | AIDA</title>
+      </Head>
 		<main className="row product-container">
-      <div className="col-md-6 col-lg-4">
-      <Heading content="Store" />
       {assets &&
 					assets.map((post) => (
-	//					console.log("hello post",post),
-						// <Link href={`/${post.Slug}`} key={post.Slug}>
-						// 	<a>
-						// 	<h2>{post.Title}</h2>
-						//		<div>
-						//			{post.admin_user.firstname} {post.admin_user.lastname}
-						//		</div> */
-
-						// </a>
-						// </Link>
-						<CardDefault props={post} key={post.Slug} />
-					))}
-        </div>
+						<div className="col-md-6 col-lg-4"  key={post.Slug}>
+							<div   key={post.Slug}>
+									<h2 className="whiteText"  key={post.Slug}>{post.Title}</h2> 
+									<Link href={`/${post.Slug}`} key={post.Slug} >
+									<a key={post.Slug}>
+										 <CardDefault props={post} key={post.Slug} />
+										 </a>
+										 </Link>
+								</div>
+								</div>
+								))}
 		</main>
+		</>
 	);
-};
-
-export async function getStaticProps() {
-	// get assets from our api
-	const res = await fetch("http://localhost:1339/assets");
-	const assets = await res.json();
-//	console.log(assets);
-	return {
-		props: { assets },
-	};
 }
 
+ProductStore.propTypes = {
+	props: PropTypes.any,
+	assets: PropTypes.any,
+	post:PropTypes.arrayOf(PropTypes.string)
+};
 
-export default Products;
+
+export default ProductStore;

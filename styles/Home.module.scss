@@ -8,9 +8,9 @@ $orange: #8d2f0d;
 $blue: #1fb8ff;
 $trueblue: #1a73e8;
 $ai-i-blue: #8fdaef;
-$ai-ii-blue: #d0f7fc;
 $ai-iii-blue: #9bf2ea;
 $grey: #b5cde0;
+$ai-ii-blue: #d0f7fc;
 $i-dark: #001d3b;
 $ii-dark: #000002;
 
@@ -24,13 +24,41 @@ $ii-dark: #000002;
 	height: fit-content;
 	width: 95%;
 	margin-left: 15px;
+	margin-top: 0.5em;
+	margin-bottom: 2.5rem;
 }
 
-.wrapper-image {
+/* .wrapper-image {
 	background: radial-gradient(at 99% 1%, #1fb8ff 2%, $ai-ii-blue 44%);
 	margin: 0 24px;
-	opacity: 80%;
 	border-radius: 16px 8px 16px 8px;
+	display: inline-block;
+} */
+
+.wrapper-image {
+	position: relative !important;
+	display: block;
+	flex-wrap: wrap;
+	flex-direction: row;
+	max-width: 28%;
+	min-width: 100px;
+	height: auto;
+   margin: 0 auto;
+//	background-image: url(/Aida_logo.svg);
+	background-repeat: no-repeat;
+}
+
+.a-m{
+	align-content:middle;
+}
+.justify-c{
+	justify-content: center;
+}
+
+.splash-image{
+max-width:50%!important;
+height: auto!important;
+margin: 0 auto!important;
 }
 
 .wrapper-image-secondary {
@@ -38,11 +66,23 @@ $ii-dark: #000002;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	height: 90vh;
+	height: 60vh;
 	width: 100%;
 	background-image: url(/background.svg);
-	background-repeat: no-repeat;
+	background-repeat:no-repeat;
+   background-position: center center;
 }
+
+.wrapper-image-about{
+	position: relative !important;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	width: 100%!important;
+	min-height:40vh!important;
+	background-image: none!important;
+}
+
 
 .wrapper-image-inner {
 	display: block;
@@ -62,7 +102,7 @@ $ii-dark: #000002;
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
-	margin-top: 5rem !important;
+	margin-top: 1rem ;
 }
 
 .column {
@@ -72,6 +112,7 @@ $ii-dark: #000002;
 	width: 100%;
 	flex: 1;
 }
+
 .double-column {
 	display: flex;
 	flex-direction: column;
@@ -84,12 +125,6 @@ $ii-dark: #000002;
 	display: block;
 	width: 96%;
 	margin: 0 auto;
-}
-.blue-column {
-	background-color: transparent;
-	height: 600px;
-	min-height: 100vh;
-	max-height: fit-content;
 }
 
 .btn_primary {
@@ -122,10 +157,10 @@ $ii-dark: #000002;
 	}
 
 	.container-2 {
-		transform: skewY(-11deg);
+	//	transform: skewY(-6.2deg);
 	}
 	.row {
-		--bs-gutter-x: 8px !important;
+		--bs-gutter-x: 0 !important;
 		--bs-gutter-y: 0;
 		display: flex;
 		flex-wrap: wrap;

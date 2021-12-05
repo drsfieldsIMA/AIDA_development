@@ -1,166 +1,103 @@
 /** @format */
-
-import Link from "next/link";
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "../components/Nav";
-import Image from "next/image";
-import HomePage from "./HomePage";
-import Heading from "../components/Heading";
-import Footer from "../components/Footer";
-import turbine from "./images/turbine.svg";
-import SplashSection from "./Splash";
-import CardDefault from "../components/CardDefault";
-import Carousel from "react-elastic-carousel";
+/* eslint-disable no-mixed-spaces-and-tabs */
+// import Link from "next/link";
+import React  from "react";
+import {Router, Switch, Route } from "react-router-dom";
+import HomePage from "../comps/Home/homePage";
 import PropTypes from "prop-types";
+import { API_URL } from "../utils/url";
+import Nav from "../comps/Layout/Nav";
+import FormLogin from "./login";
+import Dashboard from "./dashboard";
+import assetArr from "./api/assetArr";
+import Link from 'next/link'
+import { createMemoryHistory } from 'history';
+import Heading from "../comps/common/Heading";
+import { Box, Button, Container, Grid, TextField, Typography } from '@mui/material';
+import Footer from '../comps/Layout/Footer';
+import  { AuthProvider } from "../comps/context/AuthContext";
+import Layout from "../comps/Layout/Layout";
+import HomeDeck from "../comps/Home/HomeCards";
+import ProductStore from "./products";
+import AboutSection from "./about";
+import productPost from "./[slug]";
+import CarouselApp from "../comps/Home/CarouselApp"
+import AdminPage from "./admin";
+import AdminAssetsPage from "./admin/assets";
+import AuthContext from "../comps/context/AuthContext";
+import { useState, useContext } from "react";
+import { useRouter } from 'next/router';
 
-const Index = ({ assets }) => {
+const Index = ({assets,props}) => {
+const router = useRouter()
+const history = createMemoryHistory();
+
+const [auth, setAuth] = useContext(AuthContext);
 	return (
-		<Router>
-			<Nav />
-			<Switch>
-					<Route exact path="/">
-						<div className="container">
-						<HomePage props={assets} />
-						</div>
-						<div className="container_2">
-							<div className="row">
-						<div className="col-md-6 col-lg-4">
-			<p
-							className="homeSkew"
-							style={{ fontFamily: "Fira Sans Condensed",paddingTop:120,paddingBottom:40 }}
-						>
-							It is a long established fact that a reader will be distracted by
-							the readable content of a page when looking at its layout. The
-							point of using Lorem Ipsum is that it has a more-or-less normal
-							distribution of letters, as opposed to using Content here, content
-							here, making it look like readable English. Many desktop
-							publishing packages and web page editors now use Lorem Ipsum as
-							their default model text, and a search for lorem ipsum will
-							uncover many web sites still in their infancy. Various versions
-							have evolved over the years, sometimes by accident, sometimes on
-							purpose (injected humour and the like).
-						</p>
-						</div>
-						<div className="col-md-6 col-lg-4">
-						<p
-							className="homeSkew"
-							style={{ fontFamily: "Fira Sans Condensed",paddingTop:120,paddingBottom:40 }}
-						>
-							It is a long established fact that a reader will be distracted by
-							the readable content of a page when looking at its layout. The
-							point of using Lorem Ipsum is that it has a more-or-less normal
-							distribution of letters, as opposed to using Content here, content
-							here, making it look like readable English. Many desktop
-							publishing packages and web page editors now use Lorem Ipsum as
-							their default model text, and a search for lorem ipsum will
-							uncover many web sites still in their infancy. Various versions
-							have evolved over the years, sometimes by accident, sometimes on
-							purpose (injected humour and the like).
-						</p>
-						</div>
-						<div className="col-md-6 col-lg-4">
-						<p
-							className="homeSkew"
-							style={{ fontFamily: "Fira Sans Condensed",paddingTop:120,paddingBottom:40 }}
-						>
-							It is a long established fact that a reader will be distracted by
-							the readable content of a page when looking at its layout. The
-							point of using Lorem Ipsum is that it has a more-or-less normal
-							distribution of letters, as opposed to using Content here, content
-							here, making it look like readable English. Many desktop
-							publishing packages and web page editors now use Lorem Ipsum as
-							their default model text, and a search for lorem ipsum will
-							uncover many web sites still in their infancy. Various versions
-							have evolved over the years, sometimes by accident, sometimes on
-							purpose (injected humour and the like).
-						</p>
-						</div>
+		<div>
+		<Router  history={history}>
+				<Switch>
+					<Route path="/"  exact >
+					<div>
+					<HomePage/>
 					</div>
-			<Carousel className="homeSkew" itemsToShow={3} style={{marginTop:50}}>
-				{assets &&
-					assets.map(
-						(post) => (
-							console.log("incoming", post),
-							(
-								<>
-								 <Link href={`/${post.Slug}`} key={post.Slug}>
-							 	<a>
-									<h2>{post.Title}</h2>
-								<div>
-										</div> 
-
-								</a>
-								</Link>
-								<CardDefault className="box-shadow-1" props={post} key={post.Slug} />
-								</>
-							)
-						)
-					)}
-			</Carousel>
-			</div>
+					<div >
+					<HomeDeck/>
+					</div>
+					<section className="carousel-wrapper">
+					<CarouselApp props={{assets:assets}}></CarouselApp>
+					</section>
 					</Route>
 					<Route path="/products">
-						<Heading content="Products" />
-						<main className="row product-container">
-      <Heading content="Store" />
-      {assets &&
-					assets.map((post) => (
-	//					console.log("hello post",post),
-						// <Link href={`/${post.Slug}`} key={post.Slug}>
-						// 	<a>
-						// 	<h2>{post.Title}</h2>
-						//		<div>
-						//			{post.admin_user.firstname} {post.admin_user.lastname}
-						//		</div> */
-
-						// </a>
-						// </Link>
-						<>
-						<div className="col-md-6 col-lg-4">
-						<CardDefault props={post} key={post.Slug}  />
-						</div>
-						</>
-					))}
-		</main>
+					<Heading content="Products" />
+					<ProductStore props={assets}/>
 					</Route>
-					<Route path="/login"></Route>
+					<Route path="/login">
+					<FormLogin/>
+					</Route>
 					<Route path="/about">
-						About
-						{/* <img class="rotate_03"  src="/turbine.svg" alt="wind turbine"></img> */}
-						<Carousel itemsToShow={3}>
-				{assets &&
-					assets.map((post) => (
-						console.log("hello post",post),
-						// <Link href={`/${post.Slug}`} key={post.Slug}>
-						// 	<a>
-						// 	<h2>{post.Title}</h2>
-						//		<div>
-						//			{post.admin_user.firstname} {post.admin_user.lastname}
-						//		</div> */
-
-						// </a>
-						// </Link>
-						<CardDefault props={post} key={post.Slug}/>
-					))}
-			</Carousel>
+					<Heading content="About" />
+					<AboutSection/>
 					</Route>
+					{assets &&
+					assets.map((post) => (
+						<Route path={`/${post.Slug}`} key={post.Slug}>
+							<Heading  key={post.Slug} content="Individual Products" />
+								<productPost></productPost>
+						</Route>
+					))}
+					<Route path="/admin">
+					<Heading content="Admin" />
+					<Dashboard/>
+					</Route>
+					<Route path="/admin/assets" exact>
+					<Heading content="" />
+					</Route>
+						<Route path="/admin/assets/add">
+						</Route>
 				</Switch>
 		</Router>
+		</div>
 	);
 };
 
-export async function getStaticProps() {
-	// get assets from our api
-	const res = await fetch("http://localhost:1339/assets");
-	const assets = await res.json();
-//	console.log(assets);
-	return {
-		props: { assets },
-	};
-}
+
+
+export  async function getStaticProps() {
+	//	const res = await fetch(`http://localhost:1337/assets`);
+//		const data = await res.json();
+	const data=assetArr
+		return {
+			props: { assets: data },
+		};
+	}
+
 Index.propTypes = {
-	assets: PropTypes.arrayOf(PropTypes.string)
+	assets: PropTypes.objectOf(PropTypes.string),
+	assetArr: PropTypes.objectOf(PropTypes.string),
+	obj:PropTypes.objectOf(PropTypes.array),
+	post:PropTypes.arrayOf(PropTypes.string),
+	FormLogin:PropTypes.func
 };
 
 

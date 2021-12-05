@@ -1,0 +1,13 @@
+$yellow: #f2ca3e;
+
+.single-asset {
+  padding: 2px 16px!important;
+  background: #fff!important;
+  display: block;
+  margin: 20px 10px;
+  border-left: 8px solid #fff!important;
+}
+.single-asset:hover {
+  border-left: 8px solid $yellow!important;
+  color:$yellow;
+}
