@@ -1,10 +1,13 @@
-/** @format */
+/**
+ * @format
+ * @type {import('next').NextConfig}
+ */
 
-// next.config.js
-module.exports = {
-	// next.config.js
+const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ["localhost"],
-	}
+		domains: ["trashnothing.com"],
+	},
 };
+
+module.exports = nextConfig;
