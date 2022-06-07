@@ -5,13 +5,11 @@ import { Card, Box, Divider, CircularProgress } from "@mui/material";
 //import { API_URL } from "../utils/url";
 import { Grid } from "@mui/material";
 import Link from "next/link";
-import CartButton from "../../components/CartButton";
 import { InsertEmoticon } from "@mui/icons-material";
-import Header from "../../components/navigation/Header";
 
 export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 	const [isLoading, setIsLoading] = useState(true);
-
+    console.log("Recycle Post " , trash)
 	useEffect(() => {
 		if (trash) {
 			//	const { title, main_image, article_content, category } = trash;
@@ -26,7 +24,6 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 
 	return (
 		<>
-			<Header></Header>
 			{isLoading ? (
 				<Box className='container-circular-progress'>
 					<CircularProgress className='circular-progress' />
@@ -41,36 +38,30 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 								<div
 									className='img-responsive ratio-4-3'
 									style={{
-										background: `url(${trash?.thumbnail}) 50% 50% no-repeat`,
+										background: `url(${trash[0].photos[0]?.thumbnail}) 50% 50% no-repeat`,
 										backgroundSize: "cover",
 									}}></div>
 								<div className='thumbnail-group'>
-									{trash.screenshots
-										? trash.screenshots.map((item: object | any) => (
-												<div
-													key={item.id}
+									{trash[0].photos[0]
+										? <div
+													key={trash.post_id}
 													className='content-container img-thumbnail'
 													style={{
-														background: `url(${item.image}) 50% 50% no-repeat`,
+														background: `url(${trash[0].photos[0]?.thumbnail}) 50% 50% no-repeat`,
 													}}></div>
-										  ))
 										: null}
 								</div>
 							</Grid>
 							<Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
 								<div className='flex-box__container__id'>
 									<div className='flex-box__id'>
-										<h1 className='detail-h1'>{trash.title}</h1>
-										<CartButton
-											ID={parseInt(trash.id)}
-											key={trash.id}
-											className={"detail-btn"}></CartButton>
+										<h1 className='detail-h1'>{trash[0].title}</h1>
 									</div>
 								</div>
 								<div className='flex-box__container__id'>
 									<div className='flex-box__id'>
 										<h2 className='detail-price'>$19.99</h2>
-										<h2 className='detail-h2'>{trash.release_date}</h2>
+										<h2 className='detail-h2'>{trash[0].date}</h2>
 									</div>
 								</div>
 								<Divider
@@ -80,7 +71,7 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 									}}
 								/>
 								<Link href={`/browse?${trash.genre}`}>
-									<a className='category-link'>{trash.genre}</a>
+									<a className='category-link'>{trash[0].type}</a>
 								</Link>
 								<Divider
 									sx={{
@@ -91,7 +82,7 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 								<div
 									className='content-container'
 									color='#e52d27'
-									dangerouslySetInnerHTML={{ __html: `${trash.description}` }}
+									dangerouslySetInnerHTML={{ __html: `${trash[0].content}` }}
 								/>
 							</Grid>
 						</Grid>
@@ -106,7 +97,7 @@ export async function getStaticPaths() {
 	//	const res = await fetch(`http://localhost:1337/trashs`);
 	//	const trashs = await res.json();
 	const {news}=require("../api/news/data.json")
-	const paths = news.slice(0, 5).map((post) => ({
+	const paths = news.slice(0, 5).map((post: { id: any; }) => ({
 		params: { id: String(post.id) },
 	}));
 	return {
@@ -120,17 +111,11 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	let { id } = params;
 	console.log("Static id", id);
 	let idInt = parseInt(id);
-	const {news}=require("../api/news/data.json")
-	let trash = news.filter((post) => post.id == 1);
-	try {
 		const res = await fetch(`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`);
-		console.log("response", response);
-		news = await res.json();
-		trash =slice(0,1).news;
-	} catch (err) {
-		console.log(err);
-		trash = trash;
-	}
+	//	console.log("[id] response==>", res);
+		const news = await res.json();
+		const trash =news.posts.slice(0,1);
+	//	console.log("[id] trash==>", trash);
 
 	//	console.log("trash asset", asset);
 	return {

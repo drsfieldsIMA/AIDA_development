@@ -1,22 +1,24 @@
 import Image from "next/image";
-
-const ProductFeed=({news}) => {
+import Link from "next/link";
+const ProductFeed=({news}:{news:any}) => {
 	const trash=news.posts;
 console.log("product feed trash",trash)
 return (
 <div className='flow-flex-col'>
 <ol className="product-feed">
-{Object.values(trash).map((item): any => (
-    <li key={item.title} className="product-feed-item">
-        	{item.title ? <div className="top-arrow">
-			<Image src="/greenarrows-2.svg" alt='recycle-sign' width={360} height={120} /></div> :"nothing"}
-      	    <div className="feed-image">{item?.photos ?
-			<Image src={item.photos[0]?.thumbnail} alt={item.title} width={360} height={360} />
+    <li key={trash.title} className="product-feed-item">
+        	{trash.title ? <div className="product-feed-top-arrow">
+			<Image src="/greenarrows-2.svg" alt='recycle-sign' width={270} height={120} /></div> :"nothing"}
+      	    <div className="product-feed-image__container">{trash?.photos ?
+			<Image src={trash.photos[0]?.thumbnail} alt={trash.title} width={270} height={270} className="product-feed__image" />
 			:"no-photo"}</div>
-       <a key={item.id} href="/single" Parameter={item.id} className="btn-tertiary">Request</a>
-    </li>
-))
-}
+	   <Link
+		key={trash.name}
+		href={`/details/${parseInt(trash.post_id)}`}>
+	     <a className="btn-tertiary"> Details </a>
+		</Link>
+	
+	</li>
 </ol>
 </div>
 )};

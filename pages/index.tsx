@@ -1,7 +1,7 @@
 /** @format */
 
 import type { NextPage } from "next";
-import { useState } from "react";
+import { Key, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
@@ -20,15 +20,17 @@ import ResponsivePlayer from "../comps/ResponsivePlayer"
 import SplashCard from "comps/common/SplashCard";
 import { Footer } from "comps/Footer";
 import ProductFeed from "comps/common/ProductFeed";
+import ReviewSection from "comps/common/ReviewSection";
 
-const Home: NextPage = ({ news,trash }) => {
+
+const Home = ({ news,trash }:{news:any,trash:any}) => {
 	console.log("news==>", news);
 
 	const scienceNews = news;
 
 	// sort by value
 	console.log("Sciencenews", scienceNews);
-	scienceNews.sort(function (a, b) {
+	scienceNews.sort(function (a: { createdAt: string | number | Date; length: number; }, b: { createdAt: string | number | Date; length: number; }) {
 		const keyA = new Date(a.createdAt),
 			keyB = new Date(b.createdAt);
 
@@ -41,7 +43,7 @@ const Home: NextPage = ({ news,trash }) => {
 		return 0;
 	});
 
-	const headlineNews = news.filter((item) => item?.category === "news");
+	const headlineNews = news.filter((item: { category: string; }) => item?.category === "news");
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -50,28 +52,26 @@ const Home: NextPage = ({ news,trash }) => {
 			<Grid container px={0} marginLeft={0}>
 			<Grid  xs={12} sm={12}>
 			<div className="recycle-container">
-			<SplashCard/>
+			<SplashCard trash={trash}/>
 			</div> 
 			</Grid>
 			<Grid  xs={12} sm={12}>
 			<div className="recycle-container">
 			<h2> GreenCycle Infommercial</h2>
 			<ResponsivePlayer />;
+			<ReviewSection/>
 			</div>
 			</Grid>
 			</Grid>
 
-
-				<Grid container px={0} marginLeft={0}>
-					{scienceNews.map((item): any => (
-						<Grid key={item.id} item xs={12} sm={6} md={6} lg={6} xl={6}>
+			<div className="recycle-wrapper">
+					{scienceNews.map((item: { id: Key | null | undefined; }): any => (
 							<div className="recycle-container">
 							<h3> GreenCycle Statistics</h3>
 							 <RecycleCard key={item.id} card={item} /> 
 							 </div>
-						</Grid>
 					))}
-				</Grid>
+			</div>
 			</div>
 				<div className='col-aside'>
           <ProductFeed news={trash}></ProductFeed>

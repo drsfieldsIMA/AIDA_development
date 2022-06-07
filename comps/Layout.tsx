@@ -3,7 +3,15 @@ import Head from 'next/head'
 import { Header } from './navigation/Header'
 import PropTypes from "prop-types";
 
-export default function Layout({title,keywords,descrip,children}) {
+type QueryParams = {
+	title: string;
+	keywords: string;
+	descrip: string;
+	gsv: string;
+	children: any;
+};
+
+export default function Layout({title,keywords,descrip,children}:QueryParams) {
   return (
     <div>
       <Head>
@@ -19,19 +27,23 @@ export default function Layout({title,keywords,descrip,children}) {
   )
 }
 
-export function Heading({ color ,size = "1", content }) {
-	const VariableHeading = `h${size}`;
+export function Heading({ color ,size = "1", content }:{color:string,size:string,content:string}) {
+	const VariableHeading: string | any = `h${size}`;
 	return<VariableHeading  style={{ color }} >{content}</VariableHeading>;
 		}
 
-Heading.propTypes = {
-	size: PropTypes.string,
-	content: PropTypes.string.isRequired,
-	color:PropTypes.string
-};
-
-Layout.defaultProps={
-  title:" Greencycle | Going Green Goes Local ",
-  descrip:"",
-  keywords:""
-}
+    Heading.propTypes = {
+      size: PropTypes.string,
+      content: PropTypes.string.isRequired,
+      color: PropTypes.string,
+      classNameString: PropTypes.string,
+      VariableHeading: PropTypes.node,
+      articles: PropTypes.any,
+    };
+    
+    Layout.defaultProps = {
+      title: " Greencycle | Recycle Upcycle Repurpose  ",
+      descrip: "",
+      keywords: " ",
+      gsv: "wenrVQYITXvXIH9sNnSmiBaOZ941XPPzAvnupQrq6RQ",
+    };

@@ -14,23 +14,31 @@ import Link from 'next/link';
 import { Heading } from 'comps/Layout';
 import Image from 'next/image';
 
-const SplashCard=(props) => {
-  console.log("props==> Recycle",props)
-  const card = props.card;
+type QueryParams={
+    trash:any
+}
+
+const SplashCard=({props}:QueryParams) => {
   return (
       <>
     <div  className="splash-card">
     <div className='col-1'>
         <div className="heading-block">
    <h1><span className="greentext">GreenCycle</span> Going <span className="greentext">Green</span> Goes <span className="local">Local</span></h1>
-         <p>The Greencycle community are here to safeguard and contribute to stewarding the aerths resources
-             we ask that you contribute as much as you take
+         <div className="splash-text-container">
+         <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earths resources
+             we ask that you contribute as much as you take from her.
          </p>
          </div>
+         </div>
          <div className="btn-block">
-     <a href="/offers" className="btn-primary">Offer</a> 
-     <a href="/search" className="btn-primary" style={{backgroundColor:"#4EAE3C!important"}}>Request</a> 
-         </div> 
+     <Link href="/offers">
+     <a  className="btn-primary">Offer</a> 
+     </Link>
+     <Link href="/search">
+     <a  className="btn-primary" style={{backgroundColor:"#4EAE3C!important"}}>Request</a> 
+     </Link>
+        </div> 
    </div>
    <div className='col-2'>
    <Image src='/marker.svg' alt='earth' width={180} height={180} />

@@ -12,16 +12,20 @@ import ButtonLink from "./ButtonLink"
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 
-const RecycleCard=(props) => {
-  console.log("props==> Recycle",props.card.image)
-  const card = props.card;
+type QueryParams = {
+	card:any;
+};
+
+const RecycleCard=({card}:QueryParams) => {
+  console.log("props==> Recycle",card.image)
+  const trash = card;
   return (
-		<Card className="Recycle-card" sx={{ width: "100%", height:400, marginLeft:0, backgroundColor:card.backgroundColor  }}>	
+		<Card className="Recycle-card" sx={{ width: "100%", height:400, marginLeft:0, backgroundColor:trash.backgroundColor  }}>	
 			<CardContent>
-			<div className= "hero"  style={{backgroundImage:`url("${card.image}")`, backgroundPosition:`center center` , backgroundSize:"fill" }}></div>
-			      <Typography variant="h1" color={`${card.color}`} className="std-size__font">
-                    {card.content}
-				  </Typography>
+			<div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`center center` , backgroundSize:"fill" }}></div>
+			      <div className="desc-review">
+                    {trash.content}
+				  </div>
 			</CardContent>
 		</Card>
 	);

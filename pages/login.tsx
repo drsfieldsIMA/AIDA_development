@@ -1,7 +1,7 @@
 
   /** @format */
 
-  import { useState, useContext } from "react";
+  import { useState, useContext, ReactEventHandler } from "react";
   import { useForm } from "react-hook-form";
   import Head from 'next/head';
   import * as yup from "yup";
@@ -45,7 +45,7 @@
   //const {user, login, logout}=useAuth()
     const nameRegex = /\S/;
   
-    const validateName = (event) => {
+    const validateName = (event:any) => {
       const name = event.target.value;
       if (nameRegex.test(name) && name.length > 4) {
         setIsValid(true);
@@ -61,7 +61,7 @@
   
     const passwordRegex = /\S/;
   
-    const validatePassword = (event) => {
+    const validatePassword = (event:any) => {
       const pass = event.target.value;
       if (passwordRegex.test(pass) && pass.length > 2) {
         setIsValidPassword(true);
@@ -72,7 +72,7 @@
       }
     };
   
-    async function onSubmit(data) {
+    async function onSubmit(data:any) {
       console.log(" data ", data)
       setSubmitting(true);
       setLoginError(null);
@@ -116,7 +116,7 @@
       //		AuthProvider(response.data)
       //		history.push("/dashboard");
       } catch (error) {
-        setLoginError(error.toString());
+      //  setLoginError(error.toString());
       } finally {
       setTimeout(() => {
           router.push("/admin/articles/add");
@@ -163,10 +163,8 @@
         <fieldset disabled={submitting}>
           <div>
             <input
-              name="username"
               placeholder="username"
               className="formInput"
-              onChange={validateName}
               type="text"
               {...register('username')}
             />
@@ -179,7 +177,6 @@
   
           <div>
             <input
-              name="password"
               placeholder="password"
               {...register('password')}
               onChange={validatePassword}

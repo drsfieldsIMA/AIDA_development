@@ -11,7 +11,7 @@ import ReactSelect from "react-select";
 import { Router } from 'react-router';
 
 const schema = yup.object().shape({
-	title: yup.string().required("Title is required"),
+	email: yup.string().required("email is required"),
   content:yup.string().required("Description is required"),
 	category:yup.string().required("Category is required"),
 });
@@ -34,20 +34,30 @@ export default function NewsletterForm({props}:any) {
 		);
 	}
 
+    const EmailRegex = /\S/;
+
+	const handleEmail = (event: React.ChangeEvent<any>) => {
+		const email = event.target.value;
+		if (EmailRegex.test(email) && email.length > 4) {
+			setIsValid(true);
+			setMessage("Your Email looks good");
+		} else {
+			setIsValid(false);
+			setMessage("Please enter a Email with more than 3 characters!");
+		}
+	};
+
 	async function onSubmit(data: object | any) {
 		const registrationArray = JSON.parse(registration);
 		setSubmitting(true);
 		setIsValid(false);
 		try {
-			let check = duplicatedPassword(data, registrationArray);
+			let check=true
 			if (check) {
 				setIsValid(true);
 				setIsLoginValid(true);
 				setFocusMessage("You will now log in in 2 seconds");
 				setMessage("");
-				setTimeout(() => {
-					router.push("/browse");
-				}, 500);
 			} else {
 				let errorText =
 					`backend error message is \n` +
@@ -90,11 +100,9 @@ return (
 						<Grid container  className="form__fieldset__grid"  rowSpacing={7} columnSpacing={{ xs: 1, sm: 1, md: 2, lg:3 }} marginTop={{xs:1, sm:2,md:3}}>
 						<Grid   item  xs={12} md={12}>
 				
-				    	<label>Title</label>
-					 	   <Input {...register('title', { required: true })} placeholder="Title e.g. local author publishes to a worldwi....." className="formInput" name="title" onChange={handleTitle}   />
+				    	<label>Email</label>
+					 	   <Input {...register('email', { required: true })} placeholder="email e.g. local author publishes to a worldwi....." className="formInput" name="email" onChange={handleEmail}   />
 						
-						   <label>Content</label>
-						   <textarea {...register('content', { required: true })}  placeholder="Content e.g. This local author has secured a publisher....." className="formInput__content"  style={{width:500,height:90}} name="description" onChange={handleContent} />
 								</Grid>
 								</Grid>
 

@@ -1,4 +1,6 @@
 /** @format */
+// 👇️ ts-nocheck ignores all ts errors in the file
+// @ts-nocheck
 
 import type { NextPage } from "next";
 import { useState } from "react";
@@ -15,7 +17,11 @@ import { useQuery } from "react-query";
 import theme from "./theme/theme";
 
 
-const offers: NextPage = ({ news }) => {
+type QueryParams={
+	item:unknown
+}
+
+const offers: NextPage = ({ news }:any) => {
 
 	// const sportNews = news.filter((item) => item?.category === "sport");
 	// const scienceNews = news.filter(
@@ -44,9 +50,6 @@ const offers: NextPage = ({ news }) => {
     
     console.log(" offers news ", news.posts)
 	const trash=news.posts;
-    {Object.keys(news).map((item): any => (
-        item.photos ? console.log("photos",item.photos):console.log("no photos")   
-    ))}
 
 
 	return (
@@ -55,8 +58,8 @@ const offers: NextPage = ({ news }) => {
 					
 					<ol>
 					<Grid container px={0} marginLeft={0}>
-					 {Object.values(trash).map((item): any => (
-					<li className="pic-links col-50" key={item.id}>
+					 {Object.values(trash).map((item): unknown => (
+					<li className="pic-links col-50" key={item.post_id}>
 					 <div className="feed-image__container">
 					 <div className="feed-image__wrapper">
 					 {item.title ? <div className="top-arrow">

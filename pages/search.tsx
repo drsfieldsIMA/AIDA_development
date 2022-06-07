@@ -1,3 +1,6 @@
+// 👇️ ts-nocheck ignores all ts errors in the file
+// @ts-nocheck
+
 import type { NextPage } from 'next'
 import {useState} from 'react'
 import Head from 'next/head'

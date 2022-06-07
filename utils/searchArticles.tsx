@@ -1,3 +1,6 @@
+// 👇️ ts-nocheck ignores all ts errors in the file
+// @ts-nocheck
+
 import { ALL_ARTICLE_ENTRIES } from "../constants/articleEntries";
 
 const searchArticles = (query: string): Promise<string[]> => {
