@@ -12,7 +12,7 @@ import ButtonLink from "./ButtonLink"
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 
-const NewsCard=(props) => {
+const NewsCard=({props}:{props:any})=> {
   console.log("props==>",props)
   const card = props.card;
 
@@ -36,12 +36,11 @@ const NewsCard=(props) => {
 				</Typography>
 				</Grid>
 				<Grid key={card.id} item xs={6} sm={7} md={9}>
-				<ButtonLink href={`/${card.user_id}`} label={`${card.user_id}`} className={"btn-secondary"} > </ButtonLink> 
 				</Grid>
 				<Grid key={card.id} item xs={12} sm={4} md={3}>
               </Grid>
 				<Grid key={card.id} item xs={12} sm={8}  md={9}>
-				<Typography variant="p" color="text.primary" className="std-size__font">
+				<Typography variant="body1" color="text.primary" className="std-size__font">
                      {card.content}
 				</Typography>
 				</Grid>

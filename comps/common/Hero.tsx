@@ -1,9 +1,8 @@
 import Typography from "@mui/material/Typography";
 
-const Hero=({props}:{props:any}) =>{
-  console.log("props final==>",props)
+const Hero=({title,imageSrc,bgColor,bgSize}:{title:string,imageSrc:string,bgColor:string,bgSize:string}) =>{
   return(
-  <div className= "hero"  style={{backgroundImage:`url("${props.imageSrc}")`, backgroundPosition:`no-repeat center center`,backgroundRepeat:`${props.bgRepeat}` ,backgroundSize:`${props.bgSize}`}}>
+  <div className= "hero"  style={{backgroundImage:`url("${imageSrc}")`, backgroundPosition:`no-repeat center center`,backgroundRepeat:`none` ,backgroundSize:`${bgSize}`}}>
    </div>
 )
 }

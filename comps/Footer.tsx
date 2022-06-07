@@ -7,7 +7,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import PropTypes from "prop-types";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import useDeviceSize from "./DeviceSize";
 import Link from "next/link";
 
 export const Footer = () => {

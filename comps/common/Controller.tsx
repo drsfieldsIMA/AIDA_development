@@ -31,9 +31,9 @@ export default function Controller() {
 
   return (
     <div className="App">
-      <h3>Select Toppings</h3>
+      <h3>Select Category</h3>
       <ul className="toppings-list">
-        {toppings.map(({ name, id }, index) => {
+        {toppings.map(({ name}, index) => {
           return (
             <li key={index}>
               <div className="toppings-list-item">
