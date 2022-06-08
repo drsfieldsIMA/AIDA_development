@@ -72,10 +72,13 @@ const Home = ({ news,trash }:{news:any,trash:any}) => {
 							 </div>
 					))}
 			</div>
+			<div className="plenary-bkg">
+   </div>
 			</div>
 				<div className='col-aside'>
           <ProductFeed news={trash}></ProductFeed>
    </div>
+   
 			</main>
 		</ThemeProvider>
 	);

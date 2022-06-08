@@ -88,9 +88,9 @@ const Search: NextPage = ({news}) => {
 
   return (
     <div className="home">
+      <div className="col-25">
       <h1>Search by keywowrds Select Categories or Authors </h1>
       <pre>{JSON.stringify(selected)}</pre>
-      <h1>Search Some Good News</h1>
 {/*     <input
         type="text"
         onChange={({ target: { value } }) => {setSearchValue(value)
@@ -100,14 +100,12 @@ const Search: NextPage = ({news}) => {
       />
       {renderResult()} */}
      <pre>{JSON.stringify(selected)}</pre>
-      <MultiSelect
-        options={options}
-        value={selected}
-        onChange={handleChange}
-        labelledBy={"Select"}
-      />
       <Controller></Controller>
+    </div>
+    <div className='col-75'>
+    <h1>Search Results</h1>
       {renderResult()}
+    </div>
     </div>
   )
 }
