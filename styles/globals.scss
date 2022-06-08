@@ -58,7 +58,20 @@ h4 {
 	font-family: "protipo", sans-serif !important;
 }
 
-
+.col-main{
+	display: block;
+	float: left;
+	max-width: 100%;
+	min-width: 100%;
+	margin: 0 auto;
+}
+.col-aside{
+	display: block;
+	float: right;
+	max-width:100%;
+	min-width:100%;
+	margin: 0 auto;
+}
 
 .std-size__font {
 	font-size: $font-size-xs;
@@ -82,7 +95,9 @@ h4 {
 	}
 }
 
-@media only screen and (max-width: $breakpoint_lg) {
+@media only screen and (max-width: $breakpoint_md) {
+}
+@media only screen and (min-width: $breakpoint_lg) {
 	html,
 	body {
 		font-size: $font-size-lg;
@@ -90,6 +105,18 @@ h4 {
 
 	.std-size__font {
 		font-size: $font-size-lg;
+	}
+	.col-main{
+		display: block;
+		float: left;
+		max-width: 86%;
+		min-width: 86%;
+	}
+	.col-aside{
+		display: block;
+		float: right;
+		max-width: 14%;
+		min-width:14%;
 	}
 }
 
@@ -219,19 +246,6 @@ a {
 	min-width: 28%;
 }
 
-.col-main{
-	display: block;
-	float: left;
-	max-width: 84%;
-	min-width: 84%;
-}
-.col-aside{
-	display: block;
-	float: right;
-	max-width: 15%;
-	min-width:15%;
-}
-
 
 .col-50{
 	display: block;
@@ -297,7 +311,7 @@ a {
 
 .btn-block{
 	display:flex;
-	flex-direction:row;
+	flex-direction:column;
 	max-width: 20%;
 	min-width: 20%;
 	margin-top: 4rem;
@@ -310,7 +324,7 @@ a {
 	flex-direction:column;
     justify-items: center;
 	h1{
-	font-size: 4.4em!important;
+	font-size: 3em!important;
 	background-color: $secondary_green;
 	color: #fff;
 	}
@@ -797,7 +811,7 @@ main {
 }
 
 .btn-primary {
-	font-size: 39px;
+	font-size: 22px;
 	background-color: $blue;
 	border: #001d3b 2px solid;
 	border-radius: 5px;
@@ -1157,4 +1171,18 @@ input[type="text"]:focus {
 	.items__link::after {
 		display: none;
 	}
+}
+@media screen and (min-width: $breakpoint_md) {
+.col-main{
+	display: block;
+	float: left;
+	max-width: 86%;
+	min-width: 86%;
+}
+.col-aside{
+	display: block;
+	float: right;
+	max-width: 14%;
+	min-width:14%;
+}
 }
