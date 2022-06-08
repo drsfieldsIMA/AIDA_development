@@ -17,8 +17,8 @@ import Image from 'next/image';
 type QueryParams={
     trash:any
 }
-
-const SplashCard=({props}:QueryParams) => {
+/* eslint-disable-next-line */
+const SplashCard=({trash}:QueryParams) => {
   return (
       <>
     <div  className="splash-card">

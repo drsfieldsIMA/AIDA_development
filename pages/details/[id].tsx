@@ -9,7 +9,7 @@ import { InsertEmoticon } from "@mui/icons-material";
 
 export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 	const [isLoading, setIsLoading] = useState(true);
-    console.log("Recycle Post " , trash)
+    console.log("Recycle trash Post" , trash)
 	useEffect(() => {
 		if (trash) {
 			//	const { title, main_image, article_content, category } = trash;
@@ -44,7 +44,7 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 								<div className='thumbnail-group'>
 									{trash[0].photos[0]
 										? <div
-													key={trash.post_id}
+													key={trash[0].post_id}
 													className='content-container img-thumbnail'
 													style={{
 														background: `url(${trash[0].photos[0]?.thumbnail}) 50% 50% no-repeat`,
@@ -70,7 +70,7 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 										my: 3,
 									}}
 								/>
-								<Link href={`/browse?${trash.genre}`}>
+								<Link href={`/browse?${trash[0].genre}`}>
 									<a className='category-link'>{trash[0].type}</a>
 								</Link>
 								<Divider

@@ -1,5 +1,5 @@
 /** @format */
-
+/* eslint-disable */
 import type { NextPage } from "next";
 import { Key, useState } from "react";
 import Head from "next/head";
@@ -13,7 +13,7 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import { API_URL, API_MONGOOSE_URL } from "../comps/config";
 import { useQuery } from "react-query";
-import theme from "./theme/theme";
+import theme from "../comps/common/theme/theme";
 import { ThemeProvider } from "@material-ui/core";
 import news from "../pages/api/news"
 import ResponsivePlayer from "../comps/ResponsivePlayer"
@@ -24,8 +24,8 @@ import ReviewSection from "comps/common/ReviewSection";
 
 
 const Home = ({ news,trash }:{news:any,trash:any}) => {
-	console.log("news==>", news);
-
+	console.log("index news==>", news);
+    console.log("index trash==>", trash);
 	const scienceNews = news;
 
 	// sort by value
@@ -65,10 +65,10 @@ const Home = ({ news,trash }:{news:any,trash:any}) => {
 			</Grid>
 
 			<div className="recycle-wrapper">
-					{scienceNews.map((item: { id: Key | null | undefined; }): any => (
-							<div className="recycle-container">
+					{scienceNews.map((item: { post_id: Key | null | undefined; }): any => (
+							<div key={item.post_id} className="recycle-container">
 							<h3> GreenCycle Statistics</h3>
-							 <RecycleCard key={item.id} card={item} /> 
+							 <RecycleCard key={item.post_id} card={item} /> 
 							 </div>
 					))}
 			</div>
@@ -77,10 +77,6 @@ const Home = ({ news,trash }:{news:any,trash:any}) => {
           <ProductFeed news={trash}></ProductFeed>
    </div>
 			</main>
-         <Footer>
-
-
-		 </Footer>
 		</ThemeProvider>
 	);
 };

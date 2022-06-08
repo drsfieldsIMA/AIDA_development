@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Header } from './navigation/Header'
 import PropTypes from "prop-types";
+import { Footer } from "./Footer";
 
 type QueryParams = {
 	title: string;
@@ -23,6 +24,10 @@ export default function Layout({title,keywords,descrip,children}:QueryParams) {
         <div className="container">
       {children}        
       </div>
+      <Footer>
+
+
+      </Footer>
     </div>
   )
 }
