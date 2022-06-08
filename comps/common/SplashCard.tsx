@@ -41,9 +41,9 @@ const SplashCard=({trash}:QueryParams) => {
         </div> 
    </div>
    <div className='col-2'>
-   <Image src='/marker.svg' alt='earth' width={180} height={180} />
+   <Image src='/marker.svg' alt='earth' width={120} height={120} />
    <div className="splash-image" >
-   <Image src='/globe.svg' alt='earth' width={360} height={360} />
+   <Image src='/globe.svg' alt='earth' width={340} height={340} />
    </div>
    </div>
    </div>
