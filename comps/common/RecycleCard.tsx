@@ -20,7 +20,7 @@ const RecycleCard=({card}:QueryParams) => {
   console.log("props==> Recycle",card.image)
   const trash = card;
   return (
-		<Card className="Recycle-card" sx={{ width: "100%", height:400, marginLeft:0, backgroundColor:trash.backgroundColor  }}>	
+		<Card className="Recycle-card" sx={{ width: "100%", height:500, marginLeft:0, backgroundColor:trash.backgroundColor  }}>	
 			<CardContent>
 			<div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`center center` , backgroundSize:"fill" }}></div>
 			      <div className="desc-review">

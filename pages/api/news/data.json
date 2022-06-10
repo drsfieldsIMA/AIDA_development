@@ -7,7 +7,7 @@
       "date": "June 09, 2021",
       "time": "10:00 PM EST",
       "content": "We aim to save 300 metric tonnes per year in landfill. We also hope you find something that saves you cash in your back pocket.",
-      "image": "/globe.svg",
+      "image": "/images/graphs.svg",
       "color":"#4EAE3C",
       "category":"sport",
       "author":"rowling"
@@ -18,9 +18,9 @@
       "slug": "ferran-orres-hat-trick-sees-manchester-city-hold-off-newcastle-united",
       "date": "June 2, 2021",
       "time": "8:00 PM EST",
-      "content":"We have over 30000 users that provide and take off you hands 2nd hand products and services.",
+      "content":"We have over 3000 users that can take or provide second hand products off your hands.",
       "color":"#4C7041",
-      "image": "/marker.svg",
+      "image": "/globe-13351.png",
       "category":"sport",
       "author":"rowling"
     },
@@ -31,7 +31,7 @@
       "date": "June 11, 2021",
       "time": "7:00 PM EST",
       "content": "Take a look at our easy to navigate categories from furniture, phones/electricals, metals, training equipment,clothes/textiles and other ",
-      "image": "/greencycle.svg",
+      "image": "/images/categories.svg",
       "color":"#497EC0",
       "category":"science", 
       "author":"rowling"
@@ -43,8 +43,8 @@
       "slug": "england-pacer-harry-gurney-retires",
       "date": "June 11, 2021",
       "time": "7:00 PM EST",
-      "content": "England seamer and former Kolkata Knight Riders pacer Harry Gurney announced his retirement from cricket after taking 614 all-format wickets during his career in the professional game. The Nottinghamshire pacer bowed out as a result of the shoulder injury that saw him miss the club's 2020 T20 Blast campaign. The time has arrived for me to hang up my boots. After trying to recover from the recent injury to my shoulder, I am truly disappointed to have to end my playing career as a result of it, Gurney captioned a post on Instagram to announce his retirement.",
-      "image": "/logo-3.svg",
+      "content": "We have over 90 locations all over the planet.",
+      "image": "/images/locations.svg",
       "color":"#bfa65a",
       "category":"science", 
       "author":"rowling"

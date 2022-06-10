@@ -159,9 +159,10 @@
         <div className={`message ${loginisValid ? "success" : "error"}`}>
           {focusLoginMessage}
         </div>
-        
+        <h2>In order to make an offer on greencycle either create an Account or Sign in.</h2>
         <fieldset disabled={submitting}>
           <div>
+            <label>Username</label>
             <input
               placeholder="username"
               className="formInput"
@@ -176,6 +177,7 @@
           </div>
   
           <div>
+          <label>Password</label>
             <input
               placeholder="password"
               {...register('password')}

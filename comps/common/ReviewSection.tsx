@@ -6,8 +6,8 @@ const ReviewSection=() => {
     return (
 <div className="rev-section">
 
-<h2 className="title">Our Guests Love Us</h2>
-<p className="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil laboriosam possimus perferendis non error neque.</p>
+<h2 className="title">Our Users Love Us</h2>
+<p className="note">Over 3000 users from 50 locations use GreenCycle and keep us recycleing</p>
 
 <div className="reviews">
 
@@ -25,7 +25,7 @@ const ReviewSection=() => {
          <i className="fas fa-star"></i>
          <i className="fas fa-star-half"></i>
       </div>
-      <div className="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+      <div className="desc-review">I use the product all the time.</div>
    </div>
 </div>
 <div className="review">
@@ -42,7 +42,7 @@ const ReviewSection=() => {
          <i className="fas fa-star"></i>
          <i className="fas fa-star"></i>
       </div>
-      <div className="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+      <div className="desc-review">Found new loving homes for everything in my loft.</div>
    </div>
 </div>
 <div className="review">
@@ -59,7 +59,7 @@ const ReviewSection=() => {
          <i className="fas fa-star"></i>
          <i className="fas fa-star-half"></i>
       </div>
-      <div className="desc-review">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati eligendi suscipit illum officia ex eos.</div>
+      <div className="desc-review">Managed to kit out my workshop at minimum expense.</div>
    </div>
 </div>
 

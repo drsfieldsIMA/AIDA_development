@@ -23,33 +23,32 @@ const SplashCard=({trash}:QueryParams) => {
       <>
     <div  className="splash-card">
     <div className='col-2'>
-   {/* <Image src='/marker.svg' alt='earth' width={120} height={120} /> */}
    <div className="splash-image" >
-   <Image src='/globe.svg' alt='earth'  className='earth-img' layout="fill" />
+   <Image src='/globe-13351.png' alt='earth'  className='earth-img' layout="fill" />
    </div>
    </div>
     <div className='col-1'>
         <div className="heading-block">
    <h1><span className="greentext">GreenCycle</span><span className="local"> Going Green Goes Local</span></h1>
          <div className="splash-text-container">
-         <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earths resources
-             we ask that you contribute as much as you take from her.
+         <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earth's resources.
+             We ask that you contribute as much as you take.
          </p>
          </div>
          </div>
          <div className="btn-block">
      <Link href="/offers">
-     <a  className="btn-primary">Offer</a> 
+     <a  className="btn-primary"> Current Offers</a> 
      </Link>
-     <Link href="/search">
-     <a  className="btn-primary" style={{backgroundColor:"#4EAE3C!important"}}>Request</a> 
+     <Link href="/login">
+     <a  className="btn-primary" style={{backgroundColor:"#4EAE3C!important"}}>Make an offer</a> 
      </Link>
         </div> 
    </div>
    </div>
    <div className='post-title-block'>
    <div className="email-block">
-      <h3>Newsletter</h3>
+      <h3>Newsletter:enter email address to recieve newsletter</h3>
       <input type="email" placeholder='joebloggs@domain.co.uk' className='email-newsletter'></input>
   </div>
   </div>

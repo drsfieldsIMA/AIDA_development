@@ -108,6 +108,11 @@ h4 {
 	font-size: $font-size-xs;
 }
 
+
+.span-search{
+	color: $blue;
+}
+
 .btn-primary {
 	font-size: 25px;
     background-color: #497EC0;
@@ -998,7 +1003,7 @@ main {
 	overflow: hidden;
 	min-width: 94% !important;
 	max-width: 100% !important;
-	height: auto !important;
+	height: 300px !important;
 	margin-left: 0px;
 	margin-bottom: 50px !important;
 	background-color: $background-main;
