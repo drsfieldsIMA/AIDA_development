@@ -23,9 +23,9 @@ const RecycleCard=({card}:QueryParams) => {
 		<Card className="Recycle-card" sx={{ width: "100%", height:500, marginLeft:0, backgroundColor:trash.backgroundColor  }}>	
 			<CardContent>
 			{ card.image==="/globe-13351.png" ?
-		       	<div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`top center` , backgroundSize:"cover" }}></div>
+		       	<div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`top center` , backgroundSize:"cover!important" }}></div>
 				   :
-				   <div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`center center` , backgroundSize:"fill", backgroundRepeat:"no-repeat" }}></div>}
+				   <div className= "hero"  style={{backgroundImage:`url("${trash.image}")`, backgroundPosition:`center center` , backgroundSize:"fill!important", backgroundRepeat:"no-repeat!important" }}></div>}
 			      <div className="desc-review">
                     {trash.content}
 				  </div>
