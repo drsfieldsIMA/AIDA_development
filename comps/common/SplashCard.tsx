@@ -31,7 +31,7 @@ const SplashCard=({trash}:QueryParams) => {
         <div className="heading-block">
    <h1><span className="greentext">GreenCycle</span><span className="local"> Going Green Goes Local</span></h1>
          <div className="splash-text-container">
-         <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earth's resources.
+         <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earth``s resources.
              We ask that you contribute as much as you take.
          </p>
          </div>

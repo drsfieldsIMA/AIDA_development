@@ -73,7 +73,7 @@ const offers: NextPage = ({ news }:any) => {
 							<h3>{item.title}</h3>
 							<p className="feed-content">{item.content}</p>
                       <div className="feed-button">
-							<a href="/single" id-item={item.id} className="btn-secondary">REQUEST</a>
+							<a href={`/details/${parseInt(item.post_id)}`} className="btn-secondary">REQUEST</a>
 					  </div>
 					  </div>
 					</li>
