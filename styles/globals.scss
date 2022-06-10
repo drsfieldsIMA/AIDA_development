@@ -89,6 +89,21 @@ h4 {
 }
 
 
+
+.col-1{
+	display: block;
+	float: right;
+	max-width: 100%;
+	min-width: 100%;
+}
+.col-2{
+	display: block;
+	position: relative;
+	float: left;
+	max-width: 100%;
+	min-width: 100%;
+}
+
 .std-size__font {
 	font-size: $font-size-xs;
 }
@@ -129,6 +144,8 @@ img {
 	html,
 	body {
 		font-size: $font-size-md;
+		overflow-x: hidden;
+        overflow-y: scroll;
 	}
 
 	.std-size__font {
@@ -149,6 +166,8 @@ img {
 	html,
 	body {
 		font-size: $font-size-lg;
+		overflow-x: hidden;
+        overflow-y: scroll;
 	}
 
 	.std-size__font {
@@ -179,6 +198,27 @@ img {
 		float: right;
 		max-width: 75%;
 		min-width: 75%;
+	}
+
+	.col-1{
+		display: block;
+		float: right;
+		max-width: 62%;
+		min-width: 62%;
+	}
+	.col-2{
+		display: block;
+		position: relative;
+		float: left;
+		max-width: 28%;
+		min-width: 28%;
+	}
+	
+	
+	.col-50{
+		display: block;
+		max-width: 50%;
+		min-width: 50%;
 	}
 
 	.btn-primary {
@@ -316,24 +356,7 @@ a {
 * {
 	box-sizing: border-box;
 }
-.col-1{
-	display: block;
-	float: left;
-	max-width: 62%;
-	min-width: 62%;
-}
-.col-2{
-	display: block;
-	max-width: 28%;
-	min-width: 28%;
-}
 
-
-.col-50{
-	display: block;
-	max-width: 50%;
-	min-width: 50%;
-}
 .greentext{
 	font-size: 1.05em;
 	color: #E1EABE;
@@ -361,13 +384,20 @@ a {
 	background-color: $cream;
 	font-size: 22px;
 }
-.splash-image{
-	display: block;
-	margin-top: 0.5rem!important;
-	max-width: 25%!important;
-	min-width: 380px!important;
-	height: auto;
-}
+.splash-image {
+	width: 100%;
+	height: fit-content;
+	> div {
+	  position: unset !important;
+	}
+  
+	.earth-img {
+	  object-fit: contain;
+	  width: 100% !important;
+	  position: relative !important;
+	  height: unset !important;
+	}
+  }
 
 .marker-image{
 	display: inline-flex;

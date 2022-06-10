@@ -22,9 +22,15 @@ const SplashCard=({trash}:QueryParams) => {
   return (
       <>
     <div  className="splash-card">
+    <div className='col-2'>
+   {/* <Image src='/marker.svg' alt='earth' width={120} height={120} /> */}
+   <div className="splash-image" >
+   <Image src='/globe.svg' alt='earth'  className='earth-img' layout="fill" />
+   </div>
+   </div>
     <div className='col-1'>
         <div className="heading-block">
-   <h1><span className="greentext">GreenCycle</span> Going <span className="greentext">Green</span> Goes <span className="local">Local</span></h1>
+   <h1><span className="greentext">GreenCycle</span><span className="local"> Going Green Goes Local</span></h1>
          <div className="splash-text-container">
          <p className='splash-text'>The Greencycle community are here to safeguard and contribute to stewarding the Earths resources
              we ask that you contribute as much as you take from her.
@@ -39,12 +45,6 @@ const SplashCard=({trash}:QueryParams) => {
      <a  className="btn-primary" style={{backgroundColor:"#4EAE3C!important"}}>Request</a> 
      </Link>
         </div> 
-   </div>
-   <div className='col-2'>
-   <Image src='/marker.svg' alt='earth' width={120} height={120} />
-   <div className="splash-image" >
-   <Image src='/globe.svg' alt='earth' width={340} height={340} />
-   </div>
    </div>
    </div>
    <div className='post-title-block'>

@@ -45,6 +45,7 @@ export const Header = () => {
 			<div className='logo'></div>
 			<div className='tagline'>
 					<div className='f-box'>
+						Search
 						<input
 							className='header-input'
 							onChange={(e:any) => setInputValue(e.target.value)}></input>
