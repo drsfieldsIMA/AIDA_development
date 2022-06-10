@@ -159,10 +159,10 @@
         <div className={`message ${loginisValid ? "success" : "error"}`}>
           {focusLoginMessage}
         </div>
-        <h2>In order to make an offer on greencycle either create an Account or Sign in.</h2>
+        <h2>In order to make an offer on Greencycle either create an Account or Log in.</h2>
         <fieldset disabled={submitting}>
+        <label>Username</label>
           <div>
-            <label>Username</label>
             <input
               placeholder="username"
               className="formInput"
@@ -175,10 +175,10 @@
               {focusMessage}
             </div>
           </div>
-  
-          <div>
           <label>Password</label>
+          <div>
             <input
+              className="formInput"
               placeholder="password"
               {...register('password')}
               onChange={validatePassword}

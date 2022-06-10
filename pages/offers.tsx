@@ -62,10 +62,8 @@ const offers: NextPage = ({ news }:any) => {
 					<li className="pic-links col-50" key={item.post_id}>
 					 <div className="feed-image__container">
 					 <div className="feed-image__wrapper">
-					 {item.title ? <div className="top-arrow">
-						<Image src="/greenarrows-full.svg" alt='earth' width={360} height={120} /></div> :"nothing"}
 						<div className="feed-image">{item?.photos ?
-						<Image src={item.photos[0]?.thumbnail} alt='earth' width={360} height={360} />
+						<Image src={item.photos[0]?.thumbnail} alt={`${item.post_id}`} width={360} height={360} />
 						:"no-photo"}</div>
 					  </div>
 					  </div>

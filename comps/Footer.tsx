@@ -19,8 +19,8 @@ export const Footer = (props:any) => {
             <div className="foot-newsletter">
                 <h4>Sign up to the newsletter</h4>
                     <input type="email" placeholder='joebloggs@domain.co.uk' className='email-footer'></input>
-                    <input type="gender" placeholder='Female' className='gender-footer'></input>
-                    <input type="age" placeholder='20' className='age-footer'></input>
+                    <input type="gender" placeholder='Male/Female' className='gender-footer'></input>
+                    <input type="age" placeholder='Age' className='age-footer'></input>
             </div>
             </div>
             <div className="foot-col-2">

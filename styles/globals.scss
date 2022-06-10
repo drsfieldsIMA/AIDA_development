@@ -363,6 +363,7 @@ a {
 }
 
 .greentext{
+	margin-left: 0.85em;
 	font-size: 1.25em;
 	color: #E1EABE;
 	font-weight: 700;
@@ -1118,7 +1119,7 @@ input{
 	font-size: 18px;
 }
 
-input[type="text"] {
+input[type="text"],input[type="password"]  {
 	padding: 5px 12px;
 	font-size: 1.25em;
 	min-width: 73% !important;
@@ -1139,8 +1140,8 @@ input[type="text"] {
 
 .email-newsletter{
 	margin-left: 10px;
-	min-width: 73% !important;
-	max-width: 700px;
+	min-width: 66% !important;
+    max-width: 600px;
 	border: 1px solid $dark_green;
 	border-radius: 7px;
 	display: block;
@@ -1148,6 +1149,7 @@ input[type="text"] {
 	font-size: 14px;
 	background: #E1EABE;
 	padding: 14px 20px;
+	margin: 25px;
 }
 
 .form-label {

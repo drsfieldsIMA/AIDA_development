@@ -7,10 +7,9 @@ console.log("product feed trash",trash)
 return (
 <div className='flow-flex-col'>
 <ol className="product-feed">
+	<h2>Current Offers</h2>
 {Object.values(trash).map((item:any,index:any) => (
     <li key={item.title} className="product-feed-item">
-        	{item.title ? <div className="product-feed-top-arrow">
-			<Image src="/greenarrows-2.svg" alt='recycle-sign' width={270} height={120} /></div> :"nothing"}
       	    <div className="product-feed-image__container">{item?.photos ?
 			<Image src={item.photos[0]?.thumbnail} alt={item.title} width={270} height={270} className="product-feed__image" />
 			:"no-photo"}</div>

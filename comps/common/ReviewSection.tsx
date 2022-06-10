@@ -7,7 +7,7 @@ const ReviewSection=() => {
 <div className="rev-section">
 
 <h2 className="title">Our Users Love Us</h2>
-<p className="note">Over 3000 users from 50 locations use GreenCycle and keep us recycleing</p>
+<p className="note">Over 3000 users from 60 locations use GreenCycle and keep us recycling</p>
 
 <div className="reviews">
 

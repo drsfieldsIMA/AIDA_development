@@ -48,7 +48,7 @@ const SplashCard=({trash}:QueryParams) => {
    </div>
    <div className='post-title-block'>
    <div className="email-block">
-      <h3>Newsletter:enter email address to recieve newsletter</h3>
+      <h3>Newsletter:Enter email address to receive newsletter</h3>
       <input type="email" placeholder='joebloggs@domain.co.uk' className='email-newsletter'></input>
   </div>
   </div>
