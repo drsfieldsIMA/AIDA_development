@@ -38,6 +38,7 @@ $primary_yellow: #FFE069;
 $cream: #f2f0e4;
 $grey:#969696;
 $i-dark: #001d3b;
+$dark: #001d3b;
 $ii-dark: #000002;
 $background-main:#E1EABE;
 
@@ -392,17 +393,23 @@ a {
 	font-size: 22px;
 }
 .splash-image {
-	width: 100%;
+	width: 90%;
 	height: fit-content;
+	object-position: top;
+	padding-top: 60px!important;
+	padding-right: 60px!important;
 	> div {
 	  position: unset !important;
 	}
   
 	.earth-img {
-	  object-fit: contain;
-	  width: 100% !important;
+	  object-fit:contain;
+	  width: 90% !important;
 	  position: relative !important;
 	  height: unset !important;
+	  object-position: top;
+	  padding-right: 60px!important;
+	  padding-top: 48px!important;
 	}
   }
 
@@ -793,11 +800,11 @@ input[type="file" i] {
     height: 52px !important;
     background-color: #4FAE3C;
     color: white;
-    font-size: 22px;
+    font-size: 16px;
     border: #4C7041 2px solid;
     border-radius: 5px;
 	padding: 9px 0px 9px 20px;
-    margin: 1rem auto;
+    margin: 1rem 5%;
 	
 }
 
@@ -852,42 +859,74 @@ li.items {
 	position: relative;
 }
 
-.pic-links:nth-child(2n-1) {
-	background-color: transparent;
+.pic-links:nth-child(2n-1),
+.product-feed-item:nth-child(2n-1) {
+	background-color: $background-main!important;
 	font-size: 36px;
-	color:$i-dark;
+	color:$dark;
 }
-.pic-links:nth-child(2n) {
+.pic-links:nth-child(2n),
+.product-feed-item:nth-child(2n){
 	background-color: $secondary_green;
 	font-size: 36px;
-	color:$cream;
+	color:$background-main!important;
 	.feed-button{
 		.btn-secondary{
-		   background-color: $cream;
+		   background-color: $background-main!important;
 		   color: $secondary_green;	
 		}
 	}
-}
-.pic-links:nth-child(4n) {
-	background-color: $primary_yellow;
-	font-size: 36px;
-	color:$blue;
-	.feed-button{
-		.btn-secondary{
-		   background-color: $cream;
-		   color: $blue;
-		}
+	.btn-tertiary{
+		background-color: $background-main;
+		color: $secondary_green;	
 	}
 }
-.pic-links:nth-child(3n) {
-	background-color: $blue!important;
+.pic-links:nth-child(3n),
+.product-feed-item:nth-child(3n) {
+	background-color: $primary_yellow;
 	font-size: 36px;
-	color:$cream;
+	color: $dark !important;
 	.feed-button{
 		.btn-secondary{
-		   background-color: $cream;
+		   background-color: $dark_green!important;
+		   color: $cream!important;
+		}
+	}
+	.btn-tertiary{
+		background-color: $dark_green!important;
+		   color: $cream!important;
+	}
+}
+.pic-links:nth-child(5n),
+.product-feed-item:nth-child(5n) {
+	background-color: $blue!important;
+	font-size: 36px;
+	color:$background-main!important;
+	.feed-button{
+		.btn-secondary{
+		   background-color: $background-main!important;
 		   color: $blue;	
 		}
+	}
+	.btn-tertiary{
+		background-color: $background-main!important;
+		   color: $blue;
+	}
+}
+.pic-links:nth-child(7n),
+.product-feed-item:nth-child(7n) {
+	background-color: $dark!important;
+	font-size: 36px;
+	color:$background-main;
+	.feed-button{
+		.btn-secondary{
+		   background-color: $background-main;
+		   color: $dark;	
+		}
+	}
+	.btn-tertiary{
+		background-color: $background-main;
+		   color: $dark;
 	}
 }
 .pic-links{
@@ -924,7 +963,7 @@ li.items {
 }
 
 main {
-	width: calc(100% - 32px);
+	width:100%;
 	margin: 0 16px;
 }
 

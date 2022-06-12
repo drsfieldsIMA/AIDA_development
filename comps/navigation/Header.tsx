@@ -89,7 +89,7 @@ export const Header = () => {
 					</li>
 					<li className='items'>
 						<Link href='/locations'>
-							<a className={router.pathname == "/locations" ? "active items__link" : "items__link "}>locations</a>
+							<a className={router.pathname == "/location" ? "active items__link" : "items__link "}>locations</a>
 						</Link>
 					</li>
 					<li className='items'>

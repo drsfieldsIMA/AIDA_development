@@ -12,13 +12,14 @@ return (
     <li key={item.title} className="product-feed-item">
       	    <div className="product-feed-image__container">{item?.photos ?
 			<Image src={item.photos[0]?.thumbnail} alt={item.title} width={270} height={270} className="product-feed__image" />
-			:"no-photo"}</div>
+			:""}</div>
+			{item?.photos ?
 	   <Link
 		key={item.name}
 		href={`/details/${parseInt(item.post_id)}`}>
 	     <a className="btn-tertiary"> Details </a>
 		</Link>
-	
+	:""}
 	</li>
 ))
 }
