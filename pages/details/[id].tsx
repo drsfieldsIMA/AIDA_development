@@ -189,7 +189,7 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	let { id } = params;
 	console.log("The Static id for trash nothing", id);
 	let idInt = parseInt(id);
-		const res = await fetch(`https://trashnothing.com/api/v1.2/posts/?${idInt}api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`);
+		const res = await fetch(`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`);
 	//	console.log("[id] response==>", res);
 		const news = await res.json();
 		const trash =news.posts.slice(0,1);
