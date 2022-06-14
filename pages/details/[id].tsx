@@ -6,7 +6,7 @@ import { Card, Box, Divider, CircularProgress } from "@mui/material";
 import { Grid } from "@mui/material";
 import Link from "next/link";
 import { InsertEmoticon } from "@mui/icons-material";
-/* 
+ 
 const static_paths=[
 	{
 	  post_id: 37358768,
@@ -175,7 +175,7 @@ export async function getStaticPaths() {
 	//	const trashs = await res.json();
 	const res = await fetch(`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`);
     const news = await res.json();
-	const paths = static_paths.slice(0, 3).map((post: { post_id: any; }) => ({
+	const paths = news.posts.slice(0, 3).map((post: { post_id: any; }) => ({
 		params: { id: String(post.post_id) },
 	}));
 	return {
@@ -199,4 +199,4 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	return {
 		props: { trash },
 	};
-} */
+} 
