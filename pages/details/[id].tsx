@@ -6,7 +6,7 @@ import { Card, Box, Divider, CircularProgress } from "@mui/material";
 import { Grid } from "@mui/material";
 import Link from "next/link";
 import { InsertEmoticon } from "@mui/icons-material";
-
+/* 
 const static_paths=[
 	{
 	  post_id: 37358768,
@@ -199,4 +199,4 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	return {
 		props: { trash },
 	};
-}
+} */
