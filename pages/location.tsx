@@ -1,10 +1,25 @@
-// @ts-nocheck
+
 import Link from "next/link"
 import Layout from "../comps/Layout"
 import { useState } from "react"
 import { string } from "yup";
 
-function getLocation() {
+interface Provider {
+    coords:{
+    longitude: string | null;
+    latitude: string | null;
+    }
+  }
+
+export default function Location() {
+
+   const [usersLocation, setUsersLocation]=useState<string>('');
+   const  [latitude, setUsersLatitude]=useState<string | number>('');
+   const   [longitude, setUsersLongitude]=useState<string | number>('');  
+   const [position,setPosition]=useState<Provider[]>([])
+   
+
+ /*   function getLocation() {
     
     if (navigator.geolocation) {
         console.log("navigator",navigator.geolocation)
@@ -14,26 +29,18 @@ function getLocation() {
     }
   }
   
-function getCoordinates(position: { coords: { latitude: string; longitude: string; }; }){ 
+function getCoordinates(position: { coords: { latitude: string; longitude: string; }; }): { 
      console.log("get coordinates",position)
      console.log(position.coords.latitude)
    setPosition([position.coords.latitude,position.coords.longitude])
-  }
-
-export default function Location() {
-
-   const [usersLocation, setUsersLocation]=useState('');
-   const  [latitude, setUsersLatitude]=useState('');
-   const   [longitude, setUsersLongitude]=useState('');  
-   const [position,setPosition]=useState(["",""])
-   
+  } */
 
 
   return (
     <div>
      <h1>location</h1>    
      <Link href="/">Index</Link>
-     <button onClick={getLocation}>
+     <button >
        Get coordinates
      </button>
      <h4>  
