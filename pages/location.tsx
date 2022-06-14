@@ -1,4 +1,4 @@
-
+// @ts-nocheck
 import Link from "next/link"
 import Layout from "../comps/Layout"
 import { useState } from "react"
