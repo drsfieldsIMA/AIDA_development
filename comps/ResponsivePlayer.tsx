@@ -1,5 +1,5 @@
 /** @format */
-
+// @ts-nocheck
 import ReactPlayer from "react-player";
 import { Component } from "react";
 import { CircularProgress } from "@mui/material";
@@ -34,7 +34,7 @@ class ResponsivePlayer extends Component<any, any> {
 							width='100%'
 							height='100%'
 							controls={true}
-							playing={true}
+							playing={false}
 						/>
 					</div>
 				)}
@@ -44,3 +44,4 @@ class ResponsivePlayer extends Component<any, any> {
 }
 
 export default ResponsivePlayer;
+/* eslint-enable */

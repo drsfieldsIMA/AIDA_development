@@ -43,15 +43,14 @@ export const Header = () => {
 	return (
 		<nav className='header'>
 			<div className='logo'></div>
-			<div className='tagline'>
+			<div className='tagline_wrapper'>
+				<div className='tagline'>
 					<div className='f-box'>
-						<span className="span-search">
-						Search	
-						</span>
-						
+						<span className='span-search'>Search</span>
+
 						<input
 							className='header-input'
-							onChange={(e:any) => setInputValue(e.target.value)}></input>
+							onChange={(e: any) => setInputValue(e.target.value)}></input>
 						<IconButton
 							onClick={(e: any) => (
 								toggleNav(), setModalIsOpen(true), setSearchTerm(inputValue)
@@ -64,6 +63,7 @@ export const Header = () => {
 						</IconButton>
 					</div>
 				</div>
+			</div>
 			<IconButton
 				size='large'
 				edge='end'
@@ -84,27 +84,60 @@ export const Header = () => {
 				<ul className='list'>
 					<li className='items'>
 						<Link href='/'>
-							<a className={router.pathname == "/" ? "active items__link" : "items__link "}>Home</a>
+							<a
+								className={
+									router.pathname == "/" ? "active items__link" : "items__link "
+								}>
+								Home
+							</a>
 						</Link>
 					</li>
 					<li className='items'>
-						<Link href='/locations'>
-							<a className={router.pathname == "/location" ? "active items__link" : "items__link "}>locations</a>
+						<Link href='/location'>
+							<a
+								className={
+									router.pathname == "/location"
+										? "active items__link"
+										: "items__link "
+								}>
+								locations
+							</a>
 						</Link>
 					</li>
 					<li className='items'>
 						<Link href='/offers'>
-							<a className={router.pathname == "/offers" ? "active items__link" : "items__link "}>offers</a>
+							<a
+								className={
+									router.pathname == "/offers"
+										? "active items__link"
+										: "items__link "
+								}>
+								offers
+							</a>
 						</Link>
 					</li>
 					<li className='items'>
 						<Link href='/search'>
-							<a className={router.pathname == "/search" ? "active items__link" : "items__link "}>Search</a>
+							<a
+								className={
+									router.pathname == "/search"
+										? "active items__link"
+										: "items__link "
+								}>
+								Search
+							</a>
 						</Link>
 					</li>
 					<li className='items'>
 						<Link href='/about'>
-							<a className={router.pathname == "/about" ? "active items__link" : "items__link "}>About us</a>
+							<a
+								className={
+									router.pathname == "/about"
+										? "active items__link"
+										: "items__link "
+								}>
+								About us
+							</a>
 						</Link>
 					</li>
 					<Button
@@ -136,4 +169,3 @@ function setSearchTerm(inputValue: any): void {
 function inputValue(inputValue: any): void {
 	throw new Error("Function not implemented.");
 }
-
