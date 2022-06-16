@@ -1,5 +1,5 @@
 /** @format */
-
+// @ts-nocheck
 import PropTypes from "prop-types";
 import { Heading } from "../../comps/Layout";
 import Link from "next/link";

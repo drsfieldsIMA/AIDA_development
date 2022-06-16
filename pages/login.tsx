@@ -1,5 +1,5 @@
 /** @format */
-
+// @ts-nocheck
 import { useState, useContext, ReactEventHandler } from "react";
 import { useForm } from "react-hook-form";
 import Head from "next/head";
