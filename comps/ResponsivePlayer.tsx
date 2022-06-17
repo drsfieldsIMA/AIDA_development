@@ -19,7 +19,7 @@ class ResponsivePlayer extends Component<any, any> {
 
 	render() {
 		return (
-			<main className='main-splash'>
+			<div className='main-splash'>
 				{this.state.isLoadingVideo ? (
 					<div className='circular-progress-wrapper'>
 						<Box className='container-circular-progress'>
@@ -38,7 +38,7 @@ class ResponsivePlayer extends Component<any, any> {
 						/>
 					</div>
 				)}
-			</main>
+			</div>
 		);
 	}
 }

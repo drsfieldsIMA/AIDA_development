@@ -19,7 +19,7 @@ import { PersonRounded } from "@mui/icons-material";
 import Modal from "react-modal";
 import { ReactQueryDevtools } from "react-query-devtools";
 import searchArticles from "../../comps/common/lists/renderResultList";
-import ArticleSearchResult from "../ArticlesSearchResults";
+import ArticleSearchResult from "../TrashSearchResults";
 import { useQuery } from "react-query";
 import { AuthContext } from "../config/AuthContext";
 import useKeyPress from "../hooks/useKeyPress";
