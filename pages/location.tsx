@@ -15,7 +15,10 @@ export default function Location() {
 	function getLocation() {
 		if (navigator.geolocation) {
 			console.log("navigator", navigator.geolocation);
-			navigator.geolocation.getCurrentPosition(getCoordinates);
+			navigator.geolocation.getCurrentPosition(
+				getCoordinates,
+				handleLocationError
+			);
 		} else {
 			alert("Geolocation is not supported by this browser.");
 		}
@@ -26,8 +29,28 @@ export default function Location() {
 	}) {
 		console.log("get coordinates", position);
 		console.log(position.coords.latitude);
+		console.log(position.coords.longitude);
 		setUsersLatitude(position.coords.latitude);
 		setUsersLongitude(position.coords.longitude);
+	}
+
+	function handleLocationError(error) {
+		switch (error.code) {
+			case error.PERMISSION_DENIED:
+				alert("User denied the request for Geolocation.");
+				break;
+			case error.POSITION_UNAVAILABLE:
+				alert("Location information is unavailable.");
+				break;
+			case error.TIMEOUT:
+				alert("The request to get user location timed out.");
+				break;
+			case error.UNKNOWN_ERROR:
+				alert("An unknown error occurred.");
+				break;
+			default:
+				alert("An unknown error occurred.");
+		}
 	}
 
 	return (
@@ -49,6 +72,7 @@ export default function Location() {
 				<p>Latitude:{latitude}</p>
 				<p>Latitude:{longitude}</p>
 				<h4> Google Maps reverse geocoding</h4>
+				{latitude && longitude ? <img src={""} alt={""}></img> : <></>}
 			</div>
 		</>
 	);
