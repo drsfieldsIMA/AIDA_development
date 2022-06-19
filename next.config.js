@@ -6,8 +6,8 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ["trashnothing.com"],
-},
+		domains: ["trashnothing.com", "maps.googleapis.com"],
+	},
 };
 
 module.exports = nextConfig;

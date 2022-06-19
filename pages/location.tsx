@@ -72,7 +72,15 @@ export default function Location() {
 				<p>Latitude:{latitude}</p>
 				<p>Latitude:{longitude}</p>
 				<h4> Google Maps reverse geocoding</h4>
-				{latitude && longitude ? <img src={""} alt={""}></img> : <></>}
+				{latitude && longitude ? (
+					<Image
+						src={`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=12&size=400x400&key=AIzaSyBgevBciZHQLM1zO91efqUNN47674sWq6Y`}
+						alt={"google maps"}
+						width={250}
+						height={250}></Image>
+				) : (
+					<></>
+				)}
 			</div>
 		</>
 	);

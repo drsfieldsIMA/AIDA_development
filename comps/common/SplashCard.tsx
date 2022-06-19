@@ -42,11 +42,12 @@ const SplashCard = ({ trash }: QueryParams) => {
 						</h1>
 						<div className='splash-text-container d-none_lg'>
 							<p className='splash-text'>
-								Ever wondered how you can recycle more through your local more
-								clutter and belongings through your community. The Greencycle
-								community are here to safeguard and contribute to stewarding the
-								Earth`s resources. We ask that you contribute as much as you
-								take.
+								Ever wondered how you can recycle more through your local
+								community. We mean more of you and your networks clutter,
+								belongings and trash recycled through a large community. The
+								Greencycle community are here to safeguard and contribute to
+								stewarding the Earth`s resources by leveraging the world wide
+								web`s scale.
 							</p>
 						</div>
 					</div>

@@ -9,7 +9,7 @@ const TrashSearchResult = ({
 }) => {
 	return articles.posts.length > 0 ? (
 		<div className='search-grid'>
-			{articles.posts.map((article) => (
+			{articles.posts.map((article): any => (
 				<div key={id} className='trash-card'>
 					{article.title}
 				</div>
