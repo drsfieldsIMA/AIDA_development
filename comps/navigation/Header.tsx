@@ -19,7 +19,6 @@ import { PersonRounded } from "@mui/icons-material";
 import Modal from "react-modal";
 import { ReactQueryDevtools } from "react-query-devtools";
 import searchArticles from "../../comps/common/lists/renderResultList";
-import ArticleSearchResult from "../TrashSearchResults";
 import { useQuery } from "react-query";
 import { AuthContext } from "../config/AuthContext";
 import useKeyPress from "../hooks/useKeyPress";
@@ -35,9 +34,7 @@ export const Header = () => {
 	const [width, height] = useDeviceSize();
 
 	const toggleNav = () => {
-		console.log("Toogle Nav===>", toggleMenu);
 		setToggleMenu(!toggleMenu);
-		console.log("Toogle Nav===>", toggleMenu);
 	};
 
 	return (
@@ -83,62 +80,74 @@ export const Header = () => {
 			{(toggleMenu || width > 768) && (
 				<ul className='list'>
 					<li className='items'>
-						<Link href='/'>
-							<a
-								className={
-									router.pathname == "/" ? "active items__link" : "items__link "
-								}>
-								Home
-							</a>
-						</Link>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/'>
+								<a
+									className={
+										router.pathname == "/"
+											? "active items__link"
+											: "items__link "
+									}>
+									Home
+								</a>
+							</Link>
+						</button>
 					</li>
 					<li className='items'>
-						<Link href='/location'>
-							<a
-								className={
-									router.pathname == "/location"
-										? "active items__link"
-										: "items__link "
-								}>
-								locations
-							</a>
-						</Link>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/location'>
+								<a
+									className={
+										router.pathname == "/location"
+											? "active items__link"
+											: "items__link "
+									}>
+									locations
+								</a>
+							</Link>
+						</button>
 					</li>
 					<li className='items'>
-						<Link href='/offers'>
-							<a
-								className={
-									router.pathname == "/offers"
-										? "active items__link"
-										: "items__link "
-								}>
-								offers
-							</a>
-						</Link>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/offers'>
+								<a
+									className={
+										router.pathname == "/offers"
+											? "active items__link"
+											: "items__link "
+									}>
+									offers
+								</a>
+							</Link>
+						</button>
 					</li>
 					<li className='items'>
-						<Link href='/search'>
-							<a
-								className={
-									router.pathname == "/search"
-										? "active items__link"
-										: "items__link "
-								}>
-								Search
-							</a>
-						</Link>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/search'>
+								<a
+									className={
+										router.pathname == "/search"
+											? "active items__link"
+											: "items__link "
+									}>
+									Search
+								</a>
+							</Link>
+						</button>
 					</li>
 					<li className='items'>
-						<Link href='/about'>
-							<a
-								className={
-									router.pathname == "/about"
-										? "active items__link"
-										: "items__link "
-								}>
-								About us
-							</a>
-						</Link>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/about'>
+								<a
+									className={
+										router.pathname == "/about"
+											? "active items__link"
+											: "items__link "
+									}>
+									About us
+								</a>
+							</Link>
+						</button>
 					</li>
 					<Button
 						onClick={() => router.push("/login")}

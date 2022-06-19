@@ -68,7 +68,9 @@ export default function Location() {
 					</div>
 				</div>
 				<div>
-					<button onClick={getLocation}>Get coordinates</button>
+					<button onClick={getLocation} className='btn-primary'>
+						Get coordinates
+					</button>
 					<h4>HTML coordinates</h4>
 					<p>Latitude:{latitude}</p>
 					<p>Latitude:{longitude}</p>

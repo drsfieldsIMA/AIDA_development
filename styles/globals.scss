@@ -1,58 +1,12 @@
+/* base */
+@import "base/typography";
+@import "base/reset";
+@import "base/images";
+@import "base/buttons";
 
-@font-face {
-   font-family: "egizio-urw", serif;
-   font-weight: 700;
-   font-style: italic;
-	src:url("https://use.typekit.net/fum7mnw.css");
-}
+/* components */
+@import "home/Home.module.scss";
 
-@font-face {
-	 font-family: "mr-eaves-modern", sans-serif;
-	 font-weight: 400;
-	 font-style: normal;
-	 src:url("https://use.typekit.net/fum7mnw.css");
- }
-
-$breakpoint_xs: 360px;
-$breakpoint_sm: 768px;
-$breakpoint_md: 1024px;
-$breakpoint_lg: 1280px;
-$breakpoint_xl: 14400px;
-$breakpoint_xxl: 1600px;
-
-$font-size: 12px;
-$font-size-xs: 9px;
-$font-size-sm: 9px;
-$font-size-md: 11px;
-$font-size-lg: 12.5px;
-$font-size-xl: 14px;
-$font-size-xxl: 16px;
-
-$light_green: #E1EABE;
-$primary_green:#8DB942;
-$secondary_green: #4FAE3C;
-$dark_green: #4C7041;
-$blue:#497EC0; 
-$gold: #bfa65a;
-$primary_yellow: #FFE069;
-$cream: #f2f0e4;
-$grey:#969696;
-$i-dark: #001d3b;
-$dark: #001d3b;
-$ii-dark: #000002;
-$background-light:#ffffe8;
-$background-main:#E1EABE;
-$background-dark:#c3d57e;
-
-html,
-body {
-	padding: 0;
-	margin: 0;
-	font-family: "egizio-urw", serif;
-	font-style: italic;
-	font-size: 12.5px;
-	background-color: $cream;
-}
 
 h1,
 h2,
@@ -79,19 +33,6 @@ h4 {
 
 .std-size__font {
 	font-size: $font-size-xs;
-}
-
-.MuiButton-root{
-	background-color: $blue;
-	color: $cream;
-}
-
-.MuiContainer-root,.MuiPaper-root {
-	background-color: $background-light;
-}
-
-.MultiGrid-container{
-	padding-bottom: 3rem;
 }
 
 fieldset{
@@ -160,6 +101,8 @@ fieldset{
 			0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
 	}
 }
+
+
 
 .splash-image {
 	display: flex;
