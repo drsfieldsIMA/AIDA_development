@@ -55,32 +55,34 @@ export default function Location() {
 
 	return (
 		<>
-			<div className='col-2'>
-				<h1>Location</h1>
-				<div className='splash-image'>
-					<Image
-						src='/globe-13351.png'
-						alt='earth'
-						className='earth-img'
-						layout='fill'
-					/>
+			<div className='location-grid'>
+				<div>
+					<h1>Location</h1>
+					<div className='splash-image'>
+						<Image
+							src='/globe-13351.png'
+							alt='earth'
+							className='earth-img'
+							layout='fill'
+						/>
+					</div>
 				</div>
-			</div>
-			<div className='col-1'>
-				<button onClick={getLocation}>Get coordinates</button>
-				<h4>HTML coordinates</h4>
-				<p>Latitude:{latitude}</p>
-				<p>Latitude:{longitude}</p>
-				<h4> Google Maps reverse geocoding</h4>
-				{latitude && longitude ? (
-					<Image
-						src={`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=12&size=400x400&key=AIzaSyBgevBciZHQLM1zO91efqUNN47674sWq6Y`}
-						alt={"google maps"}
-						width={250}
-						height={250}></Image>
-				) : (
-					<></>
-				)}
+				<div>
+					<button onClick={getLocation}>Get coordinates</button>
+					<h4>HTML coordinates</h4>
+					<p>Latitude:{latitude}</p>
+					<p>Latitude:{longitude}</p>
+					<h4> Google Maps reverse geocoding</h4>
+					{latitude && longitude ? (
+						<Image
+							src={`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=12&size=400x400&key=AIzaSyBgevBciZHQLM1zO91efqUNN47674sWq6Y`}
+							alt={"google maps"}
+							width={250}
+							height={250}></Image>
+					) : (
+						<></>
+					)}
+				</div>
 			</div>
 		</>
 	);

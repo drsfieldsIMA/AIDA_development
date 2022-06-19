@@ -133,6 +133,7 @@ fieldset{
 .login-btn {
 	background-color: $secondary_green;
 	color: $cream;
+	box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 	&:hover {
 		background-color: $background-main;
 		color: $i-dark;
@@ -150,6 +151,7 @@ fieldset{
     border-radius: 5px;
     color: #f2f0e4;
     padding: 15px 25%;
+	box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 	&:hover {
 		background-color: $secondary_green;
 		transform: scale(1.03);
@@ -419,6 +421,13 @@ img {
 			grid-gap: 8px;
 		}
 
+.location-grid{
+		margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    grid-gap: 8px;
+}
 		.greentext{
 			display: flex;
 			font-size: clamp(3rem, -0.475rem + 8.333vw, 4.5rem);
@@ -712,6 +721,7 @@ $breakpoint_xxl: 1600px; */
 		max-width: 310px;
 		min-width: 210px;
 		padding: 21px 50px;
+		box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 	}
 	
 	.btn-block{
@@ -1219,6 +1229,7 @@ input[type="file" i] {
     border-radius: 5px;
 	padding: 9px 0px 9px 20px;
     margin: 1rem 5%;
+	box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 	
 }
 
