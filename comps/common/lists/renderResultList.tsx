@@ -1,7 +1,6 @@
 /** @format */
 
 import React from "react";
-import ArticlesSearchResult from "@/comps/TrashSearchResults";
 import useDebounce from "utils/useDebounce";
 import { useQuery } from "react-query";
 import { API_HEROKU_URL } from "utils/env";
