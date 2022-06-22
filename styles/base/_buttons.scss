@@ -1,4 +1,83 @@
-.hidden-btn{
+.hidden-btn {
     background-color: transparent;
     border: none;
 }
+
+.login-btn {
+    background-color: $secondary_green;
+    color: $cream;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+
+    &:hover {
+        background-color: $background-main;
+        color: $i-dark;
+    }
+}
+
+.btn-primary {
+    display: block;
+    position: relative;
+    max-width: 250px;
+    min-width: 100%;
+    font-size: 32px;
+    border-radius: 5px;
+    background-color: $blue;
+    color: $cream;
+    padding: 21px 50px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+}
+
+.btn-secondary {
+    display: block;
+    position: relative;
+    background-color: $secondary_green;
+    color: white;
+    font-size: 32px;
+    border: $dark_green 2px solid;
+    border-radius: 5px;
+    padding: 18px 28px 18px 28px;
+    margin: 3rem auto;
+}
+
+
+.btn-tertiary {
+    display: flex;
+    flex-direction: column;
+    height: 52px !important;
+    background-color: #4FAE3C;
+    color: white;
+    font-size: 16px;
+    border: #4C7041 2px solid;
+    border-radius: 5px;
+    padding: 9px 0px 9px 20px;
+    margin: 1rem 5%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+
+}
+
+.search-value-btn {
+    max-width: 68%;
+    border-radius: 4px;
+    background-color: $blue;
+    color: $cream;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Everything above is for mobile
+/*   $breakpoint_xs: 360px;
+$breakpoint_sm: 768px;
+$breakpoint_md: 1024px;
+$breakpoint_lg: 1280px;
+$breakpoint_xl: 14400px;
+$breakpoint_xxl: 1600px; */
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// 
+@media only screen and (min-width: $breakpoint_sm) {}
+
+@media only screen and (min-width: $breakpoint_md) {}
+
+@media only screen and (min-width: $breakpoint_lg) {}
+
+@media only screen and (min-width: $breakpoint_xl) {}
+
+@media only screen and (min-width: $breakpoint_xxl) {}

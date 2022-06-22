@@ -61,12 +61,12 @@ const Search: NextPage = ({ news }) => {
 		setIsLoading(false);
 	};
 	/* 	const { isLoading, isError, isSuccess, data } = useQuery(
-		["searchCategories", debouncedSearchValue],
-		() => searchCategories(debouncedSearchValue),
-		{
-			enabled: debouncedSearchValue.length > 0,
-		}
-	); */
+    ["searchCategories", debouncedSearchValue],
+    () => searchCategories(debouncedSearchValue),
+    {
+      enabled: debouncedSearchValue.length > 0,
+    }
+  ); */
 	//	const trash = searchCategories(debouncedSearchValue)
 
 	const renderResult = () => {

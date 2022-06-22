@@ -27,7 +27,7 @@ const SplashCard = ({ trash }: QueryParams) => {
 				<div className='splash-image_wrapper'>
 					<div className='splash-image'>
 						<Image
-							src='/globe-13351.png'
+							src='/globe-2.png'
 							alt='earth'
 							className='earth-img'
 							layout='fill'
@@ -42,12 +42,11 @@ const SplashCard = ({ trash }: QueryParams) => {
 						</h1>
 						<div className='splash-text-container d-none_lg'>
 							<p className='splash-text'>
-								Ever wondered how you can recycle more through your local
+								Ever wondered how we can recycle more through your local
 								community. We mean more of you and your networks clutter,
-								belongings and trash recycled through a large community. The
-								Greencycle community are here to safeguard and contribute to
-								stewarding the Earth`s resources by leveraging the world wide
-								web`s scale.
+								belongings and trash recycled through this app. The Greencycle
+								community are here to safeguard and contribute to stewarding the
+								Earth`s resources by leveraging the world wide web`s scale.
 							</p>
 						</div>
 					</div>

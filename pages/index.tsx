@@ -8,7 +8,6 @@ import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import RecycleCard from "../comps/common/RecycleCard";
 import Layout from "../comps/Layout";
-import NewsCard from "../comps/common/NewsCard";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import { API_URL, API_MONGOOSE_URL } from "../comps/config";
@@ -23,13 +22,11 @@ import ProductFeed from "comps/common/ProductFeed";
 import ReviewSection from "comps/common/ReviewSection";
 
 const Home = ({ news, trash }: { news: any; trash: any }) => {
-	console.log("index news==>", news);
-	console.log("index trash==>", trash);
-	const scienceNews = news;
+	const trashFeed = news;
 
 	// sort by value
-	console.log("Sciencenews", scienceNews);
-	scienceNews.sort(function (
+	console.log("trashFeed", trashFeed);
+	trashFeed.sort(function (
 		a: { createdAt: string | number | Date; length: number },
 		b: { createdAt: string | number | Date; length: number }
 	) {
@@ -61,7 +58,7 @@ const Home = ({ news, trash }: { news: any; trash: any }) => {
 						</Grid>
 						<Grid xs={12} sm={12}>
 							<div className='recycle-container'>
-								<h2> GreenCycle Informmercial</h2>
+								<h2> GreenCycle Infomercial</h2>
 								<ResponsivePlayer />;
 								<ReviewSection />
 							</div>
@@ -69,14 +66,11 @@ const Home = ({ news, trash }: { news: any; trash: any }) => {
 					</Grid>
 
 					<div className='recycle-wrapper'>
-						{scienceNews.map(
-							(item: { post_id: Key | null | undefined }): any => (
-								<div key={item.post_id} className='recycle-container'>
-									<h3> GreenCycle Statistics</h3>
-									<RecycleCard key={item.post_id} card={item} />
-								</div>
-							)
-						)}
+						{trashFeed.map((item: { post_id: Key | null | undefined }): any => (
+							<div key={item.post_id} className='recycle-container'>
+								<RecycleCard key={item.post_id} card={item} />
+							</div>
+						))}
 					</div>
 					<div className='plenary-bkg'></div>
 				</div>
@@ -93,7 +87,7 @@ export async function getStaticProps() {
 	//	const res = await fetch(`${API_MONGOOSE_URL}/articles`);
 	//	const news = await res.json();
 	const res = await fetch(
-		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`
+		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000&per_page=16`
 	);
 	const trash = await res.json();
 	const { news } = require("../pages/api/news/data.json");

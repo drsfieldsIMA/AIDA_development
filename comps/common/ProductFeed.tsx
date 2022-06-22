@@ -25,7 +25,13 @@ const ProductFeed = ({ trashBin }: { trashBin: any }) => {
 									className='product-feed__image'
 								/>
 							) : (
-								""
+								<Image
+									src='/globe-2.png'
+									alt={item.title}
+									width={270}
+									height={270}
+									className='product-feed__image'
+								/>
 							)}
 						</div>
 						{item?.photos ? (

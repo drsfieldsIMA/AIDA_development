@@ -2,8 +2,7 @@
   "news": [
     {
       "id": "1",
-      "title": "Miracle cure for genetically inherited blindness",
-      "slug": "england's-ipl-players-likely-to-miss-test-series-against-new-zealand",
+      "title": "The Numbers Add Up",
       "date": "June 09, 2021",
       "time": "10:00 PM EST",
       "content": "We aim to save 300 metric tonnes per year in landfill. We also hope you find something that saves you cash in your back pocket.",
@@ -14,39 +13,59 @@
     },
     {
       "id": "2",
-      "title": "Ferran Torres Hat-Trick Sees Manchester City Hold Off Newcastle United",
-      "slug": "ferran-orres-hat-trick-sees-manchester-city-hold-off-newcastle-united",
+      "title": "Give Gaia a Break",
       "date": "June 2, 2021",
       "time": "8:00 PM EST",
-      "content":"We have over 3000 users that can take or provide second hand products off your hands.",
+      "content":"We currently use 24% more than the planet and biosphere can provide in a single year. At Greencycle we aim to provide a network of people who can bring this quantity back to as low as possible, restoring gaia in the process.",
       "color":"#4C7041",
-      "image": "/globe-13351.png",
+      "image": "/globe-2.png",
       "category":"sport",
       "author":"rowling"
     },
     {
       "id": "3",
-      "title": "England Pacer Harry Gurney Retires",
-      "slug": "england-pacer-harry-gurney-retires",
+      "title": "Search by useful categories",
       "date": "June 11, 2021",
       "time": "7:00 PM EST",
       "content": "Take a look at our easy to navigate categories from furniture, phones/electricals, metals, training equipment,clothes/textiles and others. ",
       "image": "/images/categories.svg",
-      "color":"#497EC0",
+      "color":"#4C7041",
       "category":"science", 
       "author":"rowling"
     }
     ,
     {
       "id": "4",
-      "title": "England Pacer Harry Gurney Retires",
-      "slug": "england-pacer-harry-gurney-retires",
+      "title": "Going Green Starts Local",
       "date": "June 11, 2021",
       "time": "7:00 PM EST",
       "content": "We have over 60 locations all over the planet.",
       "image": "/images/locations.svg",
-      "color":"#bfa65a",
+      "color":"#4C7041",
       "category":"science", 
+      "author":"rowling"
+    }
+    ,
+    {
+      "id": "5",
+      "title": "Powered by google algorithms",
+      "date": "June 11, 2021",
+      "content": "Find the nearest phone, tablet, t-shirt, pedal bike or piece of furniture by using our locator algorithm as employed by google maps. ",
+      "image": "/marker.svg",
+      "color":"#4C7041",
+      "category":"science", 
+      "author":"rowling"
+    }
+    ,
+    {
+      "id": "6",
+      "title": "Our Users Love us",
+      "date": "June 2, 2021",
+      "time": "8:00 PM EST",
+      "content":"We have over 3000 users that can take or provide second hand products off your hands.",
+      "color":"#4C7041",
+      "image": "/globe-2.png",
+      "category":"sport",
       "author":"rowling"
     }
   ]

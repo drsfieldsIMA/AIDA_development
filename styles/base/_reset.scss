@@ -13,21 +13,23 @@ $font-size-lg: 12.5px;
 $font-size-xl: 14px;
 $font-size-xxl: 16px;
 
+
 $light_green: #E1EABE;
-$primary_green:#8DB942;
+$primary_green: #8DB942;
 $secondary_green: #4FAE3C;
 $dark_green: #4C7041;
-$blue:#497EC0; 
+$blue: #497EC0;
 $gold: #bfa65a;
 $primary_yellow: #FFE069;
 $cream: #f2f0e4;
-$grey:#969696;
+$grey: #969696;
 $i-dark: #001d3b;
 $dark: #001d3b;
 $ii-dark: #000002;
-$background-light:#ffffe8;
-$background-main:#E1EABE;
-$background-dark:#c3d57e;
+$background-light: #ffffe8;
+$background-main: #E1EABE;
+$background-dark: #c3d57e;
+$red: #F04923;
 
 html,
 body {
@@ -39,15 +41,90 @@ body {
 	background-color: $cream;
 }
 
-.MuiButton-root{
+.MuiButton-root {
 	background-color: $blue;
 	color: $cream;
 }
 
-.MuiContainer-root,.MuiPaper-root {
+.MuiContainer-root,
+.MuiPaper-root {
 	background-color: $background-light;
 }
 
-.MultiGrid-container{
+.MultiGrid-container {
 	padding-bottom: 3rem;
 }
+
+.std-size__font {
+	font-size: $font-size-xs;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: "protipo", sans-serif !important;
+	color: $dark_green;
+}
+
+ol {
+	list-style: none;
+	padding-inline-start: 14px !important;
+}
+
+
+h1 {
+	font-size: clamp(1.25rem, -0.475rem + 8.333vw, 3.75rem);
+}
+
+h2 {
+	font-size: clamp(1rem, -0.475rem + 8.333vw, 3rem);
+}
+
+h3 {
+	font-size: clamp(0.95rem, -0.475rem + 8.333vw, 2.5rem);
+}
+
+h4 {
+	font-size: clamp(0.5rem, -0.475rem + 8.333vw, 1.5rem);
+}
+
+p {
+	font-size: clamp(24px, 12px + 0.0333px, 28px);
+}
+
+.Recycle-card {
+	transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+	overflow: hidden;
+	min-width: 94% !important;
+	max-width: 100% !important;
+	height: 520px !important;
+	margin-left: 0px;
+	margin-bottom: 50px !important;
+	background-color: $background-main;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Everything above is for mobile
+/*   $breakpoint_xs: 360px;
+$breakpoint_sm: 768px;
+$breakpoint_md: 1024px;
+$breakpoint_lg: 1280px;
+$breakpoint_xl: 14400px;
+$breakpoint_xxl: 1600px; */
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+/// 
+@media only screen and (min-width: $breakpoint_sm) {}
+
+@media only screen and (min-width: $breakpoint_md) {
+	.recycle-container {
+		min-height: 60vh;
+	}
+}
+
+@media only screen and (min-width: $breakpoint_lg) {}
+
+@media only screen and (min-width: $breakpoint_xl) {}
+
+@media only screen and (min-width: $breakpoint_xxl) {}

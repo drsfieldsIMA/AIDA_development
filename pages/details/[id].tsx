@@ -142,7 +142,9 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 								<div className='flex-box__container__id'>
 									<div className='flex-box__id'>
 										<h2 className='detail-price'>$19.99</h2>
-										<h2 className='detail-h2'>{trash.date}</h2>
+										<h2 className='detail-h2'>
+											{trash.date.toLocaleString("en-GB")}
+										</h2>
 									</div>
 								</div>
 								<Divider
