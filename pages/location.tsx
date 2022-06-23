@@ -149,7 +149,7 @@ const Location: NextPage = ({ feed }) => {
 		<>
 			<div className='location-head'>
 				<h1 className='page-title'>
-					Location: Find your Local Greencycle network
+					Location: Find your Local GreenCycle network
 				</h1>
 				<div className='location-grid'>
 					<div className='col-1'>

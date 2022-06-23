@@ -29,8 +29,8 @@ export default function about() {
 						<p>
 							By opening up the mission through the world wide web to our global
 							users we hope to save even more journeys and more goods sent to
-							landfill. With the added incentive of saving our Green-cycle users
-							money and time. We believe A win, win situation. Going Green means
+							landfill. With the added incentive of saving our Greencycle users
+							money and time. We believe a win, win situation. Going Green means
 							saving more of what you value.
 						</p>
 					</div>

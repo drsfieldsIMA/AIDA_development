@@ -44,7 +44,7 @@ const SplashCard = ({ trash }: QueryParams) => {
 							<p className='splash-text'>
 								Ever wondered how we can recycle more through your local
 								community. We mean more of you and your networks clutter,
-								belongings and trash recycled through this app. The Greencycle
+								belongings and trash recycled through this app. The GreenCycle
 								community are here to safeguard and contribute to stewarding the
 								Earth`s resources by leveraging the world wide web`s scale.
 							</p>
