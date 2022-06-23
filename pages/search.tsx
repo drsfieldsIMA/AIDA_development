@@ -95,10 +95,10 @@ const Search: NextPage = ({ news }) => {
 	};
 
 	return (
-		<div className='home'>
+		<div>
+			<h1 className='page-title'>Search by keywords Select Categories </h1>
 			<div className='container-col'>
 				<div className='col-25'>
-					<h1>Search by keywords Select Categories </h1>
 					<div className='search-page_wrapper'>
 						<input
 							type='text'

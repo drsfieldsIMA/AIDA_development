@@ -58,7 +58,7 @@ const Home = ({ news, trash }: { news: any; trash: any }) => {
 						</Grid>
 						<Grid xs={12} sm={12}>
 							<div className='recycle-container'>
-								<h2> GreenCycle Infomercial</h2>
+								<h2 className='page-title'> GreenCycle Infomercial</h2>
 								<ResponsivePlayer />;
 								<ReviewSection />
 							</div>

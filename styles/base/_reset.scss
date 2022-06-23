@@ -105,6 +105,22 @@ p {
 	background-color: $background-main;
 }
 
+.page-title{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+}
+
+.home-links{
+	color: $blue;
+	display: flex;
+	width: 100%;	
+	flex-direction: row;
+	justify-content: space-around;
+	text-decoration: underline;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;

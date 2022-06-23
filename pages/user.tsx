@@ -7,7 +7,7 @@ const User: NextPage = ({}) => {
 	//console.log("userArray", userArray);
 	return (
 		<div className='recycle-container'>
-			<h1>Top Three Green Cycle Users</h1>
+			<h1 className='page-title'>Top Three Green Cycle Users</h1>
 			<ReviewSection />
 			{/* <h2>{userArray.username}</h2> */}
 		</div>

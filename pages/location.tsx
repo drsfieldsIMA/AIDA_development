@@ -148,9 +148,11 @@ const Location: NextPage = ({ feed }) => {
 	return (
 		<>
 			<div className='location-head'>
+				<h1 className='page-title'>
+					Location: Find your Local Greencycle network
+				</h1>
 				<div className='location-grid'>
-					<div className='col-2'>
-						<h1>Location</h1>
+					<div className='col-1'>
 						<div className='splash-image'>
 							<Image
 								src='/globe-2.png'
@@ -160,13 +162,15 @@ const Location: NextPage = ({ feed }) => {
 							/>
 						</div>
 					</div>
-					<div className='col-1'>
-						<button className='btn-primary' onClick={(event) => getLocation()}>
-							Get coordinates
-						</button>
+					<div className='col-2'>
 						<h4>HTML coordinates</h4>
 						<p>Latitude:{latitude}</p>
 						<p>Latitude:{longitude}</p>
+						<button className='btn-primary' onClick={(event) => getLocation()}>
+							Get coordinates
+						</button>
+					</div>
+					<div className='col-3'>
 						<h4> Google Maps</h4>
 						{latitude && longitude ? (
 							<Image

@@ -277,7 +277,7 @@ $breakpoint_xxl: 1600px; */
         height: 520px !important;
         margin-left: 0px;
         margin-bottom: 50px !important;
-        background-color: $background-main;
+        background-color: white!important;
 
         h3 {
             font-size: 22px;
@@ -332,6 +332,10 @@ $breakpoint_xxl: 1600px; */
         grid-template-columns: repeat(5, 1fr);
         width: 100%;
         grid-gap: 8px;
+    }
+
+    .search-grid {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 

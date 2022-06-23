@@ -48,6 +48,9 @@ const SplashCard = ({ trash }: QueryParams) => {
 								community are here to safeguard and contribute to stewarding the
 								Earth`s resources by leveraging the world wide web`s scale.
 							</p>
+							<Link href='/about'>
+								<a className='home-links'>Learn More</a>
+							</Link>
 						</div>
 					</div>
 				</div>

@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function about() {
 	return (
 		<div>
-			<h1>About Us</h1>
+			<h1 className='page-title'>About Us</h1>
 			<div className='splash-image_wrapper'>
 				<div className='splash-image'>
 					<Image

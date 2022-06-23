@@ -7,7 +7,7 @@ import { Styles } from "@material-ui/core/styles/withStyles";
 export default function NotFound() {
 	return (
 		<div>
-			<h1>
+			<h1 className='page-title'>
 				<FaExclamationTriangle />
 				404
 			</h1>

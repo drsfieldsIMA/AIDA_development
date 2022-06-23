@@ -28,8 +28,8 @@ const offers: NextPage = ({ feed }: any) => {
 	const trash = feed.posts;
 	return (
 		<main>
-			<h1>Offers</h1>
-			<h2>London the Capital</h2>
+			<h1 className='page-title'>Offers</h1>
+			<h2 className='page-title'>London the Capital</h2>
 			<ol>
 				<Grid container px={0} marginLeft={0}>
 					<div className='offers-search-grid'>

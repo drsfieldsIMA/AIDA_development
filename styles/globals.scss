@@ -64,7 +64,7 @@
 .location-head {
 	display: flex;
 	flex-direction: column;
-	max-height: 560px;
+	max-height: 610px;
 	min-height: fit-content;
 }
 
@@ -79,7 +79,7 @@
 .location-grid {
 	margin-top: 16px;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(1, 1fr);
 	width: 100%;
 	grid-gap: 8px;
 }
@@ -130,6 +130,29 @@ $breakpoint_xxl: 1600px; */
 		float: right;
 		max-width: 50%;
 		min-width: 50%;
+	}
+
+	.location-head {
+		display: flex;
+		flex-direction: column;
+		max-height: 680px;
+		min-height: fit-content;
+	}
+	
+	.location-body {
+		display: flex;
+		flex-direction: column;
+		max-height: fit-content;
+		min-height: fit-content;
+		padding: 35px 70px;
+	}
+	
+	.location-grid {
+		margin-top: 16px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		width: 100%;
+		grid-gap: 8px;
 	}
 }
 
@@ -1167,7 +1190,7 @@ input[type="password"] {
 		height: 100%;
 		object-fit: cover;
 		border-radius: 50%;
-		box-shadow: 0 10px 25px rgba(0, 0, 0, .25);
+		box-shadow: 0;
 	}
 
 	.header a {
@@ -1413,7 +1436,7 @@ input[type="password"] {
 	.location-grid {
 		margin-top: 16px;
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		width: 100%;
 		grid-gap: 100px;
 	}
@@ -2120,7 +2143,7 @@ $breakpoint_xxl: 1600px; */
 	.tagline {
 		display: flex;
 		color: $background-light;
-		background-color: #ffffe8 !important;
+		background-color: transparent!important;
 		flex-direction: row;
 		text-align: center;
 		align-items: center;
