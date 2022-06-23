@@ -29,7 +29,7 @@ const offers: NextPage = ({ feed }: any) => {
 	return (
 		<main>
 			<h1 className='page-title'>Offers</h1>
-			<h2 className='page-title'>London the Capital</h2>
+			<h2 className='page-title'>London UK</h2>
 			<ol>
 				<Grid container px={0} marginLeft={0}>
 					<div className='offers-search-grid'>
