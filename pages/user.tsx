@@ -8,8 +8,11 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import ReviewSection from "@/comps/common/ReviewSection";
 import { useRouter } from "next/router";
 
-const User: NextPage = ({ userArray }) => {
+const User: NextPage = ({}) => {
 	//console.log("userArray", userArray);
+	const userArray: { name: string } = {
+		name: "Nathan D",
+	};
 	const router = useRouter();
 	console.log("userArray", router.asPath);
 	return (
@@ -56,11 +59,9 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	console.log("res", res);
 	const userArray = await res.json(); */
 	//    console.log("feed==>",feed)
-	const userArray = {
-		name: "Nathan D",
-	};
+
 	return {
-		props: { userArray },
+		props: {},
 	};
 }
 
