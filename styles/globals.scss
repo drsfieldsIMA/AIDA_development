@@ -72,6 +72,14 @@
 	grid-gap: 8px;
 }
 
+
+.list {
+	flex-direction: column;
+	height: auto;
+	background: $background-main;
+	border: 1px solid $dark_green;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
@@ -1031,13 +1039,6 @@ input[type="password"] {
 		display: none;
 	}
 
-	.list {
-		flex-direction: column;
-		height: auto;
-		background: $background-main;
-		border: 1px solid $dark_green;
-	}
-
 
 
 	.items:nth-child(1) {
@@ -1072,6 +1073,12 @@ input[type="password"] {
 	min-width:14%;
 } */
 
+	.list {
+		flex-direction: row;
+		height: auto;
+		background: $background-main;
+		border: none;
+	}
 
 	.col-main {
 		display: block;

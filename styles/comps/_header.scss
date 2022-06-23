@@ -113,26 +113,13 @@ $breakpoint_xxl: 1600px; */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 @media only screen and (min-width: $breakpoint_sm) {
-    .header ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        list-style: none;
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        z-index: 40;
-    }
 }
 
 @media only screen and (min-width: $breakpoint_md) {
-   
 
 }
 
 @media only screen and (min-width: $breakpoint_lg) {
-
     .header {
         display: flex;
         justify-content: flex-start;

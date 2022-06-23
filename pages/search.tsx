@@ -80,13 +80,16 @@ const Search: NextPage = ({ news }) => {
 
 		if (isSuccess) {
 			return (
-				<div className='search-grid'>
-					{data &&
-						data.posts.map((article) => (
-							<div key={article.post_id} className='pokemon-card'>
-								{article.title}
-							</div>
-						))}
+				<div>
+					<h1>Search Results</h1>
+					<div className='search-grid'>
+						{data &&
+							data.posts.map((article) => (
+								<div key={article.post_id} className='pokemon-card'>
+									{article.title}
+								</div>
+							))}
+					</div>
 				</div>
 			);
 		}
@@ -116,12 +119,10 @@ const Search: NextPage = ({ news }) => {
 							Search
 						</button>
 					</div>
+
 					{/* <Controller></Controller> */}
 				</div>
-				<div className='col-75'>
-					<h1>Search Results</h1>
-					{renderResult()}
-				</div>
+				<div className='col-75'>{renderResult()}</div>
 			</div>
 		</div>
 	);

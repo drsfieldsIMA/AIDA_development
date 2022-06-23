@@ -196,7 +196,7 @@ li.items {
 .product-feed-item:nth-child(11n) {
     background-color: $background-dark  !important;
     font-size: 36px;
-    color: $dark_green;
+    color: $dark_green!important;
 
     .feed-title {
         h3 {
@@ -326,7 +326,7 @@ $breakpoint_xxl: 1600px; */
         width: 100%;
         //background-image: url("/public/images/bottom-bkg.svg");
     }
-    
+
     .splash-image_wrapper {
         width: 40%;
         height: 400px;

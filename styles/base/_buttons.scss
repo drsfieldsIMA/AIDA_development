@@ -57,15 +57,25 @@
 
 
 .search-value-input {
-	min-width: 100% !important;
+	min-width: 100px !important;
     padding-right: 14px;
 }
 
 .search-value-btn {
-	max-width: 100%;
-	border-radius: 4px;
-	background-color: $dark_green;
+    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 140px;
+    max-width: 140px;
+    border-radius: 4px;
+	background-color: $secondary_green;
 	color: $cream;
+    align-items: center;
+    vertical-align: middle;
+
+    :hover{
+        background-color: $background-main;
+    }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
