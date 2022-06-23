@@ -86,9 +86,11 @@ const Search: NextPage = ({ news }) => {
 						{data &&
 							data.posts.map((item) => (
 								<div key={item.post_id} className='search-trash-card'>
-									<a href={`/details/${parseInt(item.post_id)}`}>
-										<h3>{item.title}</h3>
-									</a>
+									<Link href={`/details/${parseInt(item.post_id)}`}>
+										<a>
+											<h3>{item.title}</h3>
+										</a>
+									</Link>
 								</div>
 							))}
 					</div>
