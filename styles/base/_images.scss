@@ -244,6 +244,16 @@ li.items {
     display: none;
 }
 
+
+.locationpage-image {
+    display: flex;
+    position: relative;
+    min-width: 360px;
+    max-width: 100%;
+   min-height: 100%;
+   max-height: auto;
+    margin-left: 2%!important;
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;

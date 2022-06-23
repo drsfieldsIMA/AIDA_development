@@ -73,13 +73,6 @@
 }
 
 
-.list {
-	flex-direction: column;
-	height: auto;
-	background: $background-main;
-	border: 1px solid $dark_green;
-}
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
@@ -1072,13 +1065,6 @@ input[type="password"] {
 	max-width: 14%;
 	min-width:14%;
 } */
-
-	.list {
-		flex-direction: row;
-		height: auto;
-		background: $background-main;
-		border: none;
-	}
 
 	.col-main {
 		display: block;
@@ -2210,14 +2196,6 @@ $breakpoint_xxl: 1600px; */
 		.tagline {
 			display: none;
 		}
-
-		.list {
-			flex-direction: column;
-			height: auto;
-			background: $background-main;
-			border: 1px solid $dark_green;
-		}
-
 
 
 		.items:nth-child(1) {
