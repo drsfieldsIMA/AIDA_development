@@ -1207,24 +1207,6 @@ input[type="password"] {
 		height: auto !important;
 	}
 
-	.splash-card {
-		height: fit-content !important;
-		display: flexbox;
-		flex-direction: row;
-		flex-wrap: wrap;
-		background-color: $cream;
-		font-size: 22px;
-		min-width: 100%;
-	}
-
-	.splash-image_wrapper {
-		display: block;
-		position: relative;
-		width: 330px;
-		height: 330px;
-		float: left;
-	}
-
 	.newsletter-block_wrapper {
 		display: block;
 		position: relative;
