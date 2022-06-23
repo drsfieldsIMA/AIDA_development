@@ -100,7 +100,20 @@ $breakpoint_xxl: 1600px; */
 /// 
 @media only screen and (min-width: $breakpoint_sm) {}
 
-@media only screen and (min-width: $breakpoint_md) {}
+@media only screen and (min-width: $breakpoint_md) {
+
+
+	.btn-block {
+		display: flex;
+		flex-direction: row;
+		max-width: 100%;
+		min-width: 100%;
+		justify-content: flex-end;
+		margin-top: 0.5rem;
+		gap: 15px;
+	}
+
+}
 
 @media only screen and (min-width: $breakpoint_lg) {}
 

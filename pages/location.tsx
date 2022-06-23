@@ -19,8 +19,8 @@ const Location: NextPage = ({ feed }) => {
 	const [latitude, setUsersLatitude] = useState("");
 	const [longitude, setUsersLongitude] = useState("");
 	const [position, setPosition] = useState(["", ""]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [isInitial, setIsInitial] = useState(true);
+	const [isLoading, setIsLoading] = useState(true);
+	const [isInitial, setIsInitial] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [data, setData] = useState(feed);
 	console.log("isInitial", isInitial);
