@@ -6,7 +6,7 @@
       "date": "June 09, 2021",
       "time": "10:00 PM EST",
       "content": "We aim to save 300 metric tonnes per year in landfill. We also hope you find something that saves you cash in your back pocket.",
-      "image": "/images/graphs.svg",
+      "image": "/truck.svg",
       "color":"#4EAE3C",
       "category":"sport",
       "author":"rowling"
@@ -18,7 +18,7 @@
       "time": "8:00 PM EST",
       "content":"We currently use 24% more than the planet and biosphere can provide in a single year. At Greencycle we aim to provide a network of people who can bring this quantity back to as low as possible, restoring gaia in the process.",
       "color":"#4C7041",
-      "image": "/globe-2.png",
+      "image": "/images/graphs.svg",
       "category":"sport",
       "author":"rowling"
     },

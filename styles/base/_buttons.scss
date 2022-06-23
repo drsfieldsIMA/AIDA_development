@@ -4,13 +4,13 @@
 }
 
 .login-btn {
-    background-color: $secondary_green;
-    color: $cream;
-    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+    background-color: $secondary_green!important;
+    color: $cream!important;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px!important;
 
     &:hover {
-        background-color: $background-main;
-        color: $i-dark;
+        background-color: $background-main!important;
+        color: $i-dark!important;
     }
 }
 
