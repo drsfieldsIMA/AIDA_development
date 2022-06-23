@@ -153,7 +153,7 @@ const Location: NextPage = ({ feed }) => {
 				</h1>
 				<div className='location-grid'>
 					<div className='col-1'>
-						<div className='splash-image'>
+						<div className='locationpage-image'>
 							<Image
 								src='/globe-2.png'
 								alt='earth'

@@ -291,6 +291,15 @@ $breakpoint_xxl: 1600px; */
         margin-left: 32%;
     }
 
+    .locationpage-image {
+        display: flex;
+        position: relative;
+        min-width: 360px;
+        max-width: 360px;
+        height: 360px;
+        margin-left: 15%!important;
+    }
+
     .offers-search-grid,
     .search-grid {
         margin-top: 16px;
