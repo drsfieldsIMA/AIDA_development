@@ -30,15 +30,15 @@
 	display: flex;
 	float: left;
 	flex-direction: column;
-	max-width: 50%;
-	min-width: 50%;
+	max-width: 100%;
+	min-width: 100%;
 }
 
 .col-75 {
 	display: block;
 	float: right;
-	max-width: 50%;
-	min-width: 50%;
+	max-width: 100%;
+	min-width: 100%;
 }
 
 .search-page_wrapper {
@@ -1317,21 +1317,6 @@ input[type="password"] {
 		justify-content: center;
 		align-items: center;
 		margin: 0 21px 0 21px;
-	}
-
-	.col-25 {
-		display: flex;
-		float: left;
-		flex-direction: column;
-		max-width: 50%;
-		min-width: 50%;
-	}
-
-	.col-75 {
-		display: block;
-		float: right;
-		max-width: 50%;
-		min-width: 50%;
 	}
 
 	.search-page_wrapper {

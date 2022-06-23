@@ -84,9 +84,11 @@ const Search: NextPage = ({ news }) => {
 					<h1>Search Results</h1>
 					<div className='search-grid'>
 						{data &&
-							data.posts.map((article) => (
-								<div key={article.post_id} className='search-trash-card'>
-									<h3>{article.title}</h3>
+							data.posts.map((item) => (
+								<div key={item.post_id} className='search-trash-card'>
+									<a href={`/details/${parseInt(item.post_id)}`}>
+										<h3>{item.title}</h3>
+									</a>
 								</div>
 							))}
 					</div>
