@@ -30,7 +30,7 @@ export default function about() {
 							By opening up the mission through the world wide web to our global
 							users we hope to save even more journeys and more goods sent to
 							landfill. With the added incentive of saving our Green-cycle users
-							money and time. A win, win. By all accounts. Going Green means
+							money and time. We believe A win, win situation. Going Green means
 							saving more of what you value.
 						</p>
 					</div>

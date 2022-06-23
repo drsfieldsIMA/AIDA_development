@@ -28,7 +28,7 @@
     list-style: none;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 70px;
     left: 0;
     z-index: 40;
 }
@@ -87,16 +87,21 @@
     text-transform: uppercase;
 }
 
-.tagline_wrapper {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	min-width: 210px;
-	max-width: 0;
-	margin-left: 0;
+.toogle-nav {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    padding: 5px;
+    color: #000;
+    font-size: 2rem;
 }
 
+.tagline_wrapper {
+        display: none;
+    }
+
+    
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
@@ -111,17 +116,23 @@ $breakpoint_xxl: 1600px; */
     .header ul {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
         list-style: none;
         width: 100%;
-        z-index: 10;
-        margin-top: 0.5rem;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 40;
     }
 }
 
-@media only screen and (min-width: $breakpoint_md) {}
+@media only screen and (min-width: $breakpoint_md) {
+   
+
+}
 
 @media only screen and (min-width: $breakpoint_lg) {
+
     .header {
         display: flex;
         justify-content: flex-start;
@@ -151,6 +162,33 @@ $breakpoint_xxl: 1600px; */
         width: 60%;
         padding: 14px 14px;
     }
+
+    .tagline_wrapper {
+        display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 310px;
+    max-width: 0;
+    margin-left: 35px;
+}
+    
+    .tagline {
+        display: flex;
+        color: $background-light;
+        background-color: transparent!important;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        vertical-align: middle;
+        margin-top: 0;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        font-size: 1.5rem;
+    }
+    .toogle-nav {
+    display: none;
+}
 }
 
 @media only screen and (min-width: $breakpoint_xl) {}
