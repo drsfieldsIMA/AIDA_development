@@ -96,7 +96,7 @@ const Search: NextPage = ({ news }) => {
 
 	return (
 		<div>
-			<h1 className='page-title'>Search by keywords Select Categories </h1>
+			<h1 className='page-title'>Search by keywords</h1>
 			<div className='container-col'>
 				<div className='col-25'>
 					<div className='search-page_wrapper'>

@@ -55,11 +55,17 @@
 
 }
 
+
+.search-value-input {
+	min-width: 100% !important;
+    padding-right: 14px;
+}
+
 .search-value-btn {
-    max-width: 68%;
-    border-radius: 4px;
-    background-color: $blue;
-    color: $cream;
+	max-width: 100%;
+	border-radius: 4px;
+	background-color: $dark_green;
+	color: $cream;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

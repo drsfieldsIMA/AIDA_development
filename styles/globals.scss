@@ -49,18 +49,6 @@
 	grid-gap: 8px;
 }
 
-.search-value-input {
-	min-width: 100% !important;
-}
-
-.search-value-btn {
-	max-width: 68%;
-	border-radius: 4px;
-	background-color: $dark_green;
-	color: $cream;
-}
-
-
 .location-head {
 	display: flex;
 	flex-direction: column;
@@ -280,7 +268,7 @@ $breakpoint_xxl: 1600px; */
 			position: relative !important;
 			height: unset !important;
 			object-position: top;
-			padding-right: 100px !important;
+			padding-right: 16px !important;
 			padding-top: 48px !important;
 			padding-left: 48px !important;
 		}
@@ -289,15 +277,6 @@ $breakpoint_xxl: 1600px; */
 			padding-top: 0 !important;
 		}
 
-	}
-
-	.plenary-bkg {
-		display: block;
-		position: relative;
-		background: url("/images/bottom-bkg.svg") center center;
-		height: 300vh;
-		width: 100%;
-		//background-image: url("/public/images/bottom-bkg.svg");
 	}
 
 	.recycle-container {
@@ -1624,46 +1603,6 @@ $breakpoint_xxl: 1600px; */
 			padding: 21px 50px;
 			box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 		}
-
-
-		.splash-image {
-			width: 90%;
-			height: 500px;
-			width: 500px;
-			object-position: top;
-			padding-top: 60px !important;
-			padding-right: 60px !important;
-
-			>div {
-				position: unset !important;
-			}
-
-			.earth-img {
-				object-fit: contain;
-				width: 90% !important;
-				position: relative !important;
-				height: unset !important;
-				object-position: top;
-				padding-right: 100px !important;
-				padding-top: 48px !important;
-				padding-left: 48px !important;
-			}
-
-			.location-img {
-				padding-top: 0 !important;
-			}
-
-		}
-
-		.plenary-bkg {
-			display: block;
-			position: relative;
-			background: url("/images/bottom-bkg.svg") center center;
-			height: 300vh;
-			width: 100%;
-			//background-image: url("/public/images/bottom-bkg.svg");
-		}
-
 
 
 		.pic-links {

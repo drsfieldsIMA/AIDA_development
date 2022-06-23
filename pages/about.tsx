@@ -9,7 +9,7 @@ export default function about() {
 		<div>
 			<h1 className='page-title'>About Us</h1>
 			<div className='splash-image_wrapper'>
-				<div className='splash-image'>
+				<div className='about-image'>
 					<Image
 						src='/images/locations.svg'
 						alt='earth'

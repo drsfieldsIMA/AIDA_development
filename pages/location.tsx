@@ -157,7 +157,7 @@ const Location: NextPage = ({ feed }) => {
 							<Image
 								src='/globe-2.png'
 								alt='earth'
-								className='earth-img location-img'
+								className='earth-img'
 								layout='fill'
 							/>
 						</div>
