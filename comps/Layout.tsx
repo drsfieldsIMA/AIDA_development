@@ -1,6 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import { Header } from './navigation/Header'
+/** @format */
+
+import React from "react";
+import Head from "next/head";
+import { Header } from "./navigation/Header";
 import PropTypes from "prop-types";
 import { Footer } from "./Footer";
 
@@ -12,43 +14,52 @@ type QueryParams = {
 	children: any;
 };
 
-export default function Layout({title,keywords,descrip,children}:QueryParams) {
-  return (
-    <div>
-      <Head>
-      <title>{title}</title>
-        <meta name='description' content={descrip}></meta>
-        <meta name="keywords" content={keywords}></meta>
-        </Head>
-        <Header></Header>
-        <div className="container">
-      {children}        
-      </div>
-      <Footer>
-
-
-      </Footer>
-    </div>
-  )
+export default function Layout({
+	title,
+	keywords,
+	descrip,
+	children,
+}: QueryParams) {
+	return (
+		<div>
+			<Head>
+				<title>{title}</title>
+				<meta name='description' content={descrip}></meta>
+				<meta name='keywords' content={keywords}></meta>
+			</Head>
+			<Header></Header>
+			<div className='container'>{children}</div>
+			<Footer></Footer>
+		</div>
+	);
 }
 
-export function Heading({ color ,size = "1", content }:{color:string,size:string,content:string}) {
+export function Heading({
+	color,
+	size = "1",
+	content,
+}: {
+	color: string;
+	size: string;
+	content: string;
+}) {
 	const VariableHeading: string | any = `h${size}`;
-	return<VariableHeading  style={{ color }} >{content}</VariableHeading>;
-		}
+	return <VariableHeading style={{ color }}>{content}</VariableHeading>;
+}
 
-    Heading.propTypes = {
-      size: PropTypes.string,
-      content: PropTypes.string.isRequired,
-      color: PropTypes.string,
-      classNameString: PropTypes.string,
-      VariableHeading: PropTypes.node,
-      articles: PropTypes.any,
-    };
-    
-    Layout.defaultProps = {
-      title: " Greencycle | Recycle Upcycle Repurpose  ",
-      descrip: "",
-      keywords: " ",
-      gsv: "wenrVQYITXvXIH9sNnSmiBaOZ941XPPzAvnupQrq6RQ",
-    };
+Heading.propTypes = {
+	size: PropTypes.string,
+	content: PropTypes.string.isRequired,
+	color: PropTypes.string,
+	classNameString: PropTypes.string,
+	VariableHeading: PropTypes.node,
+	articles: PropTypes.any,
+};
+
+Layout.defaultProps = {
+	title: " Greencycle | Recycle Upcycle Repurpose  ",
+	descrip:
+		"Ever Wondered how you can recycle more of your phone, furniture, clothes and scrap metal. By levearging the power of the internet and the large Greencycle community we can help restore and sustain the earths resources.",
+	keywords: "",
+	gsv: "wenrVQYITXvXIH9sNnSmiBaOZ941XPPzAvnupQrq6RQ",
+};
