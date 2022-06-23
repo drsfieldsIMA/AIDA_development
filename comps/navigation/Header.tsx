@@ -49,13 +49,12 @@ export const Header = () => {
 							className='header-input'
 							onChange={(e: any) => setInputValue(e.target.value)}></input>
 						<IconButton
-							onClick={(e: any) => (
-								toggleNav(), setModalIsOpen(true), setSearchTerm(inputValue)
-							)}
+							onClick={(e: any) => toggleNav()}
 							className='header-input__btn'
 							component='a'
 							size='large'
-							color='inherit'>
+							color='inherit'
+							href='/search'>
 							<Pageview />
 						</IconButton>
 					</div>

@@ -11,6 +11,8 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import theme from "../comps/common/theme/theme";
 import { styled } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [queryClient] = React.useState(() => new QueryClient());

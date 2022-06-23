@@ -61,7 +61,7 @@
 	flex-direction: column;
 	max-height: fit-content;
 	min-height: fit-content;
-	padding: 35px 70px;
+	padding: 140px 70px;
 }
 
 .location-grid {
@@ -740,8 +740,16 @@ li.items {
 	position: relative;
 }
 
+.search-trash-card{
+
+	h3{
+		font-size: clamp(0.5rem, -0.475rem + 8.333vw, 0.95rem);
+	}
+}
+
 .pic-links:nth-child(2n-1),
-.product-feed-item:nth-child(2n-1) {
+.product-feed-item:nth-child(2n-1) ,
+.search-trash-card:nth-child(2n-1) {
 	background-color: $background-main  !important;
 	font-size: 36px;
 	color: $dark_green;
@@ -752,10 +760,15 @@ li.items {
 			color: $dark_green;
 		}
 	}
+
+	h3 {
+		color: $dark_green;
+	}
 }
 
 .pic-links:nth-child(2n),
-.product-feed-item:nth-child(2n) {
+.product-feed-item:nth-child(2n),
+.search-trash-card:nth-child(2n)  {
 	background-color: $secondary_green;
 	font-size: 36px;
 	color: $background-main  !important;
@@ -765,6 +778,10 @@ li.items {
 		h3 {
 			color: $background-main;
 		}
+	}
+
+	h3 {
+		color: $background-main;
 	}
 
 	.feed-button {
@@ -781,7 +798,8 @@ li.items {
 }
 
 .pic-links:nth-child(3n),
-.product-feed-item:nth-child(3n) {
+.product-feed-item:nth-child(3n),
+.search-trash-card:nth-child(3n)  {
 	background-color: $primary_yellow;
 	font-size: 36px;
 	color: $dark  !important;
@@ -791,6 +809,10 @@ li.items {
 		h3 {
 			color: $dark_green;
 		}
+	}
+
+	h3 {
+		color: $dark_green;
 	}
 
 	.feed-button {
@@ -807,7 +829,8 @@ li.items {
 }
 
 .pic-links:nth-child(5n),
-.product-feed-item:nth-child(5n) {
+.product-feed-item:nth-child(5n),
+.search-trash-card:nth-child(5n)  {
 	background-color: $blue  !important;
 	font-size: 36px;
 	color: $background-main  !important;
@@ -816,6 +839,11 @@ li.items {
 		h3 {
 			color: $background-main
 		}
+	}
+
+
+	h3 {
+		color: $background-main
 	}
 
 	.feed-button {
@@ -832,7 +860,8 @@ li.items {
 }
 
 .pic-links:nth-child(7n),
-.product-feed-item:nth-child(7n) {
+.product-feed-item:nth-child(7n),
+.search-trash-card:nth-child(7n)  {
 	background-color: $dark  !important;
 	font-size: 36px;
 	color: $background-main;
@@ -841,6 +870,10 @@ li.items {
 		h3 {
 			color: $background-main;
 		}
+	}
+
+	h3 {
+		color: $background-main;
 	}
 
 	.feed-button {
