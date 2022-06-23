@@ -80,6 +80,14 @@
     }
 }
 
+.btn-block_wrapper {
+    display: block;
+    position: relative;
+    float: right;
+    height: fit-content;
+    width:fit-content;
+}
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
