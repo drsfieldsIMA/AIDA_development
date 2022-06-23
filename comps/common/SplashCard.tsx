@@ -57,10 +57,10 @@ const SplashCard = ({ trash }: QueryParams) => {
 				<div className='splash-card'>
 					<div className='newsletter-block_wrapper'>
 						<div className='email-block'>
-							<h3>Newsletter:Enter email address</h3>
+							<h3>Newsletter: Enter email address</h3>
 							<input
 								type='email'
-								placeholder='joebloggs@domain.co.uk'
+								placeholder='joblog@domain.co.uk'
 								className='email-newsletter'></input>
 						</div>
 					</div>
