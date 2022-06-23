@@ -118,6 +118,11 @@ $breakpoint_xxl: 1600px; */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 ///
 @media only screen and (min-width: $breakpoint_sm) {
+
+    .toogle-nav {
+        display: none;
+    }
+
  .header ul {
         display: flex;
         align-items: center;
@@ -134,6 +139,7 @@ $breakpoint_xxl: 1600px; */
         height: auto;
         background: #E1EABE;
         border: none;
+        margin-left: 120px;
     }
 }
 
@@ -146,7 +152,7 @@ $breakpoint_xxl: 1600px; */
         width: fit-content;
         position: absolute;
         top: 11px;
-        left: 0;
+        left:0;
         z-index: 40;
     }
 }
@@ -171,7 +177,7 @@ $breakpoint_xxl: 1600px; */
         justify-content: flex-end;
         position: relative !important;
         list-style: none;
-        top: 12px;
+        top: 0;
         z-index: 10;
     }
 
