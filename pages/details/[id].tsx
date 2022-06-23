@@ -169,8 +169,8 @@ export default function RecyclePost({ trash }: { trash: Array<object> | any }) {
 								/>
 								<div className='btn-block_wrapper'>
 									<div className='btn-block'>
-										<Link href='/offers'>
-											<a className='btn-primary'> Current Offers</a>
+										<Link href={`/user?${trash.post_id}`}>
+											<a className='btn-primary'>Send Request</a>
 										</Link>
 									</div>
 								</div>

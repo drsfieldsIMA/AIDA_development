@@ -64,7 +64,7 @@ const offers: NextPage = ({ feed }: any) => {
 									<a
 										href={`/details/${parseInt(item.post_id)}`}
 										className='btn-secondary'>
-										REQUEST
+										DETAILS
 									</a>
 								</div>
 							</li>
