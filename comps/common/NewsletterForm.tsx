@@ -1,22 +1,39 @@
-/* eslint-disable no-mixed-spaces-and-tabs */
-import React from 'react'
+/**
+ * /* eslint-disable no-mixed-spaces-and-tabs
+ *
+ * @format
+ */
+
+import React from "react";
 import { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { parseCookies  } from 'nookies';
-import { Box, Button, Container,MenuItem,InputLabel, Grid, Link, TextField, Typography,Input,Select } from '@mui/material';
-import { API_MONGOOSE_URL, API_URL } from 'comps/config';
+import { parseCookies } from "nookies";
+import {
+	Box,
+	Button,
+	Container,
+	MenuItem,
+	InputLabel,
+	Grid,
+	Link,
+	TextField,
+	Typography,
+	Input,
+	Select,
+} from "@mui/material";
+import { API_MONGOOSE_URL, API_URL } from "comps/config";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import ReactSelect from "react-select";
-import { Router } from 'react-router';
+import { Router } from "react-router";
 
 const schema = yup.object().shape({
 	email: yup.string().required("email is required"),
-  content:yup.string().required("Description is required"),
-	category:yup.string().required("Category is required"),
+	content: yup.string().required("Description is required"),
+	category: yup.string().required("Category is required"),
 });
 
-export default function NewsletterForm({props}:any) {
+export default function NewsletterForm({ props }: any) {
 	const [submitting, setSubmitting] = useState(false);
 	const [isValid, setIsValid] = useState(false);
 	const [focusMessage, setMessage] = useState("");
@@ -34,7 +51,7 @@ export default function NewsletterForm({props}:any) {
 		);
 	}
 
-    const EmailRegex = /\S/;
+	const EmailRegex = /\S/;
 
 	const handleEmail = (event: React.ChangeEvent<any>) => {
 		const email = event.target.value;
@@ -52,7 +69,7 @@ export default function NewsletterForm({props}:any) {
 		setSubmitting(true);
 		setIsValid(false);
 		try {
-			let check=true
+			let check = true;
 			if (check) {
 				setIsValid(true);
 				setIsLoginValid(true);
@@ -75,48 +92,54 @@ export default function NewsletterForm({props}:any) {
 		}
 	}
 
-
-return (
-    <>
+	return (
+		<>
 			<Box
-        component="main"
-        sx={{
-          alignItems: 'center',
-          display: 'flex',
-          flexGrow: 1,
-          minHeight: '100%',
-        }}
-        className="height-75"
-      >
-        <Container    sx={{
-          backgroundColor:'white',
-					maxWidth:"800"}} >
-			
-			
-						<form onSubmit={handleSubmit(onSubmit)} >
-							<fieldset className="form__fieldset" disabled={submitting}>
-
-
-						<Grid container  className="form__fieldset__grid"  rowSpacing={7} columnSpacing={{ xs: 1, sm: 1, md: 2, lg:3 }} marginTop={{xs:1, sm:2,md:3}}>
-						<Grid   item  xs={12} md={12}>
-				
-				    	<label>Email</label>
-					 	   <Input {...register('email', { required: true })} placeholder="email e.g. local author publishes to a worldwi....." className="formInput" name="email" onChange={handleEmail}   />
-						
+				component='main'
+				sx={{
+					alignItems: "center",
+					display: "flex",
+					flexGrow: 1,
+					minHeight: "100%",
+				}}
+				className='height-75'>
+				<Container
+					sx={{
+						backgroundColor: "white",
+						maxWidth: "800",
+					}}>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<fieldset className='form__fieldset' disabled={submitting}>
+							<Grid
+								container
+								className='form__fieldset__grid'
+								rowSpacing={7}
+								columnSpacing={{ xs: 1, sm: 1, md: 2, lg: 3 }}
+								marginTop={{ xs: 1, sm: 2, md: 3 }}>
+								<Grid item xs={12} md={12}>
+									<label>Email</label>
+									<Input
+										{...register("email", { required: true })}
+										placeholder='email e.g. local author publishes to a worldwi.....'
+										className='formInput'
+										name='email'
+										onChange={handleEmail}
+									/>
 								</Grid>
-								</Grid>
+							</Grid>
 
-								<div className="form-input">
-								<Button type="submit" style={{marginLeft:"30px"}} className="btn-primary">{submitting ? "Submitting..." : "Submit"}</Button>
-								</div>
-				
-				
-				</fieldset>
-			</form>
-			
-			
-			</Container>
+							<div className='form-input'>
+								<Button
+									type='submit'
+									style={{ marginLeft: "30px" }}
+									className='btn-primary'>
+									{submitting ? "Submitting..." : "Submit"}
+								</Button>
+							</div>
+						</fieldset>
+					</form>
+				</Container>
 			</Box>
-     </>
+		</>
 	);
 }
