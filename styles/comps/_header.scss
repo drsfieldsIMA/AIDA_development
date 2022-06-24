@@ -106,20 +106,7 @@
         background: $background-main;
         border: 1px solid $dark_green;
     }
-   
     
-.header a:hover {
-	color: $secondary_green;
-}
-
-.logo {
-	display: inline-block;
-	background-image: url(../../public/logo-3.svg);
-	min-height: 70px !important;
-	min-width: 70px !important;
-	font-size: 1.75em;
-	text-transform: uppercase;
-}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
@@ -144,7 +131,7 @@ $breakpoint_xxl: 1600px; */
         width: fit-content;
         position: absolute;
         top: 11px;
-        left: 0!important;
+        left: 125px!important;
         z-index: 40;
     }
     .list {
