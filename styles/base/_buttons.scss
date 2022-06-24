@@ -15,16 +15,16 @@
 }
 
 .btn-primary {
-    display: block;
-    position: relative;
-    max-width: 250px;
-    min-width: 100%;
-    font-size: clamp(14px, 12px + 0.0333px, 21px);
-    background-color: #497EC0;
-    border-radius: 5px;
-    color: #f2f0e4;
-    padding: 15px 25%;
-    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+        display: flex;
+        flex-direction: row;
+        max-height: 58px;
+        min-width: 100%;
+        font-size: 14px;
+        background-color: #497EC0;
+        border-radius: 5px;
+        color: #f2f0e4;
+        margin-top: 26px;
+        box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
 
     &:hover {
         background-color: $secondary_green;
