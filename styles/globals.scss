@@ -968,13 +968,17 @@ input {
 }
 
 .toggle-nav {
-	display: none;
-	position: absolute;
-	right: 10px;
-	top: 7px;
-	padding: 5px;
-	color: #000;
-	font-size: 18px;
+	display: flex;
+    position: relative;
+    right: 40px;
+    top: 4px;
+    padding: 15px;
+    color: $dark_green;
+    font-size: 1rem;
+    border-radius: 0!important;
+    background-color: $cream;
+    border-radius: 4px!important;
+    border: 2px solid $dark_green!important;
 }
 
 input[type="text"],

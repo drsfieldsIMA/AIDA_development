@@ -66,7 +66,7 @@ export const Header = () => {
 				color='inherit'
 				aria-label='menu'
 				onClick={toggleNav}
-				className='toogle-nav'
+				className='toggle-nav'
 				sx={{
 					display: {
 						mr: 2,

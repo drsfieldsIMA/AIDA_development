@@ -40,10 +40,6 @@ const Search: NextPage = ({ info }) => {
 	const [data, setData] = useState([]);
 	const [searchValue, setSearchValue] = useState([]);
 
-	const handleChange = (selected) => {
-		setSearchValue(selected);
-	};
-
 	const debouncedSearchValue = useDebounce(searchValue, 900);
 
 	const searchCategories = async ({ query }) => {

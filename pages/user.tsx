@@ -9,9 +9,16 @@ import ReviewSection from "@/comps/common/ReviewSection";
 import { useRouter } from "next/router";
 
 const User: NextPage = ({}) => {
+	const [message, SetMessage] = useState();
+	const [searchValue, setSearchValue] = useState([]);
 	const userArray: { name: string } = {
 		name: "Nathan D",
 	};
+
+	const sendMessage = () => {
+		alert("User has Been Contacted");
+	};
+
 	const router = useRouter();
 	return (
 		<div className='recycle-container'>
@@ -37,7 +44,22 @@ const User: NextPage = ({}) => {
 							<FontAwesomeIcon icon={faStar} />
 							<FontAwesomeIcon icon={faStar} />
 						</div>
-						<input type='text'></input>
+						<label>Send Message:</label>
+						<div className='form-group-input-submit'>
+							<input
+								type='text'
+								className='user-form'
+								onChange={({ target: { value } }) => {
+									setSearchValue(value);
+								}}
+								value={searchValue}></input>
+							<button
+								type='submit'
+								className='btn-submit'
+								onClick={(event) => sendMessage}>
+								Submit
+							</button>
+						</div>
 					</div>
 				</div>
 			</div>
