@@ -35,9 +35,9 @@
 }
 
 .btn-block_wrapper {
-    display: block;
+    display: flex;
     position: relative;
-    float: right;
+    flex-direction: column;
     height: fit-content;
     width: fit-content;
 }
@@ -52,6 +52,20 @@
     h3 {
         max-width: 50%;
         font-size: clamp(12px, -0.475rem + 8.333vw, 18px);
+    }
+
+    button{
+        max-height: 55px;
+        width: 55px;
+        text-align: center;
+        vertical-align: middle;
+        font-size:12px;
+        border: 4px;
+        background-color: $secondary_green;
+        color: $cream;
+        :hover{
+            cursor: pointer;
+        }
     }
 }
 

@@ -54,30 +54,29 @@ const SplashCard = ({ trash }: QueryParams) => {
 						</div>
 					</div>
 				</div>
-				<div className='splash-card'>
-					{/* <div className='newsletter-block_wrapper'>
-						<div className='email-block'></div>
-					</div> */}
-					<div className='btn-block_wrapper'>
-						<div className='newsletter-block_wrapper'>
-							<h3>Newsletter: Enter email address</h3>
-							<input
-								type='email'
-								placeholder='joblog@domain.co.uk'
-								className='email-newsletter'></input>
-							<button>Submit</button>
-						</div>
-						<Link href='/offers'>
-							<a className='btn-primary'> Current Offers</a>
-						</Link>
-						<Link href='/login'>
-							<a
-								className='btn-primary'
-								style={{ backgroundColor: "#4EAE3C!important" }}>
-								Make an offer
-							</a>
-						</Link>
+				<div className='newsletter-block_wrapper'>
+					<div className='email-block'>
+						<h3>Newsletter: Enter email address</h3>
+						<input
+							type='email'
+							placeholder='joblog@domain.co.uk'
+							className='email-newsletter'></input>
+						<button>Submit</button>
 					</div>
+				</div>
+			</div>
+			<div className='btn-block_wrapper'>
+				<div className='btn-block'>
+					<Link href='/offers'>
+						<a className='btn-primary'> Current Offers</a>
+					</Link>
+					<Link href='/login'>
+						<a
+							className='btn-primary'
+							style={{ backgroundColor: "#4EAE3C!important" }}>
+							Make an offer
+						</a>
+					</Link>
 				</div>
 			</div>
 		</>

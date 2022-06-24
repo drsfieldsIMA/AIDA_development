@@ -1879,16 +1879,18 @@ $breakpoint_xxl: 1600px; */
 
 	.btn-tertiary {
 		display: flex;
-		flex-direction: column;
-		height: 52px !important;
-		background-color: #4FAE3C;
-		color: white;
-		font-size: 16px;
-		border: #4C7041 2px solid;
-		border-radius: 5px;
-		padding: 9px 0px 9px 20px;
-		margin: 1rem 5%;
-		box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+    flex-direction: row;
+    height: 52px !important;
+    background-color: #4FAE3C;
+    color: white;
+    font-size: 16px;
+    border: #4C7041 2px solid;
+    border-radius: 5px;
+    padding: 9px 0px 9px 20px;
+    margin: 1rem 5%;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+    justify-content: center;
+    padding-top: 14px;
 
 	}
 
