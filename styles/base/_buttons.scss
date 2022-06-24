@@ -48,21 +48,19 @@
 }
 
 
-
-
 .btn-tertiary {
     display: flex;
-    flex-direction: column;
-    height: 52px !important;
-    background-color: #4FAE3C;
-    color: white;
+    flex-direction: row;
+    height: 52px!important;
+    background-color: #4fae3c;
+    color: #fff;
     font-size: 16px;
-    border: #4C7041 2px solid;
+    border: 2px solid #4c7041;
     border-radius: 5px;
-    padding: 9px 0px 9px 20px;
+    padding: 14px 0 9px 0;
     margin: 1rem 5%;
-    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
-
+    justify-content: space-around;
+    vertical-align: middle;
 }
 
 
@@ -75,7 +73,7 @@
     display: flex;
     display: inline-flex;
     flex-direction: row;
-    margin-left: 140px;
+    margin-left: 0;
     max-width: 140px;
     border-radius: 4px;
 	background-color: $secondary_green;
@@ -96,6 +94,19 @@
     float: right;
     height: fit-content;
     width:fit-content;
+}
+
+
+.search-page_wrapper {
+	margin-top: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.span-search {
+	color: $blue;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -123,9 +134,24 @@ $breakpoint_xxl: 1600px; */
 		gap: 15px;
 	}
 
+    .search-value-btn {
+        margin-left: 140px;
+    }
+
 }
 
-@media only screen and (min-width: $breakpoint_lg) {}
+@media only screen and (min-width: $breakpoint_lg) {
+
+    .btn-block {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        min-width: 100%;
+        justify-content: space-around;
+        margin-top: 6rem;
+        gap: 15px;
+    }
+}
 
 @media only screen and (min-width: $breakpoint_xl) {}
 

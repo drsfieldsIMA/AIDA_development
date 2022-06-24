@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 const ProductFeed = ({ trashBin }: { trashBin: any }) => {
 	const trash = trashBin.posts;
-	console.log("product feed trash", trash);
 	return (
 		<div className='flow-flex-col'>
 			<ol className='product-feed'>
@@ -26,7 +25,7 @@ const ProductFeed = ({ trashBin }: { trashBin: any }) => {
 								/>
 							) : (
 								<Image
-									src='/globe-2.png'
+									src='/logo-3.svg'
 									alt={item.title}
 									width={270}
 									height={270}

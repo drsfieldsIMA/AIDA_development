@@ -40,8 +40,11 @@ export const Footer = (props: any) => {
 						<Link href='/about'>
 							<a className='foot-links'>About Us</a>
 						</Link>
-						<Link href='/users'>
+						<Link href='/user'>
 							<a className='foot-links'>Users</a>
+						</Link>
+						<Link href='/styleguide'>
+							<a className='foot-links'>Styleguide</a>
 						</Link>
 					</div>
 				</div>

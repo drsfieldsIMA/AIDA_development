@@ -5,7 +5,7 @@ type Data = {
   name: string
 }
 
-const {news}=require("./data.json")
+const {info}=require("./data.json")
 
 export default function handler(
   req: NextApiRequest,

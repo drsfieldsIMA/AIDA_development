@@ -10,7 +10,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import Layout from "../comps/Layout";
-import NewsCard from "../comps/common/NewsCard";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import { API_URL } from "../comps/config";
@@ -24,7 +23,7 @@ import { ALL_ARTICLE_ENTRIES } from "constants/articleEntries";
 import Controller from "comps/common/Controller";
 import { render } from "sass";
 
-const Search: NextPage = ({ news }) => {
+const Search: NextPage = ({ info }) => {
 	const options = [
 		{ label: "Electricals", value: "electricals" },
 		{ label: "Phones", value: "phones" },
@@ -42,7 +41,6 @@ const Search: NextPage = ({ news }) => {
 	const [searchValue, setSearchValue] = useState([]);
 
 	const handleChange = (selected) => {
-		console.log("selected==>", selected);
 		setSearchValue(selected);
 	};
 
@@ -51,7 +49,6 @@ const Search: NextPage = ({ news }) => {
 	const searchCategories = async ({ query }) => {
 		setIsSuccess(false);
 		setIsLoading(true);
-		console.log("query==>", typeof searchValue);
 		const matchingCategories = await fetch(
 			`https://trashnothing.com/api/v1.2/posts/search?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=54.5481566&longitude=-1.2587695&radius=10000&radius=160934&search=${searchValue}`
 		);
@@ -111,7 +108,6 @@ const Search: NextPage = ({ news }) => {
 							type='text'
 							onChange={({ target: { value } }) => {
 								setSearchValue(value);
-								console.log("value==>", value);
 							}}
 							value={searchValue}
 							placeholder='Keyword'
@@ -136,9 +132,9 @@ export async function getStaticProps() {
 	const res = await fetch(
 		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=54.5481566&longitude=-1.2587695&radius=10000`
 	);
-	const news = await res.json();
+	const info = await res.json();
 	return {
-		props: { news },
+		props: { info },
 	};
 }
 

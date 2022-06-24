@@ -1,26 +1,36 @@
 /** @format */
-import React, { useState, useEffect, FC } from "react";
-import { NextPage } from "next";
+import type { NextPage } from "next";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import Image from "next/image";
+import RenderResult from "next/dist/server/render-result";
+import { useState } from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import ReviewSection from "@/comps/common/ReviewSection";
-import { useRouter } from "next/router";
+import { Header } from "@/comps/navigation/Header";
 
-const User: NextPage = ({}) => {
+const Styleguide: NextPage = ({}) => {
 	const userArray: { name: string } = {
 		name: "Nathan D",
 	};
 	const router = useRouter();
 	return (
 		<div className='recycle-container'>
-			<h1 className='page-title'>Message {userArray.name} </h1>
+			<h1 className='page-title'>Style Guide</h1>
+
+			<h2 className='page-title'>Logo</h2>
+			<Image src='/logo-3.svg' className='img' width={70} height={70} />
+			<h2 className='page-title'>Header</h2>
+			<div className='header_wrapper'>
+				<Header></Header>
+			</div>
+			<h2 className='page-title'>Review Section</h2>
 			<div className='reviews'>
 				<div className='review'>
 					<div className='head-review'>
 						<Image
-							src='/images/avatar-1.jpg'
+							src={"/images/avatar-1.jpg"}
 							className='img'
 							alt='avatar 1'
 							width={250}
@@ -53,6 +63,7 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	/* 	const res = await fetch(
 		`https://trashnothing.com/api/v1.2/users/7743302/display?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3`
 	);
+	console.log("res", res);
 	const userArray = await res.json(); */
 
 	return {
@@ -60,4 +71,4 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	};
 }
 
-export default User;
+export default Styleguide;

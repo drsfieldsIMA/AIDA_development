@@ -29,7 +29,7 @@ export default function about() {
 						<p>
 							By opening up the mission through the world wide web to our global
 							users we hope to save even more journeys and more goods sent to
-							landfill. With the added incentive of saving our Greencycle users
+							landfill. With the added incentive of saving our GreenCycle users
 							money and time. We believe a win, win situation. Going Green means
 							saving more of what you value.
 						</p>

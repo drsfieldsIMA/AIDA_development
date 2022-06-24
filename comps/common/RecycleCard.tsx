@@ -19,7 +19,6 @@ type QueryParams = {
 };
 
 const RecycleCard = ({ card }: QueryParams) => {
-	console.log("props==> Recycle", card.image);
 	const trash = card;
 	return (
 		<Card

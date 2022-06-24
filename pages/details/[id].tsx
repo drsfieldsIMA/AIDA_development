@@ -187,7 +187,6 @@ export async function getStaticPaths() {
 	//	const res = await fetch(`http://localhost:1337/trashs`);
 	//	const trashs = await res.json();
 
-	console.log("static paths==>", static_paths[0].post_id);
 	const res = await fetch(
 		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000`
 	);
@@ -204,7 +203,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: object | any }) {
 	//console.log("Static Params", params);
 	let { id } = params;
-	console.log("The Static id for trash nothing", id);
 	let idInt = parseInt(id);
 	const res = await fetch(
 		`https://trashnothing.com/api/v1.2/posts/${idInt}?&api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3`

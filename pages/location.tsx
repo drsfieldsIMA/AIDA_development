@@ -23,9 +23,6 @@ const Location: NextPage = ({ feed }) => {
 	const [isInitial, setIsInitial] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
 	const [data, setData] = useState(feed);
-	console.log("isInitial", isInitial);
-	console.log("isLoading", isLoading);
-	console.log("isSuccess", isSuccess);
 
 	async function getLocation() {
 		if (navigator.geolocation) {
@@ -41,9 +38,6 @@ const Location: NextPage = ({ feed }) => {
 	function getCoordinates(position: {
 		coords: { latitude: string; longitude: string };
 	}) {
-		console.log("get coordinates", position);
-		console.log(position.coords.latitude);
-		console.log(position.coords.longitude);
 		setUsersLatitude(position.coords.latitude);
 		setUsersLongitude(position.coords.longitude);
 		searchTrash(
@@ -86,7 +80,6 @@ const Location: NextPage = ({ feed }) => {
 		setIsLoading(false);
 		setIsInitial(false);
 		setIsSuccess(true);
-		console.log("latitude==>", latitude);
 		if (latitude && longitude) {
 			const matchingCategories = await fetch(
 				`https://trashnothing.com/api/v1.2/posts/search?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=${latitude}&longitude=${longitude}&radius=10000&radius=160934&per_page=100`
@@ -197,7 +190,6 @@ export async function getStaticProps() {
 		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000&per_page=5`
 	);
 	const feed = await res.json();
-	//    console.log("feed==>",feed)
 	return {
 		props: { feed },
 	};

@@ -18,9 +18,9 @@ const ReviewSection = () => {
 				<div className='review'>
 					<div className='head-review'>
 						<Image
-							src={"/images/avatar-1.jpg"}
+							src='/images/avatar-1.jpg'
 							className='img'
-							alt='avatar 1'
+							alt='GreenCycle logo '
 							width={250}
 							height={250}
 						/>
@@ -43,7 +43,7 @@ const ReviewSection = () => {
 				<div className='review'>
 					<div className='head-review'>
 						<Image
-							src={"/images/avatar-2.jpg"}
+							src='/images/avatar-2.jpg'
 							className='img'
 							alt='avatar 2'
 							width={250}

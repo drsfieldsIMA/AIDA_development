@@ -12,8 +12,6 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Link from "next/link";
-import Layout from "../comps/Layout";
-import NewsCard from "../comps/common/NewsCard";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import { API_URL, API_MONGOOSE_URL } from "../comps/config";
@@ -82,7 +80,6 @@ export async function getStaticProps() {
 		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000&per_page=100`
 	);
 	const feed = await res.json();
-	//    console.log("feed==>",feed)
 	return {
 		props: { feed },
 	};

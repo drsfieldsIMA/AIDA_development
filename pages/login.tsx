@@ -46,7 +46,6 @@ export default function LoginForm() {
 	const [loginisValid, setloginisValid] = useState(false);
 	const [focusLoginMessage, setFocusMessage] = useState("");
 	const [auth, setAuth] = useState("");
-	console.log("auth line 43", auth);
 
 	// const {user,jwt, login, logout}=useContext(AuthContext)
 	//const {user, login, logout}=useAuth()
@@ -82,7 +81,6 @@ export default function LoginForm() {
 	};
 
 	async function onSubmit(data: any) {
-		console.log(" data ", data);
 		setSubmitting(true);
 		setLoginError(null);
 		setIsValid(false);
@@ -91,7 +89,6 @@ export default function LoginForm() {
 			password: data.password,
 		};
 
-		console.log(" login info", loginInfo);
 		setIsValid(true);
 		setloginisValid(true);
 		try {

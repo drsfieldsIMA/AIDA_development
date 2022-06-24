@@ -46,6 +46,9 @@
         font-size: 34px;
         margin-bottom: 1.5rem;
         padding: 14px 14px !important;
+        display: flex;
+       flex-direction: row;
+         justify-content: center;
 
         &:hover {
             color: $secondary_green;

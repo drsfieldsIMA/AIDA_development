@@ -1,5 +1,5 @@
 {
-  "news": [
+  "info": [
     {
       "id": "1",
       "title": "The Numbers Add Up",
@@ -7,9 +7,7 @@
       "time": "10:00 PM EST",
       "content": "We aim to save 300 metric tonnes per year in landfill. We also hope you find something that saves you cash in your back pocket.",
       "image": "/truck.svg",
-      "color":"#4EAE3C",
-      "category":"sport",
-      "author":"rowling"
+      "color":"#4EAE3C"
     },
     {
       "id": "2",
@@ -18,9 +16,7 @@
       "time": "8:00 PM EST",
       "content":"We currently use 24% more than the planet and biosphere can provide in a single year. At GreenCycle we aim to provide a network of people who can bring this quantity back to as low as possible, restoring Gaia in the process.",
       "color":"#4C7041",
-      "image": "/images/graphs.svg",
-      "category":"sport",
-      "author":"rowling"
+      "image": "/images/graphs.svg"
     },
     {
       "id": "3",
@@ -29,9 +25,7 @@
       "time": "7:00 PM EST",
       "content": "Use our easy to navigate categories above including furniture, phones/electrics, metals, training equipment,clothes/textiles and others. ",
       "image": "/images/categories.svg",
-      "color":"#4C7041",
-      "category":"science", 
-      "author":"rowling"
+      "color":"#4C7041"
     }
     ,
     {
@@ -41,9 +35,7 @@
       "time": "7:00 PM EST",
       "content": "The GreenCycle community currently stands at over 60 worldwide locations. Join today and add your junk",
       "image": "/images/locations.svg",
-      "color":"#4C7041",
-      "category":"science", 
-      "author":"rowling"
+      "color":"#4C7041"
     }
     ,
     {
@@ -52,9 +44,7 @@
       "date": "June 11, 2021",
       "content": "Find the nearest phone, tablet, t-shirt, pedal bike or piece of furniture by using our locator algorithm as employed by Google maps. ",
       "image": "/marker.svg",
-      "color":"#4C7041",
-      "category":"science", 
-      "author":"rowling"
+      "color":"#4C7041"
     }
     ,
     {
@@ -64,9 +54,7 @@
       "time": "8:00 PM EST",
       "content":"We have over 3000 users that can take or provide second hand products off your hands.",
       "color":"#4C7041",
-      "image": "/logo-3.svg",
-      "category":"sport",
-      "author":"rowling"
+      "image": "/logo-3.svg"
     }
   ]
 }

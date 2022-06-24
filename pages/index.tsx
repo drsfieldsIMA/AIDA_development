@@ -2,30 +2,23 @@
 /* eslint-disable */
 import type { NextPage } from "next";
 import { Key, useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import Link from "next/link";
 import RecycleCard from "../comps/common/RecycleCard";
 import Layout from "../comps/Layout";
 import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
-import { API_URL, API_MONGOOSE_URL } from "../comps/config";
 import { useQuery } from "react-query";
 import theme from "../comps/common/theme/theme";
 import { ThemeProvider } from "@material-ui/core";
-import news from "../pages/api/news";
 import ResponsivePlayer from "../comps/ResponsivePlayer";
 import SplashCard from "comps/common/SplashCard";
 import { Footer } from "comps/Footer";
 import ProductFeed from "comps/common/ProductFeed";
 import ReviewSection from "comps/common/ReviewSection";
 
-const Home = ({ news, trash }: { news: any; trash: any }) => {
-	const trashFeed = news;
+const Home = ({ info, trash }: { info: any; trash: any }) => {
+	const trashFeed = info;
 
 	// sort by value
-	console.log("trashFeed", trashFeed);
 	trashFeed.sort(function (
 		a: { createdAt: string | number | Date; length: number },
 		b: { createdAt: string | number | Date; length: number }
@@ -41,10 +34,6 @@ const Home = ({ news, trash }: { news: any; trash: any }) => {
 		if (keyA > keyB) return -1;
 		return 0;
 	});
-
-	const headlineNews = news.filter(
-		(item: { category: string }) => item?.category === "news"
-	);
 
 	return (
 		<ThemeProvider theme={theme}>
@@ -83,16 +72,13 @@ const Home = ({ news, trash }: { news: any; trash: any }) => {
 };
 
 export async function getStaticProps() {
-	//const  res=await fetch(`${API_URL}/api/news`);
-	//	const res = await fetch(`${API_MONGOOSE_URL}/articles`);
-	//	const news = await res.json();
 	const res = await fetch(
 		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000&per_page=16`
 	);
 	const trash = await res.json();
-	const { news } = require("../pages/api/news/data.json");
+	const { info } = require("../pages/api/trash/data.json");
 	return {
-		props: { news, trash },
+		props: { info, trash },
 	};
 }
 
