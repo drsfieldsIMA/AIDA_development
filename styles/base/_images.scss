@@ -372,15 +372,6 @@ $breakpoint_xxl: 1600px; */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 @media only screen and (min-width: $breakpoint_sm) {
 
-    .splash-image {
-        display: flex;
-        position: relative;
-        min-width: 33.33%;
-        max-width: 360px;
-        height: 360px;
-        margin-left: 29%;
-    }
-
     .offers-search-grid,
     .search-grid {
         margin-top: 16px;

@@ -9,11 +9,11 @@
 }
 
 .splash-image_wrapper {
-    display: block;
-    position: relative;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 330px;
     height: 330px;
-    float: left;
+    margin: 0 auto;
 }
 
 .newsletter-block_wrapper {

@@ -1151,12 +1151,11 @@ input[type="password"] {
 
 	.splash-image {
 		display: flex;
-		position: relative;
-		min-width: 33.33%;
-		width: 350px;
-		height: 350px;
-		margin-top: 21px;
-		padding: 21px 14px;
+    position: relative;
+    min-width: 400px!important;
+    min-height: 400px!important;
+    margin-top: 21px;
+    padding: 21px 14px;
 
 		.earth-img {
 			display: block;
