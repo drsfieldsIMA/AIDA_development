@@ -1,3 +1,5 @@
+
+
 .splash-card {
     height: fit-content !important;
     display: flexbox;
@@ -15,6 +17,13 @@
     height: 330px;
     float: left;
 }
+
+.heading-block_wrapper {
+    float: right;
+    width: 60%;
+    padding: 14px 14px;
+}
+
 
 .btn-block_wrapper {
     display: grid;

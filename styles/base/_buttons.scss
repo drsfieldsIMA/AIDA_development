@@ -25,7 +25,8 @@
         color: #f2f0e4;
         margin-top: 26px;
         box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
-
+        align-items: center;
+        justify-content: center;
     &:hover {
         background-color: $secondary_green;
         transform: scale(1.03);

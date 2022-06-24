@@ -992,7 +992,8 @@ $breakpoint_xxl: 1600px; */
 			min-width: 75%;
 		}
 
-		.heading-block_wrapper{
+		.heading-block_wrapper,
+		.btn-block_wrapper {
 			float: right;
 			width: 60%;
 			padding: 14px 14px;
@@ -1540,7 +1541,7 @@ $breakpoint_xxl: 1600px; */
 		margin: 0 auto;
 		font-size: 14px;
 		background: #e1eabe;
-		padding: 14px 20px;
+		padding: 28px 20px;
 		margin: 25px;
 	}
 
