@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 
 const User: NextPage = ({}) => {
 	const [message, SetMessage] = useState();
-	const [searchValue, setSearchValue] = useState([]);
+	const [searchValue, setValue] = useState([]);
 	const userArray: { name: string } = {
 		name: "Nathan D",
 	};
@@ -49,9 +49,6 @@ const User: NextPage = ({}) => {
 							<input
 								type='text'
 								className='user-form'
-								onChange={({ target: { value } }) => {
-									setSearchValue(value);
-								}}
 								value={searchValue}></input>
 							<button
 								type='submit'
