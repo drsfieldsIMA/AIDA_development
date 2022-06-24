@@ -388,10 +388,12 @@ $breakpoint_xxl: 1600px; */
     .splash-image {
         display: flex;
         position: relative;
-        min-width: 33.33%;
-        max-width: 360px;
-        height: 360px;
-        margin-left: 32%;
+        max-width: 360px!important;
+        max-height: 360px!important;
+        min-width: 100%;
+        min-height: 100%;
+        margin-top: 21px;
+        padding: 21px 14px;
     }
 
     .locationpage-image {
