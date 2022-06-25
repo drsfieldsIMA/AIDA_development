@@ -8,9 +8,9 @@ The GreenCycle app can be located on the app https://aida-zeta.vercel.app/. This
 Open up a Linux terminal and access the root of the project GreenCycle_development
 
 ```bash
-npm run install
+npx create-next-app@latest
 # or
-yarn install
+yarn create next-app
 ```
 
 
