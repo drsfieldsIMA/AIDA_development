@@ -1,9 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The GreenCycle app can be located on the app https://aida-zeta.vercel.app/. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Clone the repo to your workspace then follow the following steps 
 
 ## Getting Started
 
-First, run the development server:
+Open up a Linux terminal and access the root of the project GreenCycle_development
 
+```bash
+npm run install
+# or
+yarn install
+```
+
+
+Then, run the development server:
 ```bash
 npm run dev
 # or
