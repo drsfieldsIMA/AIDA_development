@@ -5,9 +5,6 @@
 
 import type { NextPage } from "next";
 import { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
 import Link from "next/link";
 import Layout from "../comps/Layout";
 import Grid from "@mui/material/Grid";
@@ -16,7 +13,6 @@ import { API_URL } from "../comps/config";
 import { useQuery } from "react-query";
 import useDebounce from "../utils/useDebounce";
 import searchArticles from "utils/searchArticles";
-import ArticlesSearchResult from "../comps/TrashSearchResults";
 import Dropdown from "../comps/navigation/Dropdown";
 import { MultiSelect } from "react-multi-select-component";
 import { ALL_ARTICLE_ENTRIES } from "constants/articleEntries";

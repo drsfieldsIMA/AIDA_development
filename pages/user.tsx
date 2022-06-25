@@ -80,6 +80,9 @@ const User: NextPage = ({}) => {
 								Submit
 							</button>
 						</div>
+						<div className='form-group-filepicker'>
+							<input type='file' name='filePicker' id='filePicker' />
+						</div>
 					</div>
 				</div>
 			</div>

@@ -49,7 +49,7 @@ body {
 
 .MuiContainer-root,
 .MuiPaper-root {
-	background-color: $background-light;
+	background-color: white;
 }
 
 .MultiGrid-container {
@@ -76,10 +76,12 @@ ol {
 
 h1 {
 	font-size: clamp(1.25rem, -0.475rem + 8.333vw, 3.75rem);
+	color: #4C7041;
 }
 
 h2 {
 	font-size: clamp(1rem, -0.475rem + 8.333vw, 3rem);
+	color: #4C7041;
 }
 
 h3 {
@@ -92,6 +94,14 @@ h4 {
 
 p {
 	font-size: clamp(24px, 12px + 0.0333px, 28px);
+}
+
+a {
+	color: inherit;
+	text-transform: uppercase;
+	font-size: 1rem;
+	text-decoration: none !important;
+	color: #497EC0;
 }
 
 .Recycle-card {
@@ -132,6 +142,12 @@ p {
     justify-content: flex-start;
     align-items: center;
     margin: 0 21px 0 21px;
+}
+
+.dashboard{
+	font-size: 21px;
+	color: #497EC0;
+	font-weight: bold;
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
