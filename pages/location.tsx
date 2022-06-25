@@ -104,14 +104,14 @@ const Location: NextPage = ({ feed }) => {
 										{item?.photos ? (
 											<Image
 												src={item.photos[0]?.thumbnail}
-												alt={`${item.post_id}`}
+												alt={`${item.title}`}
 												width={360}
 												height={360}
 											/>
 										) : (
 											<Image
-												src='/globe-2.svg'
-												alt={`${item.post_id}`}
+												src='/logo-3.svg'
+												alt='image of the GreenCycle logo'
 												width={360}
 												height={360}
 												priority

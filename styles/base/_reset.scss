@@ -39,6 +39,7 @@ body {
 	font-style: italic;
 	font-size: 12.5px;
 	background-color: $cream;
+	color: $i-dark;
 }
 
 .MuiButton-root {
@@ -65,7 +66,6 @@ h2,
 h3,
 h4 {
 	font-family: "protipo", sans-serif !important;
-	color: $dark_green;
 }
 
 ol {
@@ -102,7 +102,6 @@ p {
 	height: 520px !important;
 	margin-left: 0px;
 	margin-bottom: 50px !important;
-	background-color: $background-main;
 }
 
 .page-title{

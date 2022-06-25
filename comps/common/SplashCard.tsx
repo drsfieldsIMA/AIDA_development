@@ -28,7 +28,7 @@ const SplashCard = ({ trash }: QueryParams) => {
 					<div className='splash-image'>
 						<Image
 							src='/globe-2.png'
-							alt='earth'
+							alt='earth as a high resolution image'
 							className='earth-img'
 							layout='fill'
 						/>

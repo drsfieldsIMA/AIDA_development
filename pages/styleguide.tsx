@@ -20,7 +20,28 @@ const Styleguide: NextPage = ({}) => {
 			<h1 className='page-title'>Style Guide</h1>
 
 			<h2 className='page-title'>Logo</h2>
-			<Image src='/logo-3.svg' className='img' width={70} height={70} />
+			<div className='img-wrapper'>
+				<Image
+					src='/logo-3.svg'
+					className='logo'
+					width={70}
+					height={70}
+					sizes='cover'
+					alt='GreenCycle logo'
+				/>
+				<p>For all devices and screen sizes the logo in the header is</p>
+				<p>width=70px</p>
+				<p>height=70px</p>
+				<Image
+					src='/truck.svg'
+					className='logo'
+					width={70}
+					height={70}
+					sizes='cover'
+					alt='GreenCycle Truck'></Image>
+                    
+			</div>
+
 			<h2 className='page-title'>Header</h2>
 			<div className='header_wrapper'>
 				<Header></Header>

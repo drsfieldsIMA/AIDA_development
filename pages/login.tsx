@@ -93,7 +93,7 @@ export default function LoginForm() {
 		setloginisValid(true);
 		try {
 			setTimeout(() => {
-				router.push("/admin/offers/");
+				router.push("/admin/index");
 			}, 2000);
 			setFocusMessage("You will now log in in 2 seconds");
 			setMessage("");

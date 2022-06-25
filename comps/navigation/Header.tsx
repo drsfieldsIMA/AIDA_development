@@ -18,8 +18,6 @@ import { Filter, LoginTwoTone, Tune } from "@mui/icons-material";
 import { PersonRounded } from "@mui/icons-material";
 import Modal from "react-modal";
 import { ReactQueryDevtools } from "react-query-devtools";
-import searchArticles from "../../comps/common/lists/renderResultList";
-import { useQuery } from "react-query";
 import { AuthContext } from "../config/AuthContext";
 import useKeyPress from "../hooks/useKeyPress";
 import { Pageview } from "@material-ui/icons";
@@ -130,6 +128,20 @@ export const Header = () => {
 											: "items__link "
 									}>
 									Search
+								</a>
+							</Link>
+						</button>
+					</li>
+					<li className='items'>
+						<button onClick={toggleNav} className='hidden-btn'>
+							<Link href='/user'>
+								<a
+									className={
+										router.pathname == "/user"
+											? "active items__link"
+											: "items__link "
+									}>
+									user
 								</a>
 							</Link>
 						</button>

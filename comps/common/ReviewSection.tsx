@@ -70,7 +70,7 @@ const ReviewSection = () => {
 						<Image
 							src={"/images/avatar-3.jpg"}
 							className='img'
-							alt='avatar 3'
+							alt='avatar for Nathan'
 							width={250}
 							height={250}
 						/>

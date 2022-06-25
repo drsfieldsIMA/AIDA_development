@@ -13,7 +13,7 @@ export default function about() {
 					<Image
 						src='/images/locations.svg'
 						alt='earth'
-						className='earth-img'
+						className='Earth map with markers'
 						layout='fill'
 					/>
 				</div>

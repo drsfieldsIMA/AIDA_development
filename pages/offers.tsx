@@ -45,9 +45,8 @@ const offers: NextPage = ({ feed }: any) => {
 												/>
 											) : (
 												<Image
-													src='/globe-2.png
-													'
-													alt={`${item.post_id}`}
+													src='/logo-3.svg'
+													alt='picture of the GreenCycle logo'
 													width={360}
 													height={360}
 												/>

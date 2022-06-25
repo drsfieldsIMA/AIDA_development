@@ -7,7 +7,9 @@
       "time": "10:00 PM EST",
       "content": "We aim to save 300 metric tonnes per year in landfill. We also hope you find something that saves you cash in your back pocket.",
       "image": "/truck.svg",
-      "color":"#4EAE3C"
+      "backgroundColor":"#4FAE3C",
+      "color": "#f2f0e4"
+
     },
     {
       "id": "2",
@@ -15,8 +17,9 @@
       "date": "June 2, 2021",
       "time": "8:00 PM EST",
       "content":"We currently use 24% more than the planet and biosphere can provide in a single year. At GreenCycle we aim to provide a network of people who can bring this quantity back to as low as possible, restoring Gaia in the process.",
-      "color":"#4C7041",
-      "image": "/images/graphs.svg"
+      "backgroundColor":"#E1EABE",
+      "image": "/images/graphs.svg",
+      "color":"#4C7041"
     },
     {
       "id": "3",
@@ -25,7 +28,8 @@
       "time": "7:00 PM EST",
       "content": "Use our easy to navigate categories above including furniture, phones/electrics, metals, training equipment,clothes/textiles and others. ",
       "image": "/images/categories.svg",
-      "color":"#4C7041"
+      "backgroundColor":"#4FAE3C",
+      "color": "#f2f0e4"
     }
     ,
     {
@@ -35,7 +39,9 @@
       "time": "7:00 PM EST",
       "content": "The GreenCycle community currently stands at over 60 worldwide locations. Join today and add your junk",
       "image": "/images/locations.svg",
-      "color":"#4C7041"
+      "backgroundColor":"#497EC0",
+      "color": "#f2f0e4"
+
     }
     ,
     {
@@ -44,6 +50,7 @@
       "date": "June 11, 2021",
       "content": "Find the nearest phone, tablet, t-shirt, pedal bike or piece of furniture by using our locator algorithm as employed by Google maps. ",
       "image": "/marker.svg",
+      "backgroundColor":"#f2f0e4",
       "color":"#4C7041"
     }
     ,
@@ -52,8 +59,8 @@
       "title": "Our Users Love us",
       "date": "June 2, 2021",
       "time": "8:00 PM EST",
-      "content":"We have over 3000 users that can take or provide second hand products off your hands.",
-      "color":"#4C7041",
+      "content":"We have over 3000 users that can take  second hand products off your hands or provide you  with new treasure.",
+      "backgroundColor":"#4FAE3C",
       "image": "/logo-3.svg"
     }
   ]

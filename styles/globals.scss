@@ -696,15 +696,6 @@ input[type="file" i] {
 	color: $secondary_green;
 }
 
-.logo {
-	display: inline-block;
-	background-image: url(../public/logo-3.svg);
-	min-height: 70px !important;
-	min-width: 70px !important;
-	font-size: 1.75em;
-	text-transform: uppercase;
-}
-
 ol {
 	display: block;
 	position: relative;
@@ -863,18 +854,6 @@ li.items {
 		background-color: $background-main;
 		color: $dark;
 	}
-}
-
-.items__link::after {
-	z-index: 5;
-	content: "";
-	position: absolute;
-	border-right: 2px solid $cream;
-	top: -30px;
-	left: -20px;
-	height: 70px;
-	width: 10px;
-	transform: skewX(-14deg);
 }
 
 main {

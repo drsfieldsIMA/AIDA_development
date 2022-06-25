@@ -27,7 +27,8 @@ const RecycleCard = ({ card }: QueryParams) => {
 				width: "100%",
 				height: 500,
 				marginLeft: 0,
-				backgroundColor: trash.backgroundColor,
+				backgroundColor: `${trash.backgroundColor}!important`,
+				color: `${trash.color}!important`,
 			}}>
 			<CardContent>
 				<div

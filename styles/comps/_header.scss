@@ -21,6 +21,18 @@
     text-decoration: none;
 }
 
+.items__link::after {
+	z-index: 5;
+    content: "";
+    position: absolute;
+    border-right: 2px solid $dark_green!important;
+    top: -40px;
+    left: -20px;
+    height: 100px;
+    width: 9px;
+    transform: skewX(-12deg);
+}
+
 .header ul {
     display: flex;
     align-items: center;

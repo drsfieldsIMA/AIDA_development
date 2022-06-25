@@ -1,23 +1,45 @@
 /** @format */
 import React, { useState, useEffect, FC } from "react";
 import { NextPage } from "next";
+import { useForm } from "react-hook-form";
+import * as yup from "yup";
+import NextLink from "next/link";
+import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import ReviewSection from "@/comps/common/ReviewSection";
 import { useRouter } from "next/router";
+import { Message } from "@mui/icons-material";
+
+const schema = yup.object().shape({
+	message: yup.string().required("Please enter your email"),
+});
 
 const User: NextPage = ({}) => {
-	const [message, SetMessage] = useState();
-	const [searchValue, setValue] = useState([]);
+	const [message, setMessage] = useState([]);
 	const userArray: { name: string } = {
 		name: "Nathan D",
 	};
 
-	const sendMessage = () => {
-		alert("User has Been Contacted");
+	const { register, handleSubmit } = useForm({
+		resolver: yupResolver(schema),
+	});
+
+	const passwordRegex = /\S/;
+
+	const validateMessage = (event: any) => {
+		const pass = event.target.value;
+		if (passwordRegex.test(pass) && pass.length > 2) {
+			setMessage(pass);
+		} else {
+		}
 	};
+
+	async function sendMessage() {
+		alert(`User has Been Contacted with the message ${message}`);
+	}
 
 	const router = useRouter();
 	return (
@@ -47,13 +69,14 @@ const User: NextPage = ({}) => {
 						<label>Send Message:</label>
 						<div className='form-group-input-submit'>
 							<input
-								type='text'
-								className='user-form'
-								value={searchValue}></input>
+								placeholder='Remember, be nice!'
+								cols='30'
+								rows='5'
+								onChange={validateMessage}></input>
 							<button
 								type='submit'
 								className='btn-submit'
-								onClick={(event) => sendMessage}>
+								onClick={sendMessage}>
 								Submit
 							</button>
 						</div>

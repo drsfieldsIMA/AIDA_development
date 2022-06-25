@@ -48,12 +48,24 @@
     }
 }
 
-img {
-    max-width: 76% !important;
+.img {
+    max-width: 100% !important;
+    height: auto !important;
+}
+.img-wrapper {
+    max-width: 100% !important;
     height: auto !important;
 }
 
-
+.logo {
+	display: inline-block;
+	background-image: url(../../public/logo-3.svg);
+	min-height: 70px !important;
+	min-width: 70px !important;
+	font-size: 1.75em;
+	text-transform: uppercase;
+    border-radius: 0;
+}
 
 .feed-image__container {
     display: flex;
@@ -422,12 +434,12 @@ $breakpoint_xxl: 1600px; */
         height: 520px !important;
         margin-left: 0px;
         margin-bottom: 50px !important;
-        background-color: white!important;
 
         h3 {
             font-size: 22px;
         }
     }
+
 
     .product-feed-image__container {
         display: flex !important;
