@@ -1,5 +1,6 @@
 <div id="top"></div>
 
+## The URL
 The GreenCycle app can be located on the app https://aida-zeta.vercel.app/. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Clone the repo to your workspace then follow the following steps 
 
 ## Getting Started
@@ -22,6 +23,10 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Style Guide 
+
+Open https://aida-zeta.vercel.app/styleguide to review the style guide on consistent typography, images, buttons and development practices.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -42,7 +47,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Shaun Fields  - drsfieldsIMA@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name]([https://github.com/your_username/repo_name](https://github.com/drsfieldsIMA/AIDA_development))
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
