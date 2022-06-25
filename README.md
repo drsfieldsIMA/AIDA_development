@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-## The URL
+## The GreenCycle URL
 The GreenCycle app can be located on the app https://aida-zeta.vercel.app/. This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Clone the repo to your workspace then follow the following steps 
 
 ## Getting Started
