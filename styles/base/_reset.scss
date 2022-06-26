@@ -85,7 +85,7 @@ h2 {
 }
 
 h3 {
-	font-size: clamp(0.95rem, -0.475rem + 8.333vw, 2.5rem);
+	font-size: clamp(0.5rem, -0.475rem + 8.333vw, 1.5rem);
 }
 
 h4 {
@@ -194,6 +194,15 @@ a {
 	color: #497EC0;
 	font-weight: bold;
 }
+
+.text-block{
+	width: 100%;
+	display:flex;
+	flex-direction: column;
+    justify-self: normal;
+	margin-top: 4rem;
+	justify-items: center;
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Everything above is for mobile
 /*   $breakpoint_xs: 360px;
@@ -223,6 +232,11 @@ $breakpoint_xxl: 1600px; */
 		margin: 0 21px 0 21px;
 	}
 
+}
+
+.MuiContainer-root,
+.MuiPaper-root {
+	background-color: white;
 }
 
 @media only screen and (min-width: $breakpoint_lg) {

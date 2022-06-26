@@ -78,7 +78,7 @@ export const Header = () => {
 						{data.length > 0 ? (
 							data.map(
 								(item: {
-									post_id: React.Key | null | undefined;
+									post_id: React.Key | null | undefined | string;
 									title:
 										| boolean
 										| React.ReactChild

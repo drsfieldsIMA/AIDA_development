@@ -22,7 +22,7 @@ import {
 	Input,
 	Select,
 } from "@mui/material";
-import { API_MONGOOSE_URL, API_URL } from "comps/config";
+import { API_URL } from "comps/config";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
 import ReactSelect from "react-select";
 import { Router } from "react-router";

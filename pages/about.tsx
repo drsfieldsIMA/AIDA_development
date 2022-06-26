@@ -3,11 +3,22 @@
 import Link from "next/link";
 import Layout from "../comps/Layout";
 import Image from "next/image";
+import Grid from "@mui/material/Grid";
+import ResponsivePlayer from "@/comps/ResponsivePlayer";
 
 export default function about() {
 	return (
 		<div>
 			<h1 className='page-title'>About Us</h1>
+
+			<Grid container px={0} marginLeft={0}>
+				<Grid xs={12} sm={12}>
+					<div className='recycle-container'>
+						<h2 className='page-title'> GreenCycle Infomercial</h2>
+						<ResponsivePlayer />;
+					</div>
+				</Grid>
+			</Grid>
 			<div className='splash-image_wrapper'>
 				<div className='about-image'>
 					<Image

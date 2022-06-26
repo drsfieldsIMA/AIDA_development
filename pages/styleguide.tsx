@@ -9,21 +9,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { Header } from "@/comps/navigation/Header";
 import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
 
-const Styleguide: NextPage = ({ }) => {
+const Styleguide: NextPage = ({ productfeed }) => {
 	const userArray: { name: string } = {
 		name: "Nathan D",
 	};
 	const router = useRouter();
+	const trash = productfeed.posts;
 	return (
 		<>
-			<div className="styleguide-nav__wrapper">
-				<li className="styleguide-nav">
+			<div className='styleguide-nav__wrapper'>
+				<li className='styleguide-nav'>
 					<a href='#colorpallette'>Color Pallette</a>
 					<a href='#typography'>Typography</a>
 					<a href='#images'>Images</a>
 					<a href='#header'>Header</a>
-					<a href="#review">Review</a>
+					<a href='#review'>Review</a>
 				</li>
 			</div>
 			<div className='recycle-container'>
@@ -60,7 +62,9 @@ const Styleguide: NextPage = ({ }) => {
 					</div>
 				</div>
 				<div className='recycle-container'>
-					<h2 className='page-title' id='typography'>>Typography</h2>
+					<h2 className='page-title' id='typography'>
+						Typography
+					</h2>
 					<div className='container-col'>
 						<div className='col-32'>
 							<Card className='Recycle-card block-7'>
@@ -72,8 +76,14 @@ const Styleguide: NextPage = ({ }) => {
 						<div className='col-32'>
 							<Card className='Recycle-card block-7'>
 								<h2>Heading 2:clamp(1rem, -0.475rem + 8.333vw, 3rem);</h2>
-								<h3>Heading 3: font-size: clamp(0.95rem, -0.475rem + 8.333vw, 2.5rem);</h3>
-								<h4>Heading 4: font-size: clamp(0.5rem, -0.475rem + 8.333vw, 1.5rem);</h4>
+								<h3>
+									Heading 3: font-size: clamp(0.95rem, -0.475rem + 8.333vw,
+									2.5rem);
+								</h3>
+								<h4>
+									Heading 4: font-size: clamp(0.5rem, -0.475rem + 8.333vw,
+									1.5rem);
+								</h4>
 								<p>Paragraph:font-size: clamp(24px, 12px + 0.0333px, 28px);</p>
 								<a>anchor links</a>
 							</Card>
@@ -94,7 +104,9 @@ const Styleguide: NextPage = ({ }) => {
 						</div>
 					</div>
 				</div>
-				<h2 className='page-title' id="images">Images</h2>
+				<h2 className='page-title' id='images'>
+					Images
+				</h2>
 				<div className='container-col'>
 					<div className='col-32'>
 						<div className='img-wrapper'>
@@ -126,29 +138,79 @@ const Styleguide: NextPage = ({ }) => {
 					<div className='col-32'>
 						<div>
 							<Image
-								src="/globe-2.png"
+								src='/globe-2.png'
 								width={350}
 								height={350}
 								sizes='cover'
 								alt='GreenCycle Globe'></Image>
 						</div>
-						<p>For desktop the globe is</p>
-						<p>width=400px</p>
-						<p>height=400px</p>
-						<p>For tablet the globe is</p>
-						<p>width=350px</p>
-						<p>height=350px</p>
-						<p>For mobile the globe is</p>
-						<p>width=100% of screen width</p>
-						<p>height=auto</p>
+						<div className='text-block'>
+							<p>For desktop the globe is</p>
+							<p>width=400px</p>
+							<p>height=400px</p>
+							<p>For tablet the globe is</p>
+							<p>width=350px</p>
+							<p>height=350px</p>
+							<p>For mobile the globe is</p>
+							<p>width=100% of screen width</p>
+							<p>height=auto</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<h2 className='page-title'>Header</h2>
+			<h2 className='page-title' id='header'>
+				Header
+			</h2>
 			<div className='header_wrapper'>
 				<Header></Header>
 			</div>
-			<h2 className='page-title' id="review">Review Section</h2>
+			<h2 className='page-title' id='productfeed'>
+				Product Feed
+			</h2>
+			<ol>
+				<Grid container px={0} marginLeft={0}>
+					<div className='offers-search-grid'>
+						{trash.map((item): unknown => (
+							<li className='pic-links' key={item.post_id}>
+								<div className='feed-image__container'>
+									<div className='feed-image__wrapper'>
+										<div className='feed-image'>
+											{item?.photos ? (
+												<Image
+													src={item.photos[0]?.thumbnail}
+													alt={`${item.post_id}`}
+													width={360}
+													height={360}
+												/>
+											) : (
+												<Image
+													src='/logo-3.svg'
+													alt='picture of the GreenCycle logo'
+													width={360}
+													height={360}
+												/>
+											)}
+										</div>
+									</div>
+								</div>
+								<div className='feed-title'>
+									<h3>{item.title}</h3>
+								</div>
+								<div className='feed-button'>
+									<a
+										href={`/details/${parseInt(item.post_id)}`}
+										className='btn-secondary'>
+										DETAILS
+									</a>
+								</div>
+							</li>
+						))}
+					</div>
+				</Grid>
+			</ol>
+			<h2 className='page-title' id='review'>
+				Review Section
+			</h2>
 			<div className='reviews'>
 				<div className='review'>
 					<div className='head-review'>
@@ -173,7 +235,6 @@ const Styleguide: NextPage = ({ }) => {
 						<input type='text'></input>
 					</div>
 				</div>
-				{/* <h2>{userArray.username}</h2> */}
 			</div>
 		</>
 	);
@@ -183,14 +244,14 @@ export async function getStaticProps({ params }: { params: object | any }) {
 	let id = params;
 
 	//const  res=await fetch(`${API_URL}/api/feed`);
-	/* 	const res = await fetch(
-		`https://trashnothing.com/api/v1.2/users/7743302/display?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3`
+	const res = await fetch(
+		`https://trashnothing.com/api/v1.2/posts?api_key=vC6smjURIIU6UX1iJaGnLY5LOXG64IIY13iiBiR3&types=offer&sources=trashnothing&latitude=51.50853&longitude=-0.12574&radius=100000&per_page=4`
 	);
 	console.log("res", res);
-	const userArray = await res.json(); */
+	const productfeed = await res.json();
 
 	return {
-		props: {},
+		props: { productfeed },
 	};
 }
 
