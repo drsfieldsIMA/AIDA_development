@@ -2,7 +2,6 @@
 
 import { FaExclamationTriangle } from "react-icons/fa";
 import Link from "next/link";
-import { Styles } from "@material-ui/core/styles/withStyles";
 
 export default function NotFound() {
 	return (

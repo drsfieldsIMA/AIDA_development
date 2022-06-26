@@ -6,10 +6,8 @@ import Head from "next/head";
 import * as yup from "yup";
 import NextLink from "next/link";
 import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
 import { API_URL, API_MONGOOSE_URL, EXT_LOGIN } from "../comps/config/index";
 import router from "next/router";
-import nookies from "nookies";
 import {
 	Box,
 	Button,
@@ -22,7 +20,6 @@ import {
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { useEffect } from "react";
 import AuthContext, { AuthProvider } from "../comps/config/AuthContext";
-import useLocalStorage from "../comps/config/useLocalStorage";
 
 const url = API_URL + EXT_LOGIN;
 

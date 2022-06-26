@@ -5,18 +5,9 @@
  */
 // 👇️ ts-nocheck ignores all ts errors in the file
 // @ts-nocheck
-
-import type { NextPage } from "next";
-import { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.scss";
-import Link from "next/link";
 import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
-import { API_URL, API_MONGOOSE_URL } from "../comps/config";
-import { useQuery } from "react-query";
-import theme from "../comps/common/theme/theme";
+import type { NextPage } from "next";
+import Image from "next/image";
 
 type QueryParams = {
 	item: unknown;

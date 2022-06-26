@@ -3,15 +3,12 @@ import React, { useState, useEffect, FC } from "react";
 import { NextPage } from "next";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
-import NextLink from "next/link";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Image from "next/image";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import ReviewSection from "@/comps/common/ReviewSection";
 import { useRouter } from "next/router";
-import { Message } from "@mui/icons-material";
 
 const schema = yup.object().shape({
 	message: yup.string().required("Please enter your email"),

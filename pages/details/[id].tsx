@@ -2,10 +2,8 @@
 import React, { useState, useEffect, FC } from "react";
 import PropTypes from "prop-types";
 import { Card, Box, Divider, CircularProgress } from "@mui/material";
-//import { API_URL } from "../utils/url";
 import { Grid } from "@mui/material";
 import Link from "next/link";
-import { InsertEmoticon } from "@mui/icons-material";
 
 const static_paths = [
 	{

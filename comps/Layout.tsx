@@ -59,7 +59,8 @@ Heading.propTypes = {
 Layout.defaultProps = {
 	title: " GreenCycle | ReCycle UpCycle Repurpose  ",
 	descrip:
-		"Ever Wondered how you can recycle more phones, furniture, clothes and scrap metal. By leveraging the power of the internet and the large GreenCycle community we can help restore and sustain the earths resources.",
-	keywords: "",
+		"Ever wondered how you can recycle more phones, furniture, clothes and scrap metal. By leveraging the power of the internet and the large GreenCycle community we can give 2nd hand products and 2nd life.",
+	keywords:
+		"recycling, recycle center, recycle program, scrap metal recycling, electrics recycling, phone recycling, recycling information, recycling sorter. ",
 	gsv: "wenrVQYITXvXIH9sNnSmiBaOZ941XPPzAvnupQrq6RQ",
 };

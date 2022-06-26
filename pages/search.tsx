@@ -6,29 +6,9 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import Link from "next/link";
-import Layout from "../comps/Layout";
-import Grid from "@mui/material/Grid";
-import { styled } from "@mui/material/styles";
-import { API_URL } from "../comps/config";
-import { useQuery } from "react-query";
 import useDebounce from "../utils/useDebounce";
-import searchArticles from "utils/searchArticles";
-import Dropdown from "../comps/navigation/Dropdown";
-import { MultiSelect } from "react-multi-select-component";
-import { ALL_ARTICLE_ENTRIES } from "constants/articleEntries";
-import Controller from "comps/common/Controller";
-import { render } from "sass";
 
 const Search: NextPage = ({ info }) => {
-	const options = [
-		{ label: "Electricals", value: "electricals" },
-		{ label: "Phones", value: "phones" },
-		{ label: "Furnitute", value: "furniture" },
-		{ label: "Training Equipment ?", value: "training" },
-		{ label: "Metal scrap ?", value: "metal" },
-		{ label: "Clothes ?", value: "clothes" },
-		{ label: "Other ?", value: "Other" },
-	];
 	const [selected, setSelected] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [isError, setIsError] = useState(false);
@@ -49,14 +29,6 @@ const Search: NextPage = ({ info }) => {
 		setIsSuccess(true);
 		setIsLoading(false);
 	};
-	/* 	const { isLoading, isError, isSuccess, data } = useQuery(
-    ["searchCategories", debouncedSearchValue],
-    () => searchCategories(debouncedSearchValue),
-    {
-      enabled: debouncedSearchValue.length > 0,
-    }
-  ); */
-	//	const trash = searchCategories(debouncedSearchValue)
 
 	const renderResult = () => {
 		if (isLoading) {

@@ -114,6 +114,51 @@ a {
 	margin-bottom: 50px !important;
 }
 
+.block-1{
+	max-height: 200px!important;
+	background-color: #8DB942!important;
+	color: $i-dark;
+}
+
+.block-2{
+	max-height: 200px!important;
+	background-color: #4FAE3C!important;
+	color: $cream;
+}
+
+.block-3{
+	max-height: 200px!important;
+	background-color: #4C7041!important;
+	color: $cream;
+}
+
+.block-4{
+	max-height: 200px!important;
+	background-color: $blue!important;
+	color: $cream;
+}
+
+.block-5{
+	max-height: 200px!important;
+	background-color: $background-main!important;
+	color: $dark_green;
+}
+
+.block-6{
+	max-height: 200px!important;
+	background-color: $red!important;
+	color: $cream;
+}
+
+.block-7 {
+	min-height: 800px !important;
+	padding: 14px 35px;
+	background-color: white !important;
+	color: $dark_green!important;
+}
+
+
+
 .page-title{
 	display: flex;
 	flex-direction: row;

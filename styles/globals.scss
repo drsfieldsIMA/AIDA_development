@@ -8,6 +8,7 @@
 @import "comps/header";
 @import "comps/footer";
 @import "home/home";
+@import "styleguide/styleguide";
 
 
 .span-search {
@@ -604,13 +605,6 @@ $breakpoint_xxl: 1600px; */
 	display: flex;
 	flex-direction: column;
 	height: 70px;
-}
-
-.product-feed-image__container {
-	display: flex !important;
-	height: 240px !important;
-	width: 100% !important;
-	justify-content: space-evenly;
 }
 
 
@@ -1321,6 +1315,12 @@ $breakpoint_xxl: 1600px; */
 			display: block;
 			max-width: 50%;
 			min-width: 50%;
+		}
+
+		.col-32 {
+			display: block;
+			max-width: 32%;
+			min-width: 32%;
 		}
 
 		.btn-primary {
