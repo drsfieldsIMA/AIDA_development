@@ -31,6 +31,7 @@ $background-main: #E1EABE;
 $background-dark: #c3d57e;
 $red: #F04923;
 
+
 html,
 body {
 	padding: 0;
@@ -54,6 +55,21 @@ body {
 
 .MultiGrid-container {
 	padding-bottom: 3rem;
+}
+
+.col-25 {
+	display: flex;
+	float: left;
+	flex-direction: column;
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.col-80 {
+	display: block;
+	float: right;
+	max-width: 100%;
+	min-width: 100%;
 }
 
 .std-size__font {
@@ -213,7 +229,23 @@ $breakpoint_xl: 14400px;
 $breakpoint_xxl: 1600px; */
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /// 
-@media only screen and (min-width: $breakpoint_sm) {}
+@media only screen and (min-width: $breakpoint_sm) {
+
+	.col-25 {
+		display: flex;
+		float: left;
+		flex-direction: column;
+		max-width: 50%;
+		min-width: 50%;
+	}
+
+	.col-75 {
+		display: block;
+		float: right;
+		max-width: 50%;
+		min-width: 50%;
+	}
+}
 
 @media only screen and (min-width: $breakpoint_md) {
 	.recycle-container {
@@ -237,6 +269,21 @@ $breakpoint_xxl: 1600px; */
 .MuiContainer-root,
 .MuiPaper-root {
 	background-color: white;
+}
+
+.col-20 {
+	display: flex;
+	float: left;
+	flex-direction: column;
+	max-width: 20%;
+	min-width: 20%;
+}
+
+.col-80 {
+	display: block;
+	float: right;
+	max-width: 80%;
+	min-width: 80%;
 }
 
 @media only screen and (min-width: $breakpoint_lg) {

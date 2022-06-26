@@ -1,4 +1,6 @@
 /** @format */
+// 👇️ ts-nocheck ignores all ts errors in the file
+// @ts-nocheck
 import type { NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -24,6 +26,7 @@ const Styleguide: NextPage = ({ productfeed }) => {
 					<a href='#colorpallette'>Color Pallette</a>
 					<a href='#typography'>Typography</a>
 					<a href='#images'>Images</a>
+					<a href='#buttons'>Buttons</a>
 					<a href='#header'>Header</a>
 					<a href='#review'>Review</a>
 				</li>
@@ -68,7 +71,7 @@ const Styleguide: NextPage = ({ productfeed }) => {
 					<div className='container-col'>
 						<div className='col-32'>
 							<Card className='Recycle-card block-7'>
-								<h1>font-family: "protipo", sans-serif </h1>
+								<h1>font-family: protipo, sans-serif </h1>
 								<h1>1rem=12.5px</h1>
 								<h1>Heading 1:clamp(1.25rem, -0.475rem + 8.333vw, 3.75rem);</h1>
 							</Card>
@@ -157,6 +160,13 @@ const Styleguide: NextPage = ({ productfeed }) => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<h2 className='page-title' id='buttons'>
+				Buttons Section
+			</h2>
+			<div className='btn-block'>
+				<button className='btn-primary s-btn'> Primary Button</button>
+				<button className='btn-secondary'> Secondary Button</button>
 			</div>
 			<h2 className='page-title' id='header'>
 				Header

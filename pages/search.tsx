@@ -7,6 +7,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 import Link from "next/link";
 import useDebounce from "../utils/useDebounce";
+import { Grid } from "@mui/material";
 
 const Search: NextPage = ({ info }) => {
 	const [selected, setSelected] = useState([]);
@@ -65,29 +66,27 @@ const Search: NextPage = ({ info }) => {
 	return (
 		<div>
 			<h1 className='page-title'>Search by keywords</h1>
-			<div className='container-col'>
-				<div className='col-25'>
-					<div className='search-page_wrapper'>
-						<input
-							type='text'
-							onChange={({ target: { value } }) => {
-								setSearchValue(value);
-							}}
-							value={searchValue}
-							placeholder='Keyword'
-							className='search-value-input'
-						/>
-						<button
-							className='search-value-btn'
-							onClick={(event) => searchCategories(debouncedSearchValue)}>
-							Search
-						</button>
-					</div>
-
-					{/* <Controller></Controller> */}
+			<div className='col-20'>
+				<div className='search-page_wrapper'>
+					<input
+						type='text'
+						onChange={({ target: { value } }) => {
+							setSearchValue(value);
+						}}
+						value={searchValue}
+						placeholder='Keyword'
+						className='search-value-input'
+					/>
+					<button
+						className='search-value-btn'
+						onClick={(event) => searchCategories(debouncedSearchValue)}>
+						Search
+					</button>
 				</div>
-				<div className='col-75'>{renderResult()}</div>
+
+				{/* <Controller></Controller> */}
 			</div>
+			<div className='col-80'>{renderResult()}</div>
 		</div>
 	);
 };

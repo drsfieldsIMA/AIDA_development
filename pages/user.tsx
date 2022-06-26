@@ -1,4 +1,6 @@
 /** @format */
+// 👇️ ts-nocheck ignores all ts errors in the file
+// @ts-nocheck
 import React, { useState, useEffect, FC } from "react";
 import { NextPage } from "next";
 import { useForm } from "react-hook-form";
@@ -67,7 +69,6 @@ const User: NextPage = ({}) => {
 						<div className='form-group-input-submit'>
 							<input
 								placeholder='Remember, be nice!'
-								cols='30'
 								rows='5'
 								onChange={validateMessage}></input>
 							<button
